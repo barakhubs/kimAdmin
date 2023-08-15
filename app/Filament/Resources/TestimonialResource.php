@@ -6,9 +6,11 @@ use App\Filament\Resources\TestimonialResource\Pages;
 use App\Filament\Resources\TestimonialResource\RelationManagers;
 use App\Models\Testimonial;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,12 +30,15 @@ class TestimonialResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->label('Name')
                     ->required(),
                 Forms\Components\TextInput::make('business'),
                 Forms\Components\Textarea::make('testimony')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('icon'),
+                FileUpload::make('icon')
+                    ->preserveFilenames()
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -42,11 +47,12 @@ class TestimonialResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('business')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('icon')
-                    ->searchable(),
+                ImageColumn::make('icon')
+                    ->circular(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -61,6 +67,7 @@ class TestimonialResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
