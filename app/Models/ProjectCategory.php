@@ -25,4 +25,14 @@ class ProjectCategory extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    /**
+     * Get all of the subCategories for the ProjectCategory
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subCategories(): HasMany
+    {
+        return $this->hasMany(ProjectSubCategory::class, 'parent_category');
+    }
 }

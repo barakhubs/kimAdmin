@@ -2,47 +2,40 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectCategoryResource\Pages;
-use App\Filament\Resources\ProjectCategoryResource\RelationManagers;
-use App\Filament\Resources\ProjectCategoryResource\RelationManagers\SubCategoriesRelationManager;
-use App\Models\ProjectCategory;
+use App\Filament\Resources\ProjectSubCategoryResource\Pages;
+use App\Filament\Resources\ProjectSubCategoryResource\RelationManagers;
+use App\Models\ProjectSubCategory;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Str;
 
-class ProjectCategoryResource extends Resource
+class ProjectSubCategoryResource extends Resource
 {
-    protected static ?string $model = ProjectCategory::class;
+    protected static ?string $model = ProjectSubCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-group';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?int $navigationSort = 0;
-
-    protected static ?string $navigationGroup = 'Projects & Portfolio';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('parent_category')
+                    ->required()
+                    ->numeric(),
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(fn(string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
-
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
-                    ->disabled()
-                    ->dehydrated()
                     ->required()
-                    ->unique(ProjectCategory::class, 'slug',
-                        ignoreRecord: true),
-                FileUpload::make('icon')->preserveFilenames()->columnSpanFull(),
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('icon')
+                    ->maxLength(255),
             ]);
     }
 
@@ -50,11 +43,15 @@ class ProjectCategoryResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('parent_category')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                ImageColumn::make('icon')->circular(),
+                Tables\Columns\TextColumn::make('icon')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -69,7 +66,6 @@ class ProjectCategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -84,16 +80,16 @@ class ProjectCategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            SubCategoriesRelationManager::class,
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProjectCategories::route('/'),
-            'create' => Pages\CreateProjectCategory::route('/create'),
-            'edit' => Pages\EditProjectCategory::route('/{record}/edit'),
+            'index' => Pages\ListProjectSubCategories::route('/'),
+            'create' => Pages\CreateProjectSubCategory::route('/create'),
+            'edit' => Pages\EditProjectSubCategory::route('/{record}/edit'),
         ];
     }
 }
