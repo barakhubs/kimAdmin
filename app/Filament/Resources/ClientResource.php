@@ -23,7 +23,7 @@ class ClientResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
-    protected static ?string $navigationGroup = 'Authoring & Editing';
+    protected static ?string $navigationGroup = 'Projects & Portfolio';
 
     public static function form(Form $form): Form
     {
@@ -35,7 +35,8 @@ class ClientResource extends Resource
                 ->prefix('https://'),
                 FileUpload::make('logo')
                     ->preserveFilenames()
-                    ->required(),
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 

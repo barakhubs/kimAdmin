@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
-use App\Models\Testimonial;
+use App\Filament\Resources\ProjectCategoryResource\Pages;
+use App\Filament\Resources\ProjectCategoryResource\RelationManagers;
+use App\Models\ProjectCategory;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
@@ -14,14 +14,15 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Str;
 
-class TestimonialResource extends Resource
+class ProjectCategoryResource extends Resource
 {
-    protected static ?string $model = Testimonial::class;
+    protected static ?string $model = ProjectCategory::class;
 
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-group';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?int $navigationSort = 0;
 
     protected static ?string $navigationGroup = 'Projects & Portfolio';
 
@@ -30,15 +31,17 @@ class TestimonialResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->label('Name')
-                    ->required(),
-                Forms\Components\TextInput::make('business'),
-                Forms\Components\Textarea::make('testimony')
                     ->required()
-                    ->columnSpanFull(),
-                FileUpload::make('icon')
-                    ->preserveFilenames()
-                    ->columnSpanFull(),
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn(string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+
+                Forms\Components\TextInput::make('slug')
+                    ->disabled()
+                    ->dehydrated()
+                    ->required()
+                    ->unique(ProjectCategory::class, 'slug',
+                        ignoreRecord: true),
+                FileUpload::make('icon')->preserveFilenames()->columnSpanFull(),
             ]);
     }
 
@@ -47,12 +50,10 @@ class TestimonialResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->label('Name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('business')
+                Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                ImageColumn::make('icon')
-                    ->circular(),
+                ImageColumn::make('icon')->circular(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -89,9 +90,9 @@ class TestimonialResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTestimonials::route('/'),
-            'create' => Pages\CreateTestimonial::route('/create'),
-            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
+            'index' => Pages\ListProjectCategories::route('/'),
+            'create' => Pages\CreateProjectCategory::route('/create'),
+            'edit' => Pages\EditProjectCategory::route('/{record}/edit'),
         ];
     }
 }
