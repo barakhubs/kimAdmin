@@ -16,10 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('icon')->nullable();
-            $table->unsignedBigInteger('parent_category');
+            $table->foreignId('project_category_id')->constrained();
             $table->timestamps();
-
-            $table->foreign('parent_category')->references('id')->on('categories')->cascadeOnDelete();
         });
     }
 

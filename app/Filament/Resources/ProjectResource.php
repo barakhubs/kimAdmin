@@ -5,7 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
+use App\Models\ProjectCategory;
+use App\Models\ProjectSubCategory;
 use Filament\Forms;
+use Filament\Forms\Components\MorphToSelect;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -26,6 +30,18 @@ class ProjectResource extends Resource
 
     public static function form(Form $form): Form
     {
+        $options = [];
+
+        $categories = ProjectCategory::with('subCategories')->get();
+
+        foreach ($categories as $category) {
+            $subOptions = [];
+            foreach ($category->subCategories as $subCategory) {
+                $subOptions[$subCategory->id] = $subCategory->title;
+            }
+
+            $options[$category->title] = $subOptions;
+        }
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
@@ -38,11 +54,15 @@ class ProjectResource extends Resource
                     ->dehydrated()
                     ->required()
                     ->unique(Project::class, 'slug', ignoreRecord: true),
-                Forms\Components\Select::make('project_category_id')
-                    ->label('Select Project Category')
-                    ->relationship('projectCategory', 'title')
+                // Forms\Components\Select::make('project_category_id')
+                //     ->label('Select Project Category')
+                //     ->relationship('projectCategory', 'title')
+                //     ->searchable()
+                //     ->required(),
+
+                Select::make('project_category_id')
                     ->searchable()
-                    ->required(),
+                    ->options($options),
 
                 Forms\Components\TextInput::make('business')
                     ->maxLength(255),

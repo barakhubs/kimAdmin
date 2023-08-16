@@ -11,7 +11,7 @@ class ProjectSubCategory extends Model
 
     protected $fillable = [
         'title',
-        'parent_category',
+        'project_category_id',
         'slug',
         'icon'
     ];

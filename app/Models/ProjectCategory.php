@@ -33,6 +33,6 @@ class ProjectCategory extends Model
      */
     public function subCategories(): HasMany
     {
-        return $this->hasMany(ProjectSubCategory::class, 'parent_category');
+        return $this->hasMany(ProjectSubCategory::class);
     }
 }

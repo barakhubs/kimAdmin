@@ -2,14 +2,17 @@
 
 namespace App\Filament\Resources\ProjectCategoryResource\RelationManagers;
 
+use App\Models\ProjectCategory;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Str;
 
 class SubCategoriesRelationManager extends RelationManager
 {
@@ -39,7 +42,11 @@ class SubCategoriesRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('title')
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('slug')
+                    ->searchable(),
+                ImageColumn::make('icon')->circular(),
             ])
             ->filters([
                 //
