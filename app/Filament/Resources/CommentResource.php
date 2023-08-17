@@ -55,7 +55,13 @@ class CommentResource extends Resource
                     ->sortable()
                     ->limit(50),
                 Tables\Columns\TextColumn::make('comment')->limit(50),
-                Tables\Columns\TextColumn::make('email')->label('Comment by'),
+                Tables\Columns\SelectColumn::make('status')
+                    ->label('Status')
+                    ->options([
+                        'not_approved' => 'Not Aproved',
+                        'approved' => 'Approved',
+                    ])
+                    ->selectablePlaceholder(false),
                 Tables\Columns\TextColumn::make('created_at')
                     ->since(),
                 Tables\Columns\TextColumn::make('updated_at')

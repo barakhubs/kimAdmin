@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\web\PostController;
+use App\Http\Controllers\web\CommentController;
+use App\Http\Controllers\web\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//web routes
+Route::get('posts', [PostController::class, 'index']);
+Route::get('posts/{slug}', [PostController::class, 'show']);
+Route::get('comments/{post}', [CommentController::class, 'postComments']);
+Route::post('comment/{post}', [CommentController::class, 'storeComment']);
+Route::get('projects', [ProjectController::class, 'index']);
+Route::post('comment/{post}', [CommentController::class, 'storeComment']);

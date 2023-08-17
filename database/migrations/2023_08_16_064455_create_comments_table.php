@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('post_id')->constrained();
             $table->string('email');
             $table->text('comment');
+            $table->enum('status', ['not_approved', 'approved']);
             $table->timestamps();
         });
     }
