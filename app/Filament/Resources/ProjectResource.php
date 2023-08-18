@@ -75,14 +75,6 @@ class ProjectResource extends Resource
 
                 Builder::make('description')
                     ->blocks([
-                        Builder\Block::make('header')
-                            ->schema([
-                                TextInput::make('content')
-                                    ->label('Heading')
-                                    ->required(),
-                            ])
-                            ->columnSpanFull(),
-
                         Builder\Block::make('client')
                             ->schema([
                                 TextInput::make('name')
@@ -99,15 +91,15 @@ class ProjectResource extends Resource
                             ])
                             ->columns(2),
 
-                        Builder\Block::make('challenge')
+                        Builder\Block::make('challenges')
                             ->schema([
-                                Textarea::make('description')
+                                Textarea::make('challenge')
                                     ->label('Challenge description')
                                     ->required()
                                     ->columnSpanFull(),
                             ]),
 
-                        Builder\Block::make('approach')
+                        Builder\Block::make('approaches')
                             ->schema([
                                 Textarea::make('approach')
                                     ->label('Approach')
@@ -117,7 +109,7 @@ class ProjectResource extends Resource
                                     ->image()
                                     ->preserveFilenames(),
                             ])
-                            ->label('Approach'),
+                            ->label('Approaches'),
 
                         Builder\Block::make('testimonial')
                             ->schema([

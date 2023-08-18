@@ -26,5 +26,7 @@ Route::get('posts', [PostController::class, 'index']);
 Route::get('posts/{slug}', [PostController::class, 'show']);
 Route::get('comments/{post}', [CommentController::class, 'postComments']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);
-Route::get('projects', [ProjectController::class, 'index']);
+Route::get('projects', [ProjectController::class, 'all']);
+Route::get('category/{id}/projects', [ProjectController::class, 'categoryProjects']);
+Route::get('project/{slug}', [ProjectController::class, 'single']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);
