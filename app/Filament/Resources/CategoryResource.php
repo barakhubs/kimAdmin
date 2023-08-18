@@ -4,10 +4,13 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\CategoryResource\RelationManagers\SubCategoriesRelationManager;
 use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
@@ -42,7 +45,14 @@ class CategoryResource extends Resource
                     ->unique(Category::class, 'slug',
                         ignoreRecord: true),
 
-                FileUpload::make('icon')->preserveFilenames()->columnSpan(2),
+                FileUpload::make('icon')->preserveFilenames(),
+
+                Select::make('type')
+                    ->options([
+                        'post' => 'Post',
+                        'project' => 'Project'
+                    ])
+                    ->required()
             ]);
     }
 
@@ -56,6 +66,7 @@ class CategoryResource extends Resource
                     ->searchable(),
                 ImageColumn::make('icon')
                     ->circular(),
+                Tables\Columns\TextColumn::make('type')->label('Type')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -70,6 +81,20 @@ class CategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
+    ->before(function (Tables\Actions\DeleteAction $action, Category $record) {
+        if ($record->subCategories()->exists()) {
+            Notification::make()
+                ->danger()
+                ->title('Failed to delete!')
+                ->body('Category has subcategories.')
+                ->persistent()
+                ->send();
+
+                // This will halt and cancel the delete action modal.
+                $action->cancel();
+        }
+    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -84,7 +109,7 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            SubCategoriesRelationManager::class
         ];
     }
 

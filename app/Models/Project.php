@@ -11,7 +11,7 @@ class Project extends Model
     use HasFactory;
 
     protected $fillable = [
-        'project_category_id',
+        'category_id',
         'title',
         'slug',
         'business',
@@ -24,8 +24,8 @@ class Project extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function projectCategory(): BelongsTo
+    public function Category(): BelongsTo
     {
-        return $this->belongsTo(ProjectCategory::class);
+        return $this->belongsTo(Category::class);
     }
 }

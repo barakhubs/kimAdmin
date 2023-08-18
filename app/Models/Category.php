@@ -13,7 +13,8 @@ class Category extends Model
     protected $fillable = [
         'title',
         'slug',
-        'icon'
+        'icon',
+        'type'
     ];
 
     /**
@@ -24,5 +25,25 @@ class Category extends Model
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class);
+    }
+
+     /**
+     * Get all of the projects for the Category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function projects(): HasMany
+    {
+        return $this->hasMany(Project::class);
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
+
+    public function subcategories()
+    {
+        return $this->hasMany(Category::class, 'parent_id');
     }
 }

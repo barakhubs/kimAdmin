@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Filament\Resources\ProjectCategoryResource\RelationManagers;
+namespace App\Filament\Resources\CategoryResource\RelationManagers;
 
-use App\Models\ProjectCategory;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
@@ -25,15 +27,24 @@ class SubCategoriesRelationManager extends RelationManager
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn(string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                    ->afterStateUpdated(
+                        fn(string $operation, $state, Forms\Set $set) =>
+                        in_array($operation, ['create', 'edit']) ? $set('slug', Str::slug($state)) : null
+                    ),
 
                 Forms\Components\TextInput::make('slug')
                     ->disabled()
                     ->dehydrated()
                     ->required()
-                    ->unique(ProjectCategory::class, 'slug',
-                        ignoreRecord: true),
-                FileUpload::make('icon')->preserveFilenames()->columnSpanFull(),
+                    ->unique(Category::class, 'slug'),
+
+                FileUpload::make('icon')->preserveFilenames(),
+
+                TextInput::make('type')
+                    ->default(
+                        Category::find($this->ownerRecord)->value('type')
+                    )
+                    ->disabled()
             ]);
     }
 
@@ -46,7 +57,9 @@ class SubCategoriesRelationManager extends RelationManager
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                ImageColumn::make('icon')->circular(),
+                ImageColumn::make('icon')
+                    ->circular(),
+                Tables\Columns\TextColumn::make('type')->label('Type')->sortable(),
             ])
             ->filters([
                 //
