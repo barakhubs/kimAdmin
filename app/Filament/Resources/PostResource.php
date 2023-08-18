@@ -36,13 +36,17 @@ class PostResource extends Resource
                                 Forms\Components\TextInput::make('title')
                                     ->required()
                                     ->live(onBlur: true)
-                                    ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                                    ->afterStateUpdated(
+                                        fn(string $operation, $state, Forms\Set $set) =>
+                                        in_array($operation, ['create', 'edit']) ? $set('slug', Str::slug($state)) : null
+                                    ),
 
                                 Forms\Components\TextInput::make('slug')
                                     ->disabled()
                                     ->dehydrated()
                                     ->required()
-                                    ->unique(Post::class, 'slug', ignoreRecord: true),
+                                    ->unique(Post::class, 'slug',
+                                        ignoreRecord: true),
 
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->required()
@@ -74,20 +78,20 @@ class PostResource extends Resource
                             ])
                             ->collapsible(),
                     ])
-                    ->columnSpan(['lg' => fn (?Post $record) => $record === null ? 3 : 2]),
+                    ->columnSpan(['lg' => fn(?Post $record) => $record === null ? 3 : 2]),
 
                 Forms\Components\Section::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
                             ->label('Created at')
-                            ->content(fn (Post $record): ?string => $record->created_at?->diffForHumans()),
+                            ->content(fn(Post $record): ?string => $record->created_at?->diffForHumans()),
 
                         Forms\Components\Placeholder::make('updated_at')
                             ->label('Last modified at')
-                            ->content(fn (Post $record): ?string => $record->updated_at?->diffForHumans()),
+                            ->content(fn(Post $record): ?string => $record->updated_at?->diffForHumans()),
                     ])
                     ->columnSpan(['lg' => 1])
-                    ->hidden(fn (?Post $record) => $record === null),
+                    ->hidden(fn(?Post $record) => $record === null),
             ])
             ->columns([
                 'sm' => 3,

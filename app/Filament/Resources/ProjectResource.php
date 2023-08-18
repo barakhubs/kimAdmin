@@ -15,8 +15,11 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Builder;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Str;
 
 class ProjectResource extends Resource
@@ -49,19 +52,20 @@ class ProjectResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn(string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                    ->afterStateUpdated(
+                        fn(string $operation, $state, Forms\Set $set) =>
+                        in_array($operation, ['create', 'edit']) ? $set('slug', Str::slug($state)) : null
+                    ),
 
                 Forms\Components\TextInput::make('slug')
                     ->disabled()
                     ->dehydrated()
                     ->required()
-                    ->unique(Project::class, 'slug',
-                        ignoreRecord: true),
-                // Forms\Components\Select::make('project_category_id')
-                //     ->label('Select Project Category')
-                //     ->relationship('projectCategory', 'title')
-                //     ->searchable()
-                //     ->required(),
+                    ->unique(
+                        Project::class,
+                        'slug',
+                        ignoreRecord: true
+                    ),
 
                 Select::make('category_id')
                     ->searchable()
@@ -69,19 +73,71 @@ class ProjectResource extends Resource
                     ->options($options)
                     ->preload(),
 
-                Forms\Components\TextInput::make('business')
-                    ->maxLength(255),
-                Forms\Components\Section::make('Image')
-                    ->schema([
-                        Forms\Components\FileUpload::make('image')
-                            ->label('Image')
-                            ->image()
-                            ->disableLabel(),
+                Builder::make('description')
+                    ->blocks([
+                        Builder\Block::make('header')
+                            ->schema([
+                                TextInput::make('content')
+                                    ->label('Heading')
+                                    ->required(),
+                            ])
+                            ->columnSpanFull(),
+
+                        Builder\Block::make('client')
+                            ->schema([
+                                TextInput::make('name')
+                                    ->label('Client Name')
+                                    ->required(),
+                                FileUpload::make('logo')
+                                    ->label('Client Logo')
+                                    ->image()
+                                    ->preserveFilenames(),
+                                Textarea::make('overview')
+                                    ->label('Client Overview')
+                                    ->required()
+                                    ->columnSpanFull(),
+                            ])
+                            ->columns(2),
+
+                        Builder\Block::make('challenge')
+                            ->schema([
+                                Textarea::make('description')
+                                    ->label('Challenge description')
+                                    ->required()
+                                    ->columnSpanFull(),
+                            ]),
+
+                        Builder\Block::make('approach')
+                            ->schema([
+                                Textarea::make('approach')
+                                    ->label('Approach')
+                                    ->required(),
+                                FileUpload::make('approach')
+                                    ->label('Images')
+                                    ->image()
+                                    ->preserveFilenames(),
+                            ])
+                            ->label('Approach'),
+
+                        Builder\Block::make('testimonial')
+                            ->schema([
+                                Textarea::make('testimonial')
+                                    ->label('Client Feedback')
+                                    ->required()
+                            ])
+                            ->label('Testimonial'),
+
+                        Builder\Block::make('images')
+                            ->schema([
+                                FileUpload::make('images')
+                                    ->label('Images')
+                                    ->image()
+                                    ->preserveFilenames()
+                                    ->multiple()
+                            ])
+                            ->label('Project Images'),
                     ])
-                    ->collapsible(),
-                Forms\Components\MarkdownEditor::make('description')
-                    ->required()
-                    ->columnSpan('full'),
+                    ->columnSpanFull()
             ]);
     }
 

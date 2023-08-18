@@ -10,6 +10,9 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'description' => 'array',
+    ];
     protected $fillable = [
         'category_id',
         'title',

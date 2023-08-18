@@ -16,9 +16,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->string('business')->nullable();
-            $table->string('image')->nullable();
-            $table->text('description');
+            $table->json('description');
             $table->timestamps();
         });
     }
