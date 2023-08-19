@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\web\PostController;
@@ -17,9 +18,13 @@ use App\Http\Controllers\web\ProjectController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//auth
+Route::get('auth/google', [AuthController::class,'redirectToGoogle']);
+Route::get('auth/google/callback', [AuthController::class,'handleGoogleCallback']);
 
 //web routes
 Route::get('posts', [PostController::class, 'index']);
