@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "http:127.0.01:8000/api/";
+const ASSET_URL = "http:127.0.01:8000/public/"
 // const BASE_URL = "http://192.168.0.106/furaha/sms/";
 
 

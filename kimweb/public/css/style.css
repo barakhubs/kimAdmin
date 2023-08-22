@@ -45,14 +45,14 @@ font-family: 'Hind', sans-serif;*/
 @import url('jquery-ui.css');
 @import url('jquery.fancybox.css');
 
-/*** 
+/***
 
 ====================================================================
 	Reset
 ====================================================================
 
  ***/
- 
+
 * {
 	margin:0px;
 	padding:0px;
@@ -60,7 +60,7 @@ font-family: 'Hind', sans-serif;*/
 	outline:none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Global Settings
@@ -83,7 +83,7 @@ body {
 a{
 	text-decoration:none;
 	cursor:pointer;
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 a:hover,a:focus,a:visited{
@@ -105,26 +105,26 @@ input,button,select,textarea{
 }
 
 textarea{
-	overflow:hidden;	
+	overflow:hidden;
 }
 
 .theme_color{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 p,.text{
 	position:relative;
-	line-height:1.8em;	
+	line-height:1.8em;
 	font-family: 'Rubik', sans-serif;
 }
 
 .page-wrapper section{
 	position:relative;
-	z-index:5;	
+	z-index:5;
 }
 
 .strike-through{
-	text-decoration:line-through;	
+	text-decoration:line-through;
 }
 
 .auto-container{
@@ -148,7 +148,7 @@ p,.text{
 ul,li{
 	list-style:none;
 	padding:0px;
-	margin:0px;	
+	margin:0px;
 }
 
 .theme-btn{
@@ -161,7 +161,7 @@ ul,li{
 }
 
 .centered{
-	text-align:center;	
+	text-align:center;
 }
 
 /*List Style One*/
@@ -184,7 +184,7 @@ ul,li{
 	content:'\f00c';
 	left:0px;
 	top:2px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:18px;
 	font-family: 'FontAwesome';
 }
@@ -197,13 +197,13 @@ ul,li{
 	color:#ffffff;
 	font-size:14px;
 	font-weight:700;
-	background:#ff4800;
+	background:#FD5E01;
 	display:inline-block;
 	padding:9px 26px;
 	border-radius:50px;
 	letter-spacing:1px;
 	text-transform:uppercase;
-	border:2px solid #ff4800;
+	border:2px solid #FD5E01;
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
@@ -220,8 +220,8 @@ ul,li{
 }
 
 .btn-style-one:hover{
-	color:#ff4800;
-	border-color:#ff4800;
+	color:#FD5E01;
+	border-color:#FD5E01;
 	background:none;
 }
 
@@ -243,8 +243,8 @@ ul,li{
 
 .btn-style-two:hover{
 	color:#ffffff;
-	border-color:#ff4800;
-	background:#ff4800;
+	border-color:#FD5E01;
+	background:#FD5E01;
 }
 
 /*Btn Style Three*/
@@ -274,10 +274,10 @@ ul,li{
 img{
 	display:inline-block;
 	max-width:100%;
-	height:auto;	
+	height:auto;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Fancy Box
@@ -326,7 +326,7 @@ img{
 .fancybox-next:hover span:before,
 .fancybox-prev:hover span:before{
 	background-color:#ffffff !important;
-	color:#000000;	
+	color:#000000;
 }
 
 .fancybox-type-image .fancybox-close{
@@ -335,18 +335,18 @@ img{
 	width:45px;
 	height:45px;
 	background:url(../images/icons/icon-cross.png) center center no-repeat;
-	background-color:rgba(17,17,17,0.50) !important;	
+	background-color:rgba(17,17,17,0.50) !important;
 }
 
 .fancybox-type-image .fancybox-close:hover{
-	background-color:#000000 !important;	
+	background-color:#000000 !important;
 }
 
 .fancybox-type-image .fancybox-skin{
-	padding:0px !important;	
+	padding:0px !important;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Social Icon One
@@ -376,10 +376,10 @@ img{
 }
 
 .social-icon-one li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Social Icon Two
@@ -409,10 +409,10 @@ img{
 }
 
 .social-icon-two li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Scroll To Top style
@@ -434,22 +434,22 @@ img{
 	z-index:99999;
 	cursor:pointer;
 	border-radius:50px;
-	background:#ff4800;
+	background:#FD5E01;
 	display:none;
-	border:2px solid #ff4800;
+	border:2px solid #FD5E01;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;		
+	transition:all 300ms ease;
 }
 
 .scroll-to-top:hover{
 	color:#ffffff;
-	background:#ff4800;
+	background:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Main Header style
@@ -509,7 +509,7 @@ img{
 .main-header .header-top .top-left .links{
 	position:relative;
 	float:left;
-	
+
 }
 
 .main-header .header-top .top-left .links li{
@@ -538,13 +538,13 @@ img{
 }
 
 .main-header .header-top .top-left .links li:last-child:after{
-	display:none;	
+	display:none;
 }
 
 .main-header .header-top .top-left .links li .icon{
 	position:relative;
 	top:2px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:18px;
 	line-height:24px;
 	margin-right:10px;
@@ -568,7 +568,7 @@ img{
 }
 
 .main-header .header-top .top-left .links li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-header .header-top .top-right{
@@ -615,11 +615,11 @@ img{
 .main-header .header-top .top-right ul li a .icon{
 	position:relative;
 	margin-right:12px;
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-header .header-top .top-right ul li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-header .header-top .top-right ul li:last-child{
@@ -644,19 +644,19 @@ img{
 .main-header .language .dropdown-menu{
 	top:100%;
 	left:0px;
-	width:180px;	
+	width:180px;
 	border-radius:0px;
 	margin-top:14px;
 	background-color:#222222;
 	border:none;
 	padding:0px;
-    border-top:3px solid #ff4800;
+    border-top:3px solid #FD5E01;
 }
 
 .main-header .language > a{
 	padding:0px 0px;
 	background:none !important;
-    border:0px;	
+    border:0px;
 }
 
 .main-header language a:hover{
@@ -673,7 +673,7 @@ img{
 }
 
 .main-header .language .dropdown-menu > li:last-child{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-header .language .dropdown-menu > li > a{
@@ -689,7 +689,7 @@ img{
 
 .main-header .language .dropdown-menu > li > a:hover{
 	color:#ffffff !important;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 /*Main Box*/
@@ -730,7 +730,7 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .main-header.fixed-header .nav-outer .search-box-outer{
@@ -784,7 +784,7 @@ img{
 
 .main-header .nav-outer .outer-box .talk{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-weight:700;
 	font-size:14px;
 	float:left;
@@ -834,9 +834,9 @@ img{
 	top:30px;
 	right:0px;
 	padding:0px;
-	width:280px;	
+	width:280px;
 	border-radius:0px;
-	border-top:3px solid #ff4800;
+	border-top:3px solid #FD5E01;
 }
 
 .main-header .search-box-outer .dropdown-menu > li{
@@ -846,12 +846,12 @@ img{
 }
 
 .main-header .search-panel .form-container{
-	padding:25px 20px;	
+	padding:25px 20px;
 }
 
 .main-header .search-panel .form-group{
 	position:relative;
-	margin:0px;	
+	margin:0px;
 }
 
 .main-header .search-panel input[type="text"],
@@ -863,7 +863,7 @@ img{
 	height:40px;
 	color:#000000;
 	line-height:24px;
-	background:#ffffff;	
+	background:#ffffff;
 	border:1px solid #e0e0e0;
 	padding:7px 40px 7px 15px;
 	-webkit-transition:all 300ms ease;
@@ -875,7 +875,7 @@ img{
 
 .main-header .search-panel input:focus,
 .main-header .search-panel select:focus{
-	border-color:#ff4800;	
+	border-color:#FD5E01;
 }
 
 .main-header .search-panel .search-btn{
@@ -946,7 +946,7 @@ img{
 	height:2px;
 	opacity:0;
 	border-radius:0px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
@@ -975,7 +975,7 @@ img{
 }
 
 .main-menu .navbar-collapse{
-	padding:0px;	
+	padding:0px;
 }
 
 .main-menu .navigation{
@@ -998,7 +998,7 @@ img{
 	width:1px;
 	height:30px;
 	opacity:0;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
@@ -1016,7 +1016,7 @@ img{
 	opacity:0;
 	margin-left:-3px;
 	border-radius:50%;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
@@ -1050,7 +1050,7 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -1059,12 +1059,12 @@ img{
 }
 
 .sticky-header .main-menu .navigation > li > a{
-	padding:5px 0px;	
+	padding:5px 0px;
 }
 
 .main-menu .navigation > li:hover > a,
 .main-menu .navigation > li.current > a{
-	color:#ff4800 !important;
+	color:#FD5E01 !important;
 	opacity:1;
 }
 
@@ -1094,7 +1094,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	border-bottom:2px solid #ff4800;
+	border-bottom:2px solid #FD5E01;
 }
 
 .main-menu .navigation > li > ul:before{
@@ -1108,7 +1108,7 @@ img{
 
 .main-menu .navigation > li > ul.from-right{
 	left:auto;
-	right:0px;	
+	right:0px;
 }
 
 .main-menu .navigation > li > ul > li{
@@ -1124,7 +1124,7 @@ img{
 }
 
 .main-menu .navigation > li > ul > li:last-child{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-menu .navigation > li > ul > li > a{
@@ -1145,11 +1145,11 @@ img{
 }
 
 .main-menu .navigation > li > ul > li:hover{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 }
 
 .main-menu .navigation > li > ul > li:hover > a{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-menu .navigation > li > ul > li.dropdown > a:after{
@@ -1165,11 +1165,11 @@ img{
 	font-size:16px;
 	font-weight:normal;
 	text-align:center;
-	z-index:5;	
+	z-index:5;
 }
 
 .main-menu .navigation > li > ul > li.dropdown:hover > a:after{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-menu .navigation > li > ul > li > ul{
@@ -1193,7 +1193,7 @@ img{
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	border-bottom:2px solid #ff4800;
+	border-bottom:2px solid #FD5E01;
 }
 
 .main-menu .navigation > li > ul > li > ul > li{
@@ -1209,7 +1209,7 @@ img{
 }
 
 .main-menu .navigation > li > ul > li > ul > li:last-child{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-menu .navigation > li > ul > li  > ul > li > a{
@@ -1230,13 +1230,13 @@ img{
 }
 
 .main-menu .navigation > li > ul > li  > ul > li > a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .main-menu .navigation > li.dropdown:hover > ul{
 	visibility:visible;
 	opacity:1;
-	top:110%;	
+	top:110%;
 }
 
 .main-menu .navigation li > ul > li.dropdown:hover > ul{
@@ -1247,7 +1247,7 @@ img{
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
-	-o-transition:all 500ms ease;	
+	-o-transition:all 500ms ease;
 }
 
 .main-menu .navigation li.dropdown .dropdown-btn{
@@ -1374,7 +1374,7 @@ img{
 	-moz-animation-iteration-count: 1;
 	-op-animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
-	animation-iteration-count: 1;	
+	animation-iteration-count: 1;
 	-webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.10);
 	-moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.10);
 	box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.10);
@@ -1398,7 +1398,7 @@ img{
 	position:relative;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Main Slider style
@@ -1416,7 +1416,7 @@ img{
 }
 
 .main-slider .tp-dottedoverlay{
-	background:none !important;	
+	background:none !important;
 }
 
 .main-slider .btns-box .theme-btn{
@@ -1464,10 +1464,10 @@ img{
 
 .main-slider .tp-bannertimer,
 .main-slider .tp-bullets{
-	display:none !important;	
+	display:none !important;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Section Title
@@ -1523,7 +1523,7 @@ img{
     margin-left: -9px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #ff4800;
+    border-top: 8px solid #FD5E01;
 }
 
 .sec-title .text{
@@ -1552,7 +1552,7 @@ img{
 	background:url(../images/icons/separater-1.png) no-repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Featured Section
@@ -1635,7 +1635,7 @@ img{
 }
 
 .featured-block .inner-box .upper-box .read-more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .featured-block .inner-box .upper-box .read-more .icon{
@@ -1691,17 +1691,17 @@ img{
 }
 
 .featured-block .lower-box .lower-inner h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .featured-block .lower-box .lower-inner .title{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Section
@@ -1783,7 +1783,7 @@ img{
 
 .services-block .inner-box h3 a:hover,
 .services-block .inner-box .read-more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .services-block .inner-box .text{
@@ -1843,10 +1843,10 @@ img{
 	width:22px;
 	height:8px;
 	border-radius:10px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Score Section
@@ -1901,16 +1901,6 @@ img{
 	position:relative;
 }
 
-.score-section .lower-box .form-column .inner-column .form-box:after{
-	position:absolute;
-	content:'';
-	right:-30px;
-	top:0px;
-	width:2px;
-	height:100%;
-	background-color:rgba(255,255,255,0.20);
-}
-
 .score-section .lower-box .progress-column .inner{
 	position:relative;
 	left:20px;
@@ -1927,14 +1917,14 @@ img{
 
 .score-section .lower-box .progress-column .inner-box{
 	position:relative;
-	display:block;	
+	display:block;
 }
 
 .score-section .lower-box .progress-column{
 	position:relative;
 	text-align:center;
 	background:none;
-	border-radius:50%;	
+	border-radius:50%;
 }
 
 .score-section .lower-box .progress-column .inner-text{
@@ -1970,7 +1960,7 @@ img{
 }
 
 .score-section .lower-box .progress-column .contact:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .score-section .lower-box .video-column{
@@ -2009,7 +1999,7 @@ img{
 .score-form input[type="text"]:focus,
 .score-form input[type="email"]:focus,
 .score-form textarea:focus{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 }
 
 .score-form .theme-btn{
@@ -2041,7 +2031,7 @@ img{
 	height:100%;
 	text-align:center;
 	overflow:hidden;
-	background:rgba(0,0,0,0);	
+	background:rgba(0,0,0,0);
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
@@ -2050,7 +2040,7 @@ img{
 }
 
 .video-box .overlay-box:hover{
-	background:rgba(0,0,0,0.20);	
+	background:rgba(0,0,0,0.20);
 }
 
 .video-box .overlay-box .icon{
@@ -2074,7 +2064,7 @@ img{
 .video-box h3{
 	position:relative;
 	padding:12px 0px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:18px;
 	font-weight:700;
 	text-align:center;
@@ -2086,7 +2076,7 @@ img{
 	padding:7px 0px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Feature Section
@@ -2162,7 +2152,7 @@ img{
 }
 
 .featured-block-two .inner-box h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .featured-block-two .inner-box .text{
@@ -2208,7 +2198,7 @@ img{
 	margin-bottom:15px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Marketing Section
@@ -2277,7 +2267,7 @@ img{
 
 .market-content .content-inner h3{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:18px;
 	font-weight:700;
 	line-height:1.4em;
@@ -2366,7 +2356,7 @@ img{
 	color:#ff4901;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Section
@@ -2474,7 +2464,7 @@ img{
 }
 
 .case-block .inner-box .content-box .options li:hover{
-	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.10);	
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.10);
 }
 
 .case-block .inner-box .content-box .text{
@@ -2501,7 +2491,7 @@ img{
 
 .case-block .inner-box .content-box .read-more:hover,
 .case-block .inner-box:hover .content-box .read-more{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .case-block .inner-box .content-box .read-more .icon{
@@ -2531,7 +2521,7 @@ img{
 	padding:9px 48px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Section
@@ -2600,8 +2590,8 @@ img{
 
 .testimonial-section .testimonial-column .owl-nav .owl-prev:hover,
 .testimonial-section .testimonial-column .owl-nav .owl-next:hover{
-	background-color:#ff4800;
-	border-color:#ff4800;
+	background-color:#FD5E01;
+	border-color:#FD5E01;
 	color:#0f1341;
 }
 
@@ -2631,7 +2621,7 @@ img{
 
 .testimonial-block .inner-box .continue{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:14px;
 	font-weight:700;
 	letter-spacing:1px;
@@ -2686,12 +2676,12 @@ img{
 
 .testimonial-block .inner-box .author-info .author-inner .designation{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price Section
@@ -2748,7 +2738,7 @@ img{
 	line-height:1.4em;
 	text-align:center;
 	padding-top:10px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -2761,7 +2751,7 @@ img{
 	color:#ffffff;
 	padding:0px 25px;
 	letter-spacing:1px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	text-transform:uppercase;
 	-ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -2770,7 +2760,7 @@ img{
 
 .price-block.active .inner-box,
 .price-block .inner-box:hover{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
 	-moz-box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
 	box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
@@ -2807,7 +2797,7 @@ img{
 	position:relative;
 	font-size:54px;
 	font-weight:600;
-	color:#ff4800;
+	color:#FD5E01;
 	line-height:1em;
 	margin-bottom:25px;
 	font-family: 'Poppins', sans-serif;
@@ -2820,14 +2810,14 @@ img{
 
 .price-block .inner-box .price span{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:14px;
 }
 
 .price-block .inner-box:hover .theme-btn{
 	color:#ffffff;
-	border-color:#ff4800;
-	background:#ff4800;
+	border-color:#FD5E01;
+	background:#FD5E01;
 }
 
 .price-block.alternate .inner-box{
@@ -2853,10 +2843,10 @@ img{
 }
 
 .price-block.alternate .inner-box:hover .theme-btn{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Partners Section
@@ -2950,12 +2940,12 @@ img{
 }
 
 .partner-block .inner-box .read-more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Main Footer
@@ -3000,7 +2990,7 @@ img{
 	bottom:0px;
 	width:70px;
 	height:2px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .main-footer .links-widget{
@@ -3086,7 +3076,7 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .main-footer .subscribe-widget .form-group button{
@@ -3094,7 +3084,7 @@ img{
 	right:0px;
 	top:10px;
 	font-size:18px;
-	color:#ff4800;
+	color:#FD5E01;
 	background:none;
 }
 
@@ -3153,12 +3143,12 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .office-widget .owl-dots .owl-dot:hover,
 .office-widget .owl-dots .owl-dot.active{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .main-footer .copyright{
@@ -3173,10 +3163,10 @@ img{
 
 .main-footer .copyright a{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About Section
@@ -3206,7 +3196,7 @@ img{
 	text-align:center;
 	padding:115px 0px;
 	min-height:400px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	background-repeat:no-repeat;
 	background-position:center bottom;
 }
@@ -3214,7 +3204,7 @@ img{
 .bottom-parallax .about-section .inner{
 	position:relative;
 	max-width:570px;
-	margin:0 auto;	
+	margin:0 auto;
 }
 
 .bottom-parallax .about-section h2{
@@ -3227,7 +3217,7 @@ img{
 	text-transform:uppercase;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Page Title Style
@@ -3281,7 +3271,7 @@ img{
 	font-size:16px;
 	color:#272727;
 	line-height:24px;
-	font-weight:700;	
+	font-weight:700;
 }
 
 .page-info .bread-crumb{
@@ -3295,7 +3285,7 @@ img{
 	display:inline-block;
 	font-size:16px;
 	margin-right:24px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-weight:400;
 	line-height:24px;
 	text-transform:capitalize;
@@ -3318,7 +3308,7 @@ img{
 }
 
 .page-info .bread-crumb li:last-child:after{
-	display:none;	
+	display:none;
 }
 
 .page-info .bread-crumb li a{
@@ -3331,10 +3321,10 @@ img{
 }
 
 .page-info .bread-crumb li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Mission Section
@@ -3440,7 +3430,7 @@ img{
 }
 
 .mission-section .image-column .inner-column .more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .mission-section .image-column .inner-column .more .icon{
@@ -3477,10 +3467,10 @@ img{
 	width:22px;
 	height:8px;
 	border-radius:10px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	We Are Section
@@ -3515,7 +3505,7 @@ img{
 
 .we-are-section .content-column .inner-column .bold-text{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:18px;
 	line-height:1.7em;
 	font-weight:700;
@@ -3527,7 +3517,7 @@ img{
 	content:'\f195';
 	left:0px;
 	top:0px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:60px;
 	line-height:1em;
 	opacity:0.1;
@@ -3642,7 +3632,7 @@ img{
 }
 
 .monthy-block .inner-box h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .monthy-block .inner-box .text{
@@ -3705,11 +3695,11 @@ img{
 .we-are-section .carousel-column .slick-arrow.slick-prev:hover,
 .we-are-section .carousel-column .slick-arrow.slick-next:hover{
 	color:#ffffff;
-	border-color:#ff4800;
-	background-color:#ff4800;
+	border-color:#FD5E01;
+	background-color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Section Two
@@ -3753,12 +3743,12 @@ img{
 }
 
 .services-section-three .inner-box h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .services-section-three .inner-box .title{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 }
 
@@ -3795,10 +3785,10 @@ img{
 }
 
 .services-section-three .inner-box .read-more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Marketing Section Two
@@ -3875,7 +3865,7 @@ img{
 }
 
 .step-block .inner-box h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .step-block .inner-box .step-number{
@@ -3895,7 +3885,7 @@ img{
 	text-transform:uppercase;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Team Section
@@ -3947,7 +3937,7 @@ img{
 
 .team-block .inner-box .lower-content-box .designation{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	margin-bottom:2px;
 }
@@ -3960,7 +3950,7 @@ img{
 	margin-bottom:10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Error Section
@@ -3987,7 +3977,7 @@ img{
 
 .error-section .inner-section h1{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:200px;
 	line-height:1em;
 	font-weight:700;
@@ -4014,7 +4004,7 @@ img{
 
 .error-section .go-back{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 	text-align:center;
@@ -4051,7 +4041,7 @@ img{
 }
 
 .error-search-form .form-group input:focus{
-	border-color:#ff6600;	
+	border-color:#ff6600;
 }
 
 .error-search-form .form-group button{
@@ -4064,11 +4054,11 @@ img{
 	font-size:16px;
 	color:#ffffff;
 	line-height:100%;
-	background:#ff4800;
+	background:#FD5E01;
 	font-weight:normal;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Comming Soon Section
@@ -4113,7 +4103,7 @@ img{
 	margin-top:25px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Countdown style
@@ -4202,7 +4192,7 @@ img{
 }
 
 .emailed-form .form-group input:focus{
-	border-color:#ff6600;	
+	border-color:#ff6600;
 }
 
 .emailed-form .form-group button{
@@ -4215,11 +4205,11 @@ img{
 	font-size:16px;
 	color:#ffffff;
 	line-height:100%;
-	background:#ff4800;
+	background:#FD5E01;
 	font-weight:normal;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Contact Section
@@ -4301,7 +4291,7 @@ img{
 	transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
-	-o-transition:all 500ms ease;	
+	-o-transition:all 500ms ease;
 }
 
 .contact-form textarea{
@@ -4324,7 +4314,7 @@ img{
 .contact-form input.error,
 .contact-form select.error,
 .contact-form textarea.error{
-	border-color:#ff0000 !important;	
+	border-color:#ff0000 !important;
 }
 
 .contact-form label.error{
@@ -4334,7 +4324,7 @@ img{
 	text-transform:uppercase;
 	font-size:11px;
 	color:#ff0000;
-	font-weight:500;	
+	font-weight:500;
 }
 
 .contact-section .contact-info-column{
@@ -4381,7 +4371,7 @@ img{
 
 .info-slide .inner .title{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 }
@@ -4423,7 +4413,7 @@ img{
 	transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
-	-o-transition:all 500ms ease;	
+	-o-transition:all 500ms ease;
 }
 
 .contact-section .contact-info-column .owl-nav .owl-prev span:before{
@@ -4443,8 +4433,8 @@ img{
 .contact-section .contact-info-column .owl-nav .owl-prev:hover,
 .contact-section .contact-info-column .owl-nav .owl-next:hover{
 	color:#f4f4f4;
-	border-color:#ff4800;
-	background-color:#ff4800;
+	border-color:#FD5E01;
+	background-color:#FD5E01;
 }
 
 .contact-section .contact-info-column .inner-column .lower-box{
@@ -4488,7 +4478,7 @@ img{
 	line-height:1em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Map Section
@@ -4515,7 +4505,7 @@ img{
 	height:480px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Quote Section
@@ -4612,7 +4602,7 @@ img{
     top: -2px;
     width: 19px;
     height: 19px;
-    color: #ff4800;
+    color: #FD5E01;
     z-index: 99;
     font-size: 14px;
 	line-height: 19px;
@@ -4673,7 +4663,7 @@ img{
 	transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
-	-o-transition:all 500ms ease;	
+	-o-transition:all 500ms ease;
 }
 
 .quote-form textarea{
@@ -4722,7 +4712,7 @@ img{
 	position:relative;
 	top:4px;
 	text-indent:0px;
-	color:#888888;	
+	color:#888888;
 }
 
 .form-group .ui-button .ui-icon:before{
@@ -4754,12 +4744,12 @@ img{
 }
 
 .ui-menu .ui-menu-item:last-child{
-	border:none;	
+	border:none;
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active{
-	background:#ff4800;
-	border-color:#ff4800;
+	background:#FD5E01;
+	border-color:#FD5E01;
 }
 
 .ui-menu .ui-menu-item-wrapper{
@@ -4774,7 +4764,7 @@ img{
 	background-color:#17519d;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Mobile Section
@@ -4860,7 +4850,7 @@ img{
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .mobile-form .form-group button{
@@ -4869,7 +4859,7 @@ img{
 	margin-top:30px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Section
@@ -4954,11 +4944,11 @@ img{
 
 .testimonial-block-two .inner-box .lower-box .lower-inner .designation{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Analysis Section
@@ -5014,7 +5004,7 @@ img{
 .analysis-form input[type="text"]:focus,
 .analysis-form input[type="email"]:focus,
 .analysis-form textarea:focus{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 }
 
 .analysis-form .theme-btn{
@@ -5022,7 +5012,7 @@ img{
 	padding:9px 44px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Featured Section Three
@@ -5069,7 +5059,7 @@ img{
 }
 
 .price-block-two.empty-block{
-	margin-bottom:0;	
+	margin-bottom:0;
 }
 
 .price-block-two .inner-box{
@@ -5112,7 +5102,7 @@ img{
 	line-height:1.4em;
 	text-align:center;
 	padding-top:10px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -5125,7 +5115,7 @@ img{
 	color:#ffffff;
 	padding:0px 25px;
 	letter-spacing:1px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	text-transform:uppercase;
 	-ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -5134,7 +5124,7 @@ img{
 
 .price-block-two.active .inner-box,
 .price-block-two .inner-box:hover{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
 	-moz-box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
 	box-shadow: 0px 0px 30px 0px rgba(208,208,208,1);
@@ -5149,7 +5139,7 @@ img{
 	position:relative;
 	font-size:54px;
 	font-weight:600;
-	color:#ff4800;
+	color:#FD5E01;
 	line-height:1em;
 	margin-bottom:4px;
 	font-family: 'Poppins', sans-serif;
@@ -5172,8 +5162,8 @@ img{
 
 .price-block-two .inner-box:hover .theme-btn{
 	color:#ffffff;
-	border-color:#ff4800;
-	background:#ff4800;
+	border-color:#FD5E01;
+	background:#FD5E01;
 }
 
 /*Price Table Section*/
@@ -5231,7 +5221,7 @@ img{
 	font-size:18px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Blog Page Section
@@ -5322,7 +5312,7 @@ img{
 }
 
 .news-block .inner-box:hover .lower-content .post-date:before{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .news-block .inner-box .lower-content h3{
@@ -5345,7 +5335,7 @@ img{
 }
 
 .news-block .inner-box .lower-content h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .news-block .inner-box .lower-content .more{
@@ -5391,11 +5381,11 @@ img{
 }
 
 .news-block .inner-box .lower-content .read-more:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Sidebar Page Container
@@ -5452,7 +5442,7 @@ img{
 
 .sidebar .search-box .form-group{
 	position:relative;
-	margin:0px;	
+	margin:0px;
 }
 
 .sidebar .search-box .form-group input[type="text"],
@@ -5497,7 +5487,7 @@ img{
 	position:relative;
 	padding:20px 25px 20px;
 	border:1px solid #eeeeee;
-	border-left-color:#ff4800;
+	border-left-color:#FD5E01;
 }
 
 .blog-cat li{
@@ -5537,7 +5527,7 @@ img{
 
 .blog-cat li a:hover::after{
 	width:100%;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .blog-cat li:last-child{
@@ -5570,12 +5560,12 @@ img{
 }
 
 .blog-cat li a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .blog-cat li a:hover::before{
 	border-color:rgba(255,72,0,0.20);
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 
@@ -5640,7 +5630,7 @@ img{
 }
 
 .comment-block .inner .content h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .comment-block .inner .content .text{
@@ -5663,7 +5653,7 @@ img{
 }
 
 .comment-block .inner .content .reply-btn:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 /*Post Widget*/
@@ -5749,7 +5739,7 @@ img{
 
 .sidebar .popular-posts .post a,
 .sidebar .popular-posts .post a:hover{
-	color:#ff4800;	
+	color:#FD5E01;
 }
 
 .sidebar .popular-posts .post-info{
@@ -5765,7 +5755,7 @@ img{
 	content:'\f073';
 	left:0px;
 	top:0px;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:14px;
 	font-family: 'FontAwesome';
 }
@@ -5794,8 +5784,8 @@ img{
 
 .sidebar .popular-tags a:hover{
 	color:#ffffff;
-	border-color:#ff4800;
-	background-color:#ff4800;
+	border-color:#FD5E01;
+	background-color:#FD5E01;
 }
 
 .news-block-two{
@@ -5866,7 +5856,7 @@ img{
 }
 
 .news-block-two .inner-box .lower-content h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .news-block-two .inner-box .lower-content .text{
@@ -5878,7 +5868,7 @@ img{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Styled Pagination
@@ -5928,8 +5918,8 @@ img{
 .styled-pagination li a:hover,
 .styled-pagination li a.active{
 	color:#ffffff;
-	border-color:#ff4800;
-	background-color:#ff4800;
+	border-color:#FD5E01;
+	background-color:#FD5E01;
 }
 
 .blog-single{
@@ -5976,7 +5966,7 @@ img{
 .blog-single .inner-box .lower-content .post-meta li .icon{
 	position:relative;
 	margin-right:8px;
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .blog-single .inner-box .lower-content h3{
@@ -6048,7 +6038,7 @@ img{
 
 .blog-single .inner-box .lower-content .text blockquote .quote-info .quote-desination{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 }
 
@@ -6101,7 +6091,7 @@ img{
 
 .blog-single .post-share-options .tags a{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 	text-transform:capitalize;
@@ -6109,7 +6099,7 @@ img{
 
 .blog-single .post-share-options .tags{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 	font-weight:400;
 	margin-top:3px;
@@ -6174,7 +6164,7 @@ img{
 	margin-bottom:10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Comments Area
@@ -6199,11 +6189,11 @@ img{
 }
 
 .sidebar-page-container .comments-area .comment-box:nth-child(1){
-	padding-top:0px;	
+	padding-top:0px;
 }
 
 .sidebar-page-container .comments-area .comment-box:hover{
-	border-color:#eb5310;	
+	border-color:#eb5310;
 }
 
 .sidebar-page-container .comments-area .comment-box.reply-comment{
@@ -6230,7 +6220,7 @@ img{
 
 .sidebar-page-container .comments-area .comment .comment-inner .rating .fa{
 	display:inline-block;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:14px;
 }
 
@@ -6250,7 +6240,7 @@ img{
 	position:relative;
 	color:#0f1341;
 	line-height:24px;
-	font-size:16px;	
+	font-size:16px;
 	font-weight:700;
 }
 
@@ -6311,7 +6301,7 @@ img{
 }
 
 .comment-form .rating-box .rating a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .comment-form .form-group{
@@ -6358,7 +6348,7 @@ img{
 .comment-form .form-group input[type="email"]:focus,
 .comment-form .form-group select:focus,
 .comment-form .form-group textarea:focus{
-	border-color:#ff4800;
+	border-color:#FD5E01;
 }
 
 .comment-form .form-group textarea{
@@ -6389,10 +6379,10 @@ img{
 .comment-form input:focus,
 .comment-form select:focus,
 .comment-form textarea:focus{
-	border-color:#f06529;	
+	border-color:#f06529;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Page Section
@@ -6450,7 +6440,7 @@ img{
 }
 
 .case-block-two.alternate .inner-box:hover .image{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .case-block-two .inner-box .image img{
@@ -6512,7 +6502,7 @@ img{
 }
 
 .case-block-two .inner-box .lower-box h3 a:hover{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .case-block-two .inner-box .lower-box .text{
@@ -6542,10 +6532,10 @@ img{
 
 .case-block-two .inner-box .lower-box .read-more:hover,
 .case-block-two .inner-box:hover .lower-box .read-more{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Banner Section
@@ -6579,14 +6569,14 @@ img{
 	margin-bottom:45px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Single Section
 ====================================================================
 
  ***/
- 
+
 .case-single-section{
 	position:relative;
 	padding-top:60px;
@@ -6658,17 +6648,17 @@ img{
 }
 
 .info-category li .fa{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Goal Section
 ====================================================================
 
  ***/
- 
+
 .case-goal-section{
 	position:relative;
 	padding-top:60px;
@@ -6721,14 +6711,14 @@ img{
 	margin-bottom:22px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Challenge Section
 ====================================================================
 
  ***/
- 
+
 .case-challenge-section{
 	position:relative;
 	padding-top:60px;
@@ -6787,7 +6777,7 @@ img{
 	width:22px;
 	height:8px;
 	border-radius:10px;
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .case-challenge-section .content-column .inner-column .text{
@@ -6845,14 +6835,14 @@ img{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Case Solution Section
 ====================================================================
 
  ***/
- 
+
 .case-solutions-section{
 	position:relative;
 	padding-top:60px;
@@ -6917,14 +6907,14 @@ img{
 	font-weight:700;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Case Result Section
 ====================================================================
 
  ***/
- 
+
 .case-result-section{
 	position:relative;
 	padding-top:60px;
@@ -7001,7 +6991,7 @@ img{
 	background-color:#f4f4f4;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Single Section
@@ -7143,7 +7133,7 @@ img{
 }
 
 .sidebar-brochure .brochure:hover{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 	color:#ffffff;
 }
 
@@ -7199,7 +7189,7 @@ img{
 
 .testimonial-widget .inner-widget .upper-box .upper-inner .location{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:16px;
 }
 
@@ -7237,7 +7227,7 @@ img{
 
 .testimonial-widget .owl-dots .owl-dot:hover,
 .testimonial-widget .owl-dots .owl-dot.active{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .services-single{
@@ -7464,11 +7454,11 @@ img{
 .services-single .inner-box .lower-content .carousel-column .slick-arrow.slick-prev:hover,
 .services-single .inner-box .lower-content .carousel-column .slick-arrow.slick-next:hover{
 	color:#ffffff;
-	border-color:#ff4800;
-	background-color:#ff4800;
+	border-color:#FD5E01;
+	background-color:#FD5E01;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Accordion Style
@@ -7520,7 +7510,7 @@ img{
 }
 
 .accordion-box .block .acc-btn.active{
-	color:#ff4800;
+	color:#FD5E01;
 }
 
 .accordion-box .block .icon-outer{
@@ -7548,7 +7538,7 @@ img{
 }
 
 .accordion-box .block.active-block:after{
-	background-color:#ff4800;
+	background-color:#FD5E01;
 }
 
 .accordion-box .block .acc-content{
@@ -7561,7 +7551,7 @@ img{
 }
 
 .accordion-box .block .acc-content.current{
-	display:block;	
+	display:block;
 }
 
 .accordion-box .block .content{
@@ -7572,15 +7562,15 @@ img{
 
 .accordion-box .block .content .text{
 	line-height:1.8em;
-	font-size:16px;	
+	font-size:16px;
 	color:#848484;
 }
 
 .accordion-box .block .content p:last-child{
-	margin-bottom:0px;	
+	margin-bottom:0px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Quote Section Two
@@ -7626,7 +7616,7 @@ img{
 
 .quote-two-section .title-column .plans{
 	position:relative;
-	color:#ff4800;
+	color:#FD5E01;
 	font-size:14px;
 	font-weight:700;
 	text-transform:uppercase;

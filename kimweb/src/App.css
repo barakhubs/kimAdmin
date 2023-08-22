@@ -1,0 +1,31 @@
+.dropdown {
+    position: relative;
+}
+.mega-menu {
+    width: 400px !important;
+}
+.dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 600px; /* Adjust as needed */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown ul li {
+    width: 50%; /* Assuming 2 columns */
+    float: left;
+    list-style-type: none;
+    border-right: 1px solid #eee;
+}
+
+.dropdown ul li:last-child {
+    border-right: none;
+}

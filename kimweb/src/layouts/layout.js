@@ -1,8 +1,28 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./footer";
 import Header from "./header";
+import { useEffect } from "react";
 
 const Layout = () => {
+    useEffect(() => {
+        const scrollToTopElement = document.querySelector(".scroll-to-top");
+
+        if (scrollToTopElement) {
+            scrollToTopElement.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        }
+
+        return () => {
+            if (scrollToTopElement) {
+                scrollToTopElement.removeEventListener("click");
+            }
+        };
+    }, []);
+
     return (
         <div className="page-wrapper">
             {/* <!-- Preloader --> */}
@@ -10,7 +30,7 @@ const Layout = () => {
             {/* Outlet will render nested routes */}
 
             <Header />
-                <Outlet />
+            <Outlet />
             <Footer />
 
             {/* <!--Scroll to top--> */}

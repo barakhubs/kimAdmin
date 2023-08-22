@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+import logo from '../images/kimdigitary.png';
+
+
 const Header = () => {
     return (
         <>
@@ -7,53 +11,17 @@ const Header = () => {
                         <div className="top-outer clearfix">
                             <div className="top-left">
                                 <ul className="links clearfix">
-                                    <li className="language dropdown">
-                                        <a
-                                            className="btn btn-default dropdown-toggle"
-                                            id="dropdownMenu2"
-                                            data-toggle="dropdown"
-                                            aria-haspopup="true"
-                                            aria-expanded="true"
-                                            href="#"
-                                        >
-                                            <span className="flag-img">
-                                                <img
-                                                    src="images/icons/flag.jpg"
-                                                    alt=""
-                                                />
-                                            </span>
-                                            English &nbsp;
-                                            <span className="fa fa-angle-down"></span>
-                                        </a>
-                                        <ul
-                                            className="dropdown-menu style-one"
-                                            aria-labelledby="dropdownMenu2"
-                                        >
-                                            <li>
-                                                <a href="#">English</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">German</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Arabic</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Hindi</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <span className="icon fa fa-phone"></span>
-                                            Talk With Our Spacialist:{" "}
-                                            <strong>+0 625-07520-6644</strong>{" "}
-                                        </a>
+                                            Talk to us now:{" "}
+                                            <strong>+256 704 316255</strong>{" "}
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link to="/contact-us">
                                             <span className="icon"></span>Contact Us
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -61,23 +29,23 @@ const Header = () => {
                             <div className="top-right clearfix">
                                 <ul className="clearfix">
                                     <li>
-                                        <a href="#">
+                                        <Link to="/free-web-analysis">
                                             <span className="icon flaticon-planet-earth"></span>
-                                            Free SEO Analysis
-                                        </a>
+                                            Free Website Analysis
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <Link href="#">
                                             <span className="icon flaticon-user"></span>
                                             Login
-                                        </a>{" "}
+                                        </Link> {" "}
                                         <span>or</span>{" "}
-                                        <a href="#">
+                                        <Link href="#">
                                             <span className="icon flaticon-upload"></span>
                                             Register
-                                        </a>
+                                        </Link>
                                     </li>
-                                    <li className="search-box-outer">
+                                    {/* <li className="search-box-outer">
                                         <div className="dropdown">
                                             <button
                                                 className="search-box-btn dropdown-toggle"
@@ -118,7 +86,7 @@ const Header = () => {
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
@@ -129,9 +97,9 @@ const Header = () => {
                         <div className="outer-container clearfix">
                             <div className="logo-box">
                                 <div className="logo">
-                                    <a href="index.html">
-                                        <img src="images/logo.png" alt="" />
-                                    </a>
+                                    <Link href="/">
+                                        <img style={{ height: 70+'px', width: 270+'px' }} src={logo} alt="Logo" />
+                                    </Link>
                                 </div>
                             </div>
 
@@ -153,167 +121,98 @@ const Header = () => {
                                     <div className="navbar-collapse collapse clearfix">
                                         <ul className="navigation clearfix">
                                             <li className="current dropdown">
-                                                <a href="#">Home</a>
-                                                <ul>
-                                                    <li>
-                                                        <a href="index.html">
-                                                            Header Style 01
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="index-2.html">
-                                                            Header Style 02
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="index-3.html">
-                                                            Header Style 03
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="index-4.html">
-                                                            Header Style 04
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <Link href="#">Home</Link>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">Services</a>
+                                                <Link href="#">company</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="services.html">
-                                                            Search Engine
-                                                            Optimization
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="ppc-click-management.html">
-                                                            PPC Click Management
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="display-advertising.html">
-                                                            Display Advertising
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="email-marketing.html">
-                                                            Email Marketing
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="web-development.html">
-                                                            Web Development
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="mobile-optimizations.html">
-                                                            Mobile Optimizations
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="dropdown">
-                                                <a href="#">company</a>
-                                                <ul>
-                                                    <li>
-                                                        <a href="about.html">
+                                                        <Link href="about.html">
                                                             About Our Company
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="seo.html">
+                                                        <Link href="seo.html">
                                                             SEO Analysis
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="mobile-friendly.html">
+                                                        <Link href="mobile-friendly.html">
                                                             Mobile Friendly Test
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="error-page.html">
+                                                        <Link href="error-page.html">
                                                             404 Page
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="quote.html">
+                                                        <Link href="quote.html">
                                                             Get a Quote
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="testimonial.html">
+                                                        <Link href="testimonial.html">
                                                             Testimonials
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="comming-soon.html">
+                                                        <Link href="comming-soon.html">
                                                             Coming Soon
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="contact.html">
+                                                        <Link href="contact.html">
                                                             Contact Us
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">Case Studies</a>
+                                                <Link href="#">Case Studies</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="case.html">
+                                                        <Link href="case.html">
                                                             Case Studies Default
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="cases-text.html">
+                                                        <Link href="cases-text.html">
                                                             Case Studies Modern
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="cases-single.html">
+                                                        <Link href="cases-single.html">
                                                             Single Case
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="price.html">Pricing</a>
+                                                <Link href="price.html">Pricing</Link>
                                             </li>
-                                            <li className="dropdown">
-                                                <a href="#">Blog</a>
-                                                <ul>
-                                                    <li>
-                                                        <a href="blog.html">
-                                                            Blog Default
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-classic.html">
-                                                            Blog Large Image
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-detail.html">
-                                                            Single Post
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <Link href="price.html">About</Link>
+                                            </li>
+                                            <li>
+                                                <Link href="price.html">Contact</Link>
+                                            </li>
+                                            <li>
+                                                <Link href="price.html">Blog</Link>
                                             </li>
                                         </ul>
                                     </div>
                                 </nav>
 
                                 <div className="outer-box">
-                                    <a
+                                    <Link
                                         href="contact.html"
                                         className="theme-btn btn-style-one"
                                     >
                                         {" "}
                                         <span className="icon flaticon-right-arrow-1"></span>{" "}
                                         Get a Quote
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -325,12 +224,9 @@ const Header = () => {
                         <div className="outer-container clearfix">
                             <div className="logo-box pull-left">
                                 <div className="logo">
-                                    <a href="index.html">
-                                        <img
-                                            src="images/logo-small.png"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <Link href="index.html">
+                                    <img style={{ height: 45+'px', width: 150+'px' }} src={logo} alt="Logo" />
+                                    </Link>
                                 </div>
                             </div>
 
@@ -352,151 +248,151 @@ const Header = () => {
                                     <div className="navbar-collapse collapse clearfix">
                                         <ul className="navigation clearfix">
                                             <li className="current dropdown">
-                                                <a href="#">Home</a>
+                                                <Link href="#">Home</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="index.html">
+                                                        <Link href="index.html">
                                                             Header Style 01
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="index-2.html">
+                                                        <Link href="index-2.html">
                                                             Header Style 02
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="index-3.html">
+                                                        <Link href="index-3.html">
                                                             Header Style 03
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="index-4.html">
+                                                        <Link href="index-4.html">
                                                             Header Style 04
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">Services</a>
+                                                <Link href="#">Services</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="services.html">
+                                                        <Link href="services.html">
                                                             Search Engine
                                                             Optimization
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="ppc-click-management.html">
+                                                        <Link href="ppc-click-management.html">
                                                             PPC Click Management
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="display-advertising.html">
+                                                        <Link href="display-advertising.html">
                                                             Display Advertising
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="email-marketing.html">
+                                                        <Link href="email-marketing.html">
                                                             Email Marketing
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="web-development.html">
+                                                        <Link href="web-development.html">
                                                             Web Development
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="mobile-optimizations.html">
+                                                        <Link href="mobile-optimizations.html">
                                                             Mobile Optimizations
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">company</a>
+                                                <Link href="#">company</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="about.html">
+                                                        <Link href="about.html">
                                                             About Our Company
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="seo.html">
+                                                        <Link href="seo.html">
                                                             SEO Analysis
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="mobile-friendly.html">
+                                                        <Link href="mobile-friendly.html">
                                                             Mobile Friendly Test
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="error-page.html">
+                                                        <Link href="error-page.html">
                                                             404 Page
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="quote.html">
+                                                        <Link href="quote.html">
                                                             Get a Quote
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="testimonial.html">
+                                                        <Link href="testimonial.html">
                                                             Testimonials
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="comming-soon.html">
+                                                        <Link href="comming-soon.html">
                                                             Coming Soon
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="contact.html">
+                                                        <Link href="contact.html">
                                                             Contact Us
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">Case Studies</a>
+                                                <Link href="#">Case Studies</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="case.html">
+                                                        <Link href="case.html">
                                                             Case Studies Default
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="cases-text.html">
+                                                        <Link href="cases-text.html">
                                                             Case Studies Modern
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="cases-single.html">
+                                                        <Link href="cases-single.html">
                                                             Single Case
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="price.html">Pricing</a>
+                                                <Link href="price.html">Pricing</Link>
                                             </li>
                                             <li className="dropdown">
-                                                <a href="#">Blog</a>
+                                                <Link href="#">Blog</Link>
                                                 <ul>
                                                     <li>
-                                                        <a href="blog.html">
+                                                        <Link href="blog.html">
                                                             Blog Default
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-classic.html">
+                                                        <Link href="blog-classic.html">
                                                             Blog Large Image
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-detail.html">
+                                                        <Link href="blog-detail.html">
                                                             Single Post
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\web\TestimonialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\web\PostController;
@@ -35,3 +36,4 @@ Route::get('projects', [ProjectController::class, 'all']);
 Route::get('category/{id}/projects', [ProjectController::class, 'categoryProjects']);
 Route::get('project/{slug}', [ProjectController::class, 'single']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);
+Route::get('testimonials', [TestimonialController::class, 'index']);
