@@ -14,13 +14,13 @@ use App\Http\Controllers\auth\AuthController;
 |
 */
 
-Route::get('/test', function () {
-    return 'hello oworld';
-});
+// Route::get('/test', function () {
+//     return 'hello oworld';
+// });
 
-Route::get('/google', function () {
-    return view('welcome');
-});
+// Route::get('/google', function () {
+//     return view('welcome');
+// });
 
-Route::get('auth/google', [AuthController::class,'redirectToGoogle'])->name('gogo');
-Route::get('login/google/callback', [AuthController::class,'handleGoogleCallback']);
+// Route::get('auth/google', [AuthController::class,'redirectToGoogle'])->name('gogo');
+// Route::get('login/google/callback', [AuthController::class,'handleGoogleCallback']);
