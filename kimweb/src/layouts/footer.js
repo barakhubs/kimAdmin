@@ -192,8 +192,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright">
-                    Copyright &copy; 2012-2018 The <a href="#">Gosearch</a>{" "}
-                    Theme by <a href="#">Themekalia</a>. All rights reserved.
+                    Copyright &copy; 2012-2018 The <a href="#">Kim Digitary</a>{" "}
+                     All rights reserved.
                 </div>
             </footer>
         </>

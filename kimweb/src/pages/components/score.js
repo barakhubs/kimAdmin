@@ -36,7 +36,6 @@ const Score = () => {
                                                         <input
                                                             type="text"
                                                             name="text"
-                                                            value=""
                                                             placeholder="Your Website URL"
                                                             required
                                                         />
@@ -45,7 +44,6 @@ const Score = () => {
                                                         <input
                                                             type="email"
                                                             name="email"
-                                                            value=""
                                                             placeholder="Email Address"
                                                             required
                                                         />

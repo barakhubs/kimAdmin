@@ -1,21 +1,21 @@
 const Pricing = () => {
     return (
         <>
-            <section class="price-section">
-                <div class="auto-container">
-                    <div class="sec-title centered">
+            <section className="price-section">
+                <div className="auto-container">
+                    <div className="sec-title centered">
                         <h2>Pricing Plans</h2>
-                        <div class="text">
+                        <div className="text">
                             We help you generate high-quality online sales leads
                             by implementing highly structured, <b /> persuasive
                             Internet marketing campaigns.
                         </div>
                     </div>
-                    <div class="clearfix">
-                        <div class="price-block col-md-4 col-sm-6 col-xs-12">
-                            <div class="inner-box">
-                                <div class="icon-box">
-                                    <span class="icon">
+                    <div className="clearfix">
+                        <div className="price-block col-md-4 col-sm-6 col-xs-12">
+                            <div className="inner-box">
+                                <div className="icon-box">
+                                    <span className="icon">
                                         <img
                                             src="images/icons/price-icon.png"
                                             alt=""
@@ -30,20 +30,20 @@ const Pricing = () => {
                                     <li>-</li>
                                     <li>15 Social Accounts</li>
                                 </ul>
-                                <div class="price">
+                                <div className="price">
                                     <sup>$</sup>99 <span>/ per month</span>
                                 </div>
-                                <a href="#" class="theme-btn btn-style-two">
+                                <a href="#" className="theme-btn btn-style-two">
                                     Order Now
                                 </a>
                             </div>
                         </div>
 
-                        <div class="price-block active col-md-4 col-sm-6 col-xs-12">
-                            <div class="inner-box">
-                                <div class="ribbon">popular</div>
-                                <div class="icon-box">
-                                    <span class="icon">
+                        <div className="price-block active col-md-4 col-sm-6 col-xs-12">
+                            <div className="inner-box">
+                                <div className="ribbon">popular</div>
+                                <div className="icon-box">
+                                    <span className="icon">
                                         <img
                                             src="images/icons/price-icon.png"
                                             alt=""
@@ -58,24 +58,24 @@ const Pricing = () => {
                                     <li>Includes Branded Reports</li>
                                     <li>50 Social Accounts</li>
                                 </ul>
-                                <div class="price">
+                                <div className="price">
                                     <sup>$</sup>120 <span>/ per month</span>
                                 </div>
-                                <a href="#" class="theme-btn btn-style-two">
+                                <a href="#" className="theme-btn btn-style-two">
                                     Order Now
                                 </a>
                             </div>
                         </div>
 
-                        <div class="price-block col-md-4 col-sm-6 col-xs-12">
-                            <div class="inner-box">
-                                <div class="off">
+                        <div className="price-block col-md-4 col-sm-6 col-xs-12">
+                            <div className="inner-box">
+                                <div className="off">
                                     20%
                                     <br />
                                     OFF
                                 </div>
-                                <div class="icon-box">
-                                    <span class="icon">
+                                <div className="icon-box">
+                                    <span className="icon">
                                         <img
                                             src="images/icons/price-icon.png"
                                             alt=""
@@ -90,10 +90,10 @@ const Pricing = () => {
                                     <li>Includes Branded Reports</li>
                                     <li>75 Social Accounts</li>
                                 </ul>
-                                <div class="price">
+                                <div className="price">
                                     <sup>$</sup>199 <span>/ per month</span>
                                 </div>
-                                <a href="#" class="theme-btn btn-style-two">
+                                <a href="#" className="theme-btn btn-style-two">
                                     Order Now
                                 </a>
                             </div>
