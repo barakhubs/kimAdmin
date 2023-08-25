@@ -20,6 +20,10 @@ class SubCategoriesRelationManager extends RelationManager
 {
     protected static string $relationship = 'subCategories';
 
+    protected static ?string $inverseRelationship = 'parent';
+
+
+
     public function form(Form $form): Form
     {
         return $form
@@ -38,13 +42,11 @@ class SubCategoriesRelationManager extends RelationManager
                     ->required()
                     ->unique(Category::class, 'slug'),
 
-                FileUpload::make('icon')->preserveFilenames(),
+                FileUpload::make('icon')->preserveFilenames()->columnSpanFull(),
 
-                TextInput::make('type')
-                    ->default(
-                        Category::find($this->ownerRecord)->value('type')
-                    )
-                    ->disabled()
+                Forms\Components\Hidden::make('type')
+                ->default('project')
+
             ]);
     }
 
@@ -65,7 +67,12 @@ class SubCategoriesRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
-                Tables\Actions\CreateAction::make(),
+                Tables\Actions\CreateAction::make()
+                ->mutateFormDataUsing(function (array $data): array {
+                    $data['type'] = 'project';
+
+                    return $data;
+                }),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

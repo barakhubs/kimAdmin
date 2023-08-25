@@ -103,13 +103,24 @@ class ProjectResource extends Resource
                             ->schema([
                                 Textarea::make('approach')
                                     ->label('Approach')
+                                    ->rows(4)
+                                    ->columnSpanFull()
                                     ->required(),
-                                FileUpload::make('approach')
-                                    ->label('Images')
+                                FileUpload::make('concept-once')
+                                    ->label('Concept one')
+                                    ->image()
+                                    ->preserveFilenames(),
+                                FileUpload::make('concept-two')
+                                    ->label('Concept two')
+                                    ->image()
+                                    ->preserveFilenames(),
+                                FileUpload::make('concept-three')
+                                    ->label('Concept three')
                                     ->image()
                                     ->preserveFilenames(),
                             ])
-                            ->label('Approaches'),
+                            ->label('Approaches')
+                            ->columns(3),
 
                         Builder\Block::make('testimonial')
                             ->schema([
@@ -128,6 +139,14 @@ class ProjectResource extends Resource
                                     ->multiple()
                             ])
                             ->label('Project Images'),
+
+                        Builder\Block::make('video-url')
+                            ->schema([
+                                TextInput::make('video')
+                                    ->label('Add video url')
+                                    ->url()
+                            ])
+                            ->label('Project Video'),
                     ])
                     ->columnSpanFull()
             ]);

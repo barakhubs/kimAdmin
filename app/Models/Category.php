@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
@@ -14,7 +15,8 @@ class Category extends Model
         'title',
         'slug',
         'icon',
-        'type'
+        'type',
+        'parent_id'
     ];
 
     /**
@@ -37,13 +39,13 @@ class Category extends Model
         return $this->hasMany(Project::class);
     }
 
-    public function parent()
+    public function parent() : BelongsTo
     {
-        return $this->belongsTo(Category::class, 'parent_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function subcategories()
+    public function subcategories() : HasMany
     {
-        return $this->hasMany(Category::class, 'parent_id');
+        return $this->hasMany(Category::class);
     }
 }
