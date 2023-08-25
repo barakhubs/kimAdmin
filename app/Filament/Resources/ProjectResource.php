@@ -122,11 +122,23 @@ class ProjectResource extends Resource
                             ->label('Approaches')
                             ->columns(3),
 
+                        Builder\Block::make('results')
+                            ->schema([
+                                Textarea::make('description')
+                                    ->label('Result description')
+                            ])
+                            ->label('Final results'),
+
                         Builder\Block::make('testimonial')
                             ->schema([
                                 Textarea::make('testimonial')
                                     ->label('Client Feedback')
-                                    ->required()
+                                    ->required(),
+                                FileUpload::make('images')
+                                    ->label('Images')
+                                    ->image()
+                                    ->preserveFilenames()
+                                    ->multiple()
                             ])
                             ->label('Testimonial'),
 
