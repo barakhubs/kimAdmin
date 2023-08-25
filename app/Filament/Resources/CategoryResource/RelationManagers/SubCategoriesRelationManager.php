@@ -26,6 +26,11 @@ class SubCategoriesRelationManager extends RelationManager
 
     public function form(Form $form): Form
     {
+        if (Category::find($this->ownerRecord)->value('type') == 'project') {
+            $type = 'project';
+        } else {
+            $type = 'post';
+        }
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
@@ -45,8 +50,7 @@ class SubCategoriesRelationManager extends RelationManager
                 FileUpload::make('icon')->preserveFilenames()->columnSpanFull(),
 
                 Forms\Components\Hidden::make('type')
-                ->default('project')
-
+                    ->default($type)
             ]);
     }
 
@@ -68,11 +72,6 @@ class SubCategoriesRelationManager extends RelationManager
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make()
-                ->mutateFormDataUsing(function (array $data): array {
-                    $data['type'] = 'project';
-
-                    return $data;
-                }),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
