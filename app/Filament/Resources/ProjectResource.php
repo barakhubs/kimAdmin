@@ -125,7 +125,12 @@ class ProjectResource extends Resource
                         Builder\Block::make('results')
                             ->schema([
                                 Textarea::make('description')
-                                    ->label('Result description')
+                                    ->label('Result description'),
+                                FileUpload::make('images')
+                                    ->label('Images')
+                                    ->image()
+                                    ->preserveFilenames()
+                                    ->multiple()
                             ])
                             ->label('Final results'),
 
@@ -134,11 +139,6 @@ class ProjectResource extends Resource
                                 Textarea::make('testimonial')
                                     ->label('Client Feedback')
                                     ->required(),
-                                FileUpload::make('images')
-                                    ->label('Images')
-                                    ->image()
-                                    ->preserveFilenames()
-                                    ->multiple()
                             ])
                             ->label('Testimonial'),
 
