@@ -29,6 +29,7 @@ Route::get('auth/google/callback', [AuthController::class,'handleGoogleCallback'
 
 //web routes
 Route::get('posts', [PostController::class, 'index']);
+Route::get('posts/latest', [PostController::class, 'latestPosts']);
 Route::get('posts/{slug}', [PostController::class, 'show']);
 Route::get('comments/{post}', [CommentController::class, 'postComments']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);

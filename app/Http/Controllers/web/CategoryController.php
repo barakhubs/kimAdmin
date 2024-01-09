@@ -3,26 +3,20 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $posts = Post::where('status', 'published')->get();
+        $categories = Category::where('is_parent', '0')->get();
 
-        return response()->json(['rows'=>$posts->count(), 'posts' => $posts], 200);
-    }
-
-    public function latestPosts()
-    {
-        $posts = Post::where('status', 'published')->orderBy('created_at', 'desc')->get();
-
-        return response()->json(['rows'=>$posts->count(), 'posts' => $posts], 200);
+        return response()->json(['rows'=>$categories->count(), 'categories' => $categories], 200);
     }
 
     /**

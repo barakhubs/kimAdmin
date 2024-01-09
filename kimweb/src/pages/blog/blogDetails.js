@@ -65,50 +65,19 @@ const BlogDetails = () => {
                             <div className="lower-content">
                                 <ul className="post-meta">
                                     <li><span className="icon fa fa-calendar"></span>{post.created_at}</li>
-                                    <li><span className="icon fa fa-user"></span>Roger Jenina</li>
-                                    <li><span className="icon fa fa-folder"></span>Email Marketing</li>
+                                    <li><span className="icon fa fa-user"></span>{post.name}</li>
+                                    <li><span className="icon fa fa-folder"></span>{post.category_name}</li>
                                 </ul>
-                                <h3>The Solution-Focused:  How Emotional Intelligence Can Make You a Stronger Leader.</h3>
+                                <h3>{post.title}</h3>
                                 <div className="text">
-                                	<p>Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was & born and I will give you a complete account of the system, and expound the actual teachings of  explorer of the truth, the master-builder of human happiness Explain to you how all mistaken pleasure and praising pain was born and we will give you a complete.</p>
-                                    <p>Account of the system, and expound the actual teachings of the explorer of the truth, the master-builder of human happiness which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes.</p>
-                                    <blockquote>
-                                        <div className="quote-icon"><span className="icon flaticon-right-quotation-sign"></span></div>
-                                        <div className="blockquote-text">  There anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which  can procure him some great pleasure. </div>
-                                        <div className="quote-info">
-                                            <h4>Teena Venanda</h4>
-                                            <div className="quote-desination">CEO/Founder</div>
-                                        </div>
-                                    </blockquote>
-                                    <div className="two-column clearfix">
-                                        <div className="row clearfix">
-                                            <div className="image-column col-md-6 col-sm-6 col-xs-12">
-                                                <div className="image">
-                                                    <img src="images/resource/news-14.jpg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div className="text-column col-md-6 col-sm-6 col-xs-12">
-                                            	<p>Explain you how  mistaken idea denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the  of truth pain itself occur great.</p>
-                                                <p>The master-builder of human happiness which toil and pain can procure him some seds great pleasure take a of ever.</p>
-                                            </div>
-										</div>
-                                    </div>
-
-                                    <div className="post-share-options">
-                                        <div className="post-share-inner clearfix">
-                                            <ul className="pull-left info-links clearfix">
-                                                <li><a href="#"><span className="fa fa-heart"></span></a>18</li>
-                                                <li><a href="#"><span className="fa fa-comments"></span></a>6</li>
-                                            </ul>
-                                            <div className="pull-right tags"><span>Tags: </span><a href="#">idea</a>, <a href="#">services</a>, <a href="#">Growth</a></div>
-                                        </div>
-                                    </div>
-
+                                <div
+                                        dangerouslySetInnerHTML={{ __html: post.content }}
+                                    />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="group-title">
+                        {/* <div className="group-title">
                         	<h2>About Author</h2>
                         </div>
 
@@ -236,7 +205,7 @@ const BlogDetails = () => {
                                 </div>
                             </form>
 
-                        </div>
+                        </div> */}
 
 
                     </div>
