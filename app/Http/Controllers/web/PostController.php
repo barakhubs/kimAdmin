@@ -25,7 +25,7 @@ class PostController extends Controller
                 'content' => $post->content,
                 'status' => $post->status,
                 'category_name' => $post->category->name, // Assuming 'category' is the relationship
-                'username' => $post->user->username, // Assuming 'user' is the relationship
+                'name' => $post->user->name, // Assuming 'user' is the relationship
                 'created_at' => $post->created_at->format('M d,Y'),
                 'updated_at' => $post->updated_at->format('M d,Y'),
             ];
