@@ -462,6 +462,7 @@ img{
 	left:0px;
 	top:0px;
 	z-index:999;
+    background-color: #f4f4f4;
 	width:100%;
 }
 
