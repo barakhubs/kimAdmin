@@ -15,23 +15,7 @@ class PostController extends Controller
     {
         $posts = Post::where('status', 'published')->get();
 
-        // Transform the posts data
-        $transformedPosts = $posts->map(function ($post) {
-            return [
-                'id' => $post->id,
-                'title' => $post->title,
-                'slug' => $post->slug,
-                'image' => $post->image,
-                'content' => $post->content,
-                'status' => $post->status,
-                'category_name' => $post->category->name, // Assuming 'category' is the relationship
-                'name' => $post->user->name, // Assuming 'user' is the relationship
-                'created_at' => $post->created_at->format('M d,Y'),
-                'updated_at' => $post->updated_at->format('M d,Y'),
-            ];
-        });
-
-        return response()->json(['rows' => $transformedPosts->count(), 'posts' => $transformedPosts], 200);
+        return response()->json(['rows'=>$posts->count(), 'posts' => $posts], 200);
     }
 
     /**
@@ -57,7 +41,22 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
 
-        return response()->json(['post' => $post], 200);
+        $transformedPosts = $post->map(function ($post) {
+            return [
+                'id' => $post->id,
+                'title' => $post->title,
+                'slug' => $post->slug,
+                'image' => $post->image,
+                'content' => $post->content,
+                'status' => $post->status,
+                'category_name' => $post->category->name, // Assuming 'category' is the relationship
+                'name' => $post->user->name, // Assuming 'user' is the relationship
+                'created_at' => $post->created_at->format('M d,Y'),
+                'updated_at' => $post->updated_at->format('M d,Y'),
+            ];
+        });
+        
+        return response()->json(['post' => $transformedPosts], 200);
     }
 
     /**
