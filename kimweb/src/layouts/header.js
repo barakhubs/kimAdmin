@@ -12,14 +12,14 @@ const Header = () => {
                             <div className="top-left">
                                 <ul className="links clearfix">
                                     <li>
-                                        <Link to="#">
+                                        <Link to="tel:+256 704 316255">
                                             <span className="icon fa fa-phone"></span>
                                             Talk to us now:{" "}
                                             <strong>+256 704 316255</strong>{" "}
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact-us">
+                                        <Link to="/contact">
                                             <span className="icon"></span>Contact Us
                                         </Link>
                                     </li>
@@ -121,81 +121,53 @@ const Header = () => {
                                     <div className="navbar-collapse collapse clearfix">
                                         <ul className="navigation clearfix">
                                             <li className="current dropdown">
-                                                <Link to="#">Home</Link>
+                                                <Link to="/">Home</Link>
                                             </li>
                                             <li className="dropdown">
-                                                <Link to="#">company</Link>
+                                                <Link to="#">Services</Link>
                                                 <ul>
+                                                    <span></span>
                                                     <li>
-                                                        <Link to="about.html">
-                                                            About Our Company
+                                                        <Link to="/">
+                                                            Software Development
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="seo.html">
-                                                            SEO Analysis
+                                                        <Link to="/">
+                                                            Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="mobile-friendly.html">
-                                                            Mobile Friendly Test
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="error-page.html">
-                                                            404 Page
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="quote.html">
-                                                            Get a Quote
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="testimonial.html">
-                                                            Testimonials
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="comming-soon.html">
-                                                            Coming Soon
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="contact.html">
-                                                            Contact Us
+                                                        <Link to="/">
+                                                            Digital Marketing
                                                         </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <Link to="#">Case Studies</Link>
+                                                <Link to="/portfolio">Our Work</Link>
                                                 <ul>
+                                                    <span></span>
                                                     <li>
-                                                        <Link to="case.html">
-                                                            Case Studies Default
+                                                        <Link to="/">
+                                                            Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="cases-text.html">
-                                                            Case Studies Modern
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="cases-single.html">
-                                                            Single Case
+                                                        <Link to="/">
+                                                            Website Design
                                                         </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link to="price.html">Pricing</Link>
+                                                <Link to="/pricing">Pricing</Link>
                                             </li>
                                             <li>
-                                                <Link to="price.html">About</Link>
+                                                <Link to="/about">About</Link>
                                             </li>
                                             <li>
-                                                <Link to="price.html">Contact</Link>
+                                                <Link to="/contact">Contact</Link>
                                             </li>
                                             <li>
                                                 <Link to="/blog">Blog</Link>
@@ -246,155 +218,58 @@ const Header = () => {
                                     </div>
 
                                     <div className="navbar-collapse collapse clearfix">
-                                        <ul className="navigation clearfix">
+                                    <ul className="navigation clearfix">
                                             <li className="current dropdown">
-                                                <Link to="#">Home</Link>
-                                                <ul>
-                                                    <li>
-                                                        <Link to="index.html">
-                                                            Header Style 01
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="index-2.html">
-                                                            Header Style 02
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="index-3.html">
-                                                            Header Style 03
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="index-4.html">
-                                                            Header Style 04
-                                                        </Link>
-                                                    </li>
-                                                </ul>
+                                                <Link to="/">Home</Link>
                                             </li>
                                             <li className="dropdown">
                                                 <Link to="#">Services</Link>
                                                 <ul>
+                                                    <span></span>
                                                     <li>
-                                                        <Link to="services.html">
-                                                            Search Engine
-                                                            Optimization
+                                                        <Link to="/">
+                                                            Software Development
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="ppc-click-management.html">
-                                                            PPC Click Management
+                                                        <Link to="/">
+                                                            Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="display-advertising.html">
-                                                            Display Advertising
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="email-marketing.html">
-                                                            Email Marketing
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="web-development.html">
-                                                            Web Development
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="mobile-optimizations.html">
-                                                            Mobile Optimizations
+                                                        <Link to="/">
+                                                            Digital Marketing
                                                         </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="dropdown">
-                                                <Link to="#">company</Link>
+                                                <Link to="/portfolio">Our Work</Link>
                                                 <ul>
+                                                    <span></span>
                                                     <li>
-                                                        <Link to="about.html">
-                                                            About Our Company
+                                                        <Link to="/works/graphics">
+                                                            Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="seo.html">
-                                                            SEO Analysis
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="mobile-friendly.html">
-                                                            Mobile Friendly Test
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="error-page.html">
-                                                            404 Page
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="quote.html">
-                                                            Get a Quote
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="testimonial.html">
-                                                            Testimonials
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="comming-soon.html">
-                                                            Coming Soon
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="contact.html">
-                                                            Contact Us
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="dropdown">
-                                                <Link to="#">Case Studies</Link>
-                                                <ul>
-                                                    <li>
-                                                        <Link to="case.html">
-                                                            Case Studies Default
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="cases-text.html">
-                                                            Case Studies Modern
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="cases-single.html">
-                                                            Single Case
+                                                        <Link to="/works/websites">
+                                                            Website Design
                                                         </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link to="price.html">Pricing</Link>
+                                                <Link to="/pricing">Pricing</Link>
                                             </li>
-                                            <li className="dropdown">
-                                                <Link to="#">Blog</Link>
-                                                <ul>
-                                                    <li>
-                                                        <Link to="blog.html">
-                                                            Blog Default
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="blog-classic.html">
-                                                            Blog Large Image
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="blog-detail.html">
-                                                            Single Post
-                                                        </Link>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <Link to="/about">About</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/contact">Contact</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/blog">Blog</Link>
                                             </li>
                                         </ul>
                                     </div>

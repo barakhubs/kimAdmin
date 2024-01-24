@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const BASE_URL = "https://admin.kimdigitary.com/api/";
-// const BASE_URL = "http://192.168.0.106/furaha/sms/";
 
 export default axios.create({
   baseURL: BASE_URL,

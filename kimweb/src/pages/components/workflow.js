@@ -28,27 +28,21 @@ const WorkFlow = () => {
                     <div className="row clearfix">
                         <div className="image-column col-md-6 col-sm-12 col-xs-12">
                             <div className="image">
-                                <img src="images/resource/firefox.jpg" alt="" />
+                                <img src="images/programming.jpeg" alt="" />
                             </div>
                         </div>
                         <div className="content-column col-md-6 col-sm-12 col-xs-12">
                             <div className="inner-column">
                                 <h2>
-                                    We’ll Make Your Web Marketing! <br /> More
-                                    Efficient!
+                                Your Digital Success <br></br>Starts Here with Kim Digitary!
                                 </h2>
                                 <div className="single-item-carousel owl-carousel owl-theme">
                                     <div className="market-content">
                                         <div className="content-inner">
                                             <div className="content-number">1.</div>
-                                            <h3>Save Time and Money</h3>
+                                            <h3>Elevating Your Brand in the Digital World</h3>
                                             <div className="text">
-                                                How all this mistaken idea of
-                                                denouncing pleasure and praising
-                                                pain was born and I will give
-                                                you a complete account of
-                                                system, the actual teachings of
-                                                the great explorer.
+                                            Introduce your audience to Kim Digitary with a sleek title slide. The logo sets the tone for a professional and dynamic digital marketing agency.
                                             </div>
 
                                             <div className="featured-block-three">
@@ -94,14 +88,9 @@ const WorkFlow = () => {
                                     <div className="market-content">
                                         <div className="content-inner">
                                             <div className="content-number">2.</div>
-                                            <h3>Save Time and Money</h3>
+                                            <h3>Results-driven approach: Your success is our priority.</h3>
                                             <div className="text">
-                                                How all this mistaken idea of
-                                                denouncing pleasure and praising
-                                                pain was born and I will give
-                                                you a complete account of
-                                                system, the actual teachings of
-                                                the great explorer.
+                                            Highlight the unique selling points of Kim Digitary, focusing on the results-driven methodology and the innovative, committed team behind its success.
                                             </div>
 
                                             <div className="featured-block-three">
@@ -147,14 +136,9 @@ const WorkFlow = () => {
                                     <div className="market-content">
                                         <div className="content-inner">
                                             <div className="content-number">3.</div>
-                                            <h3>Save Time and Money</h3>
+                                            <h3>Let's embark on your digital journey together.</h3>
                                             <div className="text">
-                                                How all this mistaken idea of
-                                                denouncing pleasure and praising
-                                                pain was born and I will give
-                                                you a complete account of
-                                                system, the actual teachings of
-                                                the great explorer.
+                                            Encourage engagement by inviting the audience to connect with Kim Digitary for personalized consultations, emphasizing accessibility and responsiveness.
                                             </div>
 
                                             <div className="featured-block-three">

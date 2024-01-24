@@ -6,9 +6,7 @@ const Pricing = () => {
                     <div className="sec-title centered">
                         <h2>Pricing Plans</h2>
                         <div className="text">
-                            We help you generate high-quality online sales leads
-                            by implementing highly structured, <b /> persuasive
-                            Internet marketing campaigns.
+                        We offer the most affordable pricing to our clients, See here
                         </div>
                     </div>
                     <div className="clearfix">
@@ -22,16 +20,12 @@ const Pricing = () => {
                                         />
                                     </span>
                                 </div>
-                                <h2>Fast</h2>
+                                <h2>Website Design & Dev't</h2>
                                 <ul>
-                                    <li>5 Analytics Campaigns</li>
-                                    <li>300 Keywords</li>
-                                    <li>250,000 Crawled Pages</li>
-                                    <li>-</li>
-                                    <li>15 Social Accounts</li>
+                                    <li>Starting From</li>
                                 </ul>
                                 <div className="price">
-                                    <sup>$</sup>99 <span>/ per month</span>
+                                    <sup>UGX</sup> 350,000 <span></span>
                                 </div>
                                 <a href="#" className="theme-btn btn-style-two">
                                     Order Now
@@ -50,16 +44,12 @@ const Pricing = () => {
                                         />
                                     </span>
                                 </div>
-                                <h2>hot</h2>
+                                <h2>Logo Designing</h2>
                                 <ul>
-                                    <li>25 Analytics Campaigns</li>
-                                    <li>1,900 Keywords</li>
-                                    <li>1,250,000 Crawled Pages</li>
-                                    <li>Includes Branded Reports</li>
-                                    <li>50 Social Accounts</li>
+                                    <li>Starting from</li>
                                 </ul>
                                 <div className="price">
-                                    <sup>$</sup>120 <span>/ per month</span>
+                                    <sup>UGX </sup>100,000 <span></span>
                                 </div>
                                 <a href="#" className="theme-btn btn-style-two">
                                     Order Now
@@ -82,16 +72,12 @@ const Pricing = () => {
                                         />
                                     </span>
                                 </div>
-                                <h2>Bomb</h2>
+                                <h2>Social media graphics</h2>
                                 <ul>
-                                    <li>50 Analytics Campaigns</li>
-                                    <li>2,500 Keywords</li>
-                                    <li>1,250,000 Crawled Pages</li>
-                                    <li>Includes Branded Reports</li>
-                                    <li>75 Social Accounts</li>
+                                    <li>Starting from</li>
                                 </ul>
                                 <div className="price">
-                                    <sup>$</sup>199 <span>/ per month</span>
+                                    <sup>UGX </sup>250,000 <span></span>
                                 </div>
                                 <a href="#" className="theme-btn btn-style-two">
                                     Order Now

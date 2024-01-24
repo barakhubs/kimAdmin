@@ -14,12 +14,16 @@ class ProjectController extends Controller
     {
         $projects = Project::all();
 
+
         if ($projects->isEmpty()) {
             return response()->json(['error' => 'No projects found'], Response::HTTP_NOT_FOUND);
         }
 
+
         return response()->json(['rows'=>$projects->count(), 'projects' => $projects], 200);
     }
+
+    
 
     public function categoryProjects($id)
     {

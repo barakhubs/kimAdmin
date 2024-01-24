@@ -7,9 +7,7 @@ const FeaturedSection = () => {
                             <div className="inner-box">
                                 <div className="upper-box">
                                     <div className="text">
-                                        Explain to you how all this mistaken
-                                        idea of denouncing pleasure and praising
-                                        pain was complete account system.{" "}
+                                    Welcome to Kim Digitary, your premier partner in 360-degree digital marketing services. Committed to building unshakable brand presences and delivering measurable ROI.
                                     </div>
                                     <a className="read-more" href="services.html">
                                         <span className="icon flaticon-right-arrow-1"></span>{" "}
@@ -28,11 +26,11 @@ const FeaturedSection = () => {
                                         </div>
                                         <h3>
                                             <a href="services.html">
-                                                Advanced SEO Consultant
+                                                Who We Are
                                             </a>
                                         </h3>
                                         <div className="title">
-                                            Big Business, Big Needs
+                                            Bulding Brands, Building Brands
                                         </div>
                                     </div>
                                 </div>
@@ -43,9 +41,7 @@ const FeaturedSection = () => {
                             <div className="inner-box">
                                 <div className="upper-box">
                                     <div className="text">
-                                        Explain to you how all this mistaken
-                                        idea of denouncing pleasure and praising
-                                        pain was complete account system.{" "}
+                                    Comprehensive 360-degree digital marketing solutions tailored to your business needs. Services include SEO, Social Media Management, Content Marketing, and more.
                                     </div>
                                     <a className="read-more" href="services.html">
                                         <span className="icon flaticon-right-arrow-1"></span>{" "}
@@ -64,11 +60,11 @@ const FeaturedSection = () => {
                                         </div>
                                         <h3>
                                             <a href="services.html">
-                                                Keyword & Market Research
+                                                What We Do
                                             </a>
                                         </h3>
                                         <div className="title">
-                                            Results... On a Budget.
+                                            Services we Offer
                                         </div>
                                     </div>
                                 </div>
@@ -79,9 +75,7 @@ const FeaturedSection = () => {
                             <div className="inner-box">
                                 <div className="upper-box">
                                     <div className="text">
-                                        Explain to you how all this mistaken
-                                        idea of denouncing pleasure and praising
-                                        pain was complete account system.{" "}
+                                    Partnering with businesses of all sizes – from startups to national brands. Our mission is to empower every business with effective digital marketing strategies. 
                                     </div>
                                     <a className="read-more" href="services.html">
                                         <span className="icon flaticon-right-arrow-1"></span>{" "}
@@ -100,11 +94,11 @@ const FeaturedSection = () => {
                                         </div>
                                         <h3>
                                             <a href="services.html">
-                                                Link Building & Promotion
+                                                Who We Help
                                             </a>
                                         </h3>
                                         <div className="title">
-                                            Sales, Sales, Sales.
+                                            Client Focus
                                         </div>
                                     </div>
                                 </div>

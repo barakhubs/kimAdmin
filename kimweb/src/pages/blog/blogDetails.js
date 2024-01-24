@@ -3,22 +3,31 @@ import { Link, useParams } from "react-router-dom";
 import axios, { ASSET_URL } from "../../config/axios";
 
 const BlogDetails = () => {
-  const { slug } = useParams();
-  const [post, setPost] = useState(null);
+    const { slug } = useParams();
+    const [post, setPost] = useState(null);
+    const [latestPosts, setLatestPosts] = useState(null);
 
-  useEffect(() => {
-    // Fetching the posts from the API
-    axios
-      .get(`/posts/${slug}`)
-      .then((response) => setPost(response.data.post))
-      .catch((error) => console.error("Error fetching posts:", error));
-  }, [slug]);
+    useEffect(() => {
+        // Fetching the posts from the API
+        axios
+            .get(`/posts/${slug}`)
+            .then((response) => setPost(response.data.post))
+            .catch((error) => console.error("Error fetching posts:", error));
+    }, [slug]);
 
-  if (!post) {
-    return <p>Loading...</p>; // You can replace this with a loading spinner or message
-  }
+    useEffect(() => {
+        // Fetching the posts from the API
+        axios
+            .get("/posts/latest")
+            .then((response) => setLatestPosts(response.data.posts))
+            .catch((error) => console.error("Error fetching posts:", error));
+    }, []);
 
-  return (
+    if (!post) {
+        return <p>Loading...</p>; // You can replace this with a loading spinner or message
+    }
+
+    return (
         <>
             <section
                 className="page-title"
@@ -47,37 +56,51 @@ const BlogDetails = () => {
             </section>
 
             <div className="sidebar-page-container">
-    	<div className="auto-container">
-        	<div className="row clearfix">
-
-                <div className="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                	<div className="blog-single">
-						<div className="inner-box">
-                            <div className="image">
-                            {post.image && (
-                      <img
-                        src={`${ASSET_URL}${post.image}`}
-                        alt={post.title}
-                        style={{ width: "7700px", height: "400px", objectFit: "cover" }}
-                      />
-                    )}
-                            </div>
-                            <div className="lower-content">
-                                <ul className="post-meta">
-                                    <li><span className="icon fa fa-calendar"></span>{post.created_at}</li>
-                                    <li><span className="icon fa fa-user"></span>{post.name}</li>
-                                    <li><span className="icon fa fa-folder"></span>{post.category_name}</li>
-                                </ul>
-                                <h3>{post.title}</h3>
-                                <div className="text">
-                                <div
-                                        dangerouslySetInnerHTML={{ __html: post.content }}
-                                    />
+                <div className="auto-container">
+                    <div className="row clearfix">
+                        <div className="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div className="blog-single">
+                                <div className="inner-box">
+                                    <div className="image">
+                                        {post.image && (
+                                            <img
+                                                src={`${ASSET_URL}${post.image}`}
+                                                alt={post.title}
+                                                style={{
+                                                    width: "7700px",
+                                                    height: "400px",
+                                                    objectFit: "cover",
+                                                }}
+                                            />
+                                        )}
+                                    </div>
+                                    <div className="lower-content">
+                                        <ul className="post-meta">
+                                            <li>
+                                                <span className="icon fa fa-calendar"></span>
+                                                {post.created_at}
+                                            </li>
+                                            <li>
+                                                <span className="icon fa fa-user"></span>
+                                                {post.name}
+                                            </li>
+                                            <li>
+                                                <span className="icon fa fa-folder"></span>
+                                                {post.category_name}
+                                            </li>
+                                        </ul>
+                                        <h3>{post.title}</h3>
+                                        <div className="text">
+                                            <div
+                                                dangerouslySetInnerHTML={{
+                                                    __html: post.content,
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        {/* <div className="group-title">
+                                {/* <div className="group-title">
                         	<h2>About Author</h2>
                         </div>
 
@@ -206,107 +229,95 @@ const BlogDetails = () => {
                             </form>
 
                         </div> */}
+                            </div>
+                        </div>
 
+                        <div className="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <aside className="sidebar default-sidebar with-border">
+                                <div className="sidebar-widget search-box">
+                                    <form method="post" action="contact.html">
+                                        <div className="form-group">
+                                            <input
+                                                type="search"
+                                                name="search-field"
+                                                value=""
+                                                placeholder="Enter Your Keyword..."
+                                                required
+                                            />
+                                            <button type="submit">
+                                                <span className="icon fa fa-search"></span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
 
+                                <div className="sidebar-widget sidebar-blog-category">
+                                    <div className="sidebar-title">
+                                        <h2>Categories</h2>
+                                    </div>
+                                    <ul className="blog-cat">
+                                        <li>
+                                            <a href="#">
+                                                Business <span>(6)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Email Marketing <span>(2)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                PPC Management <span>(8)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Social Marketing{" "}
+                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Uncategorized <span>(3)</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="sidebar-widget popular-posts">
+                                    <div className="sidebar-title">
+                                        <h2>Popular Posts</h2>
+                                    </div>
+                                    {/* {latestPosts.map((post) => (
+                                    <article className="post">
+                                        <figure className="post-thumb">
+                                            <img
+                                                src="images/resource/post-thumb-1.jpg"
+                                                alt=""
+                                            />
+                                            <a
+                                                className="overlay"
+                                                href="blog-single.html"
+                                            ></a>
+                                        </figure>
+                                        <div className="text">
+                                            <a href="blog-single.html">
+                                                6 ways to keep in control your
+                                                debtors
+                                            </a>
+                                        </div>
+                                        <div className="post-info">
+                                            April 18, 2017
+                                        </div>
+                                    </article>
+                                    ))} */}
+                                </div>
+                            </aside>
+                        </div>
                     </div>
                 </div>
-
-                <div className="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                	<aside className="sidebar default-sidebar with-border">
-
-                        <div className="sidebar-widget search-box">
-                        	<form method="post" action="contact.html">
-                                <div className="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Enter Your Keyword..." required />
-                                    <button type="submit"><span className="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-						</div>
-
-                        <div className="sidebar-widget sidebar-blog-category">
-                            <div className="sidebar-title">
-                                <h2>Categories</h2>
-                            </div>
-                            <ul className="blog-cat">
-                                <li><a href="#">Business  <span>(6)</span></a></li>
-                                <li><a href="#">Email Marketing <span>(2)</span></a></li>
-                                <li><a href="#">PPC Management <span>(8)</span></a></li>
-                                <li><a href="#">Social Marketing <span>(5)</span></a></li>
-                                <li><a href="#">Uncategorized <span>(3)</span></a></li>
-                            </ul>
-                        </div>
-
-                        <div className="sidebar-widget recent-comments">
-                            <div className="sidebar-title">
-                                <h2>Recent Comments</h2>
-                            </div>
-
-                            <div className="comment-block">
-                            	<div className="inner">
-                                	<div className="date">August 17, 2017</div>
-                                    <div className="content">
-                                    	<div className="image"><img src="images/resource/author-4.jpg" alt="" /></div>
-                                        <h3><a href="#">Mark Mitchael</a></h3>
-                                        <div className="text">It is long established fact</div>
-                                        <a href="#" className="reply-btn"><span className="fa fa-mail-forward"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="comment-block">
-                            	<div className="inner">
-                                	<div className="date">July 08, 2017</div>
-                                    <div className="content">
-                                    	<div className="image"><img src="images/resource/author-5.jpg" alt="" /></div>
-                                        <h3><a href="#">Steve Bowerman</a></h3>
-                                        <div className="text">When looking at its layout</div>
-                                        <a href="#" className="reply-btn"><span className="fa fa-mail-forward"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className="sidebar-widget popular-posts">
-                            <div className="sidebar-title"><h2>Popular Posts</h2></div>
-
-                            <article className="post">
-                            	<figure className="post-thumb"><img src="images/resource/post-thumb-1.jpg" alt=""/><a className="overlay" href="blog-single.html"></a></figure>
-                                <div className="text"><a href="blog-single.html">6 ways to keep in control your debtors</a></div>
-                                <div className="post-info">April 18, 2017</div>
-                            </article>
-
-                            <article className="post">
-                            	<figure className="post-thumb"><img src="images/resource/post-thumb-2.jpg" alt=""/><a className="overlay" href="blog-single.html"></a></figure>
-                                <div className="text"><a href="blog-single.html">What a finance director could add business</a></div>
-                                <div className="post-info">February 14, 2017</div>
-                            </article>
-
-                            <article className="post">
-                            	<figure className="post-thumb"><img src="images/resource/post-thumb-3.jpg" alt=""/><a className="overlay" href="blog-single.html"></a></figure>
-                                <div className="text"><a href="blog-single.html">Tips for sucess in 2016: Ways to grow your business</a></div>
-                                <div className="post-info">January 16, 2017</div>
-                            </article>
-
-						</div>
-
-                        <div className="sidebar-widget popular-tags">
-                            <div className="sidebar-title"><h2>Tag Cloud</h2></div>
-                            <a href="#">Idea</a>
-                            <a href="#">Finance</a>
-                            <a href="#">Experts</a>
-                            <a href="#">Tips</a>
-                            <a href="#">Marketing</a>
-                            <a href="#">Services</a>
-                            <a href="#">Growth</a>
-                        </div>
-
-                    </aside>
-                </div>
-
             </div>
-        </div>
-    </div>
         </>
     );
 };
