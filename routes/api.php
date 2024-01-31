@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\web\PostController;
 use App\Http\Controllers\web\CommentController;
 use App\Http\Controllers\web\ProjectController;
+use App\Http\Controllers\web\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,4 @@ Route::get('category/{id}/projects', [ProjectController::class, 'categoryProject
 Route::get('project/{slug}', [ProjectController::class, 'single']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);
 Route::get('testimonials', [TestimonialController::class, 'index']);
+Route::get('clients', [ClientController::class, 'index']);

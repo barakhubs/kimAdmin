@@ -42,7 +42,7 @@ const WorkFlow = () => {
                                             <div className="content-number">1.</div>
                                             <h3>Elevating Your Brand in the Digital World</h3>
                                             <div className="text">
-                                            Introduce your audience to Kim Digitary with a sleek title slide. The logo sets the tone for a professional and dynamic digital marketing agency.
+                                            We make imaginative, eye-catching logos, blurbs, flyers, and websites that are competitive and moderate whereas keeping your campaign’s objective in intellect.
                                             </div>
 
                                             <div className="featured-block-three">
@@ -90,7 +90,7 @@ const WorkFlow = () => {
                                             <div className="content-number">2.</div>
                                             <h3>Results-driven approach: Your success is our priority.</h3>
                                             <div className="text">
-                                            Highlight the unique selling points of Kim Digitary, focusing on the results-driven methodology and the innovative, committed team behind its success.
+                                            We focuse on the results-driven methodology with an innovative, committed team behind its success.
                                             </div>
 
                                             <div className="featured-block-three">
@@ -138,7 +138,7 @@ const WorkFlow = () => {
                                             <div className="content-number">3.</div>
                                             <h3>Let's embark on your digital journey together.</h3>
                                             <div className="text">
-                                            Encourage engagement by inviting the audience to connect with Kim Digitary for personalized consultations, emphasizing accessibility and responsiveness.
+                                            Connect with Kim Digitary for personalized consultations, emphasizing accessibility and responsiveness.
                                             </div>
 
                                             <div className="featured-block-three">

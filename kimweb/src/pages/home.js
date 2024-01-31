@@ -17,7 +17,7 @@ const Home = () => {
             <Slider />
             <FeaturedSection />
             <Services />
-            <Score />
+            {/* <Score /> */}
             <Features />
             <WorkFlow />
             <CaseStudy />

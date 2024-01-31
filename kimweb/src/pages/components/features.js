@@ -7,7 +7,7 @@ const Features = () => {
             >
                 <div className="auto-container">
                     <div className="sec-title centered">
-                        <h2>Some Features</h2>
+                        <h2>Why Choose Us</h2>
                     </div>
                     <div className="inner-container">
                         <div className="clearfix">

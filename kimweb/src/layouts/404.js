@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Missing = () => {
     const navigate = useNavigate();
@@ -17,9 +17,9 @@ const Missing = () => {
                             Try the search below to find matching pages:
                         </div>
 
-                        <a href="index.html" class="go-back">
+                        <Link to="/" class="go-back">
                             Back to Home Page
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
