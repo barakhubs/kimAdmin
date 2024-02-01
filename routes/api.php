@@ -37,7 +37,6 @@ Route::post('comment/{post}', [CommentController::class, 'storeComment']);
 Route::get('projects', [ProjectController::class, 'all']);
 Route::get('project/{slug}', [ProjectController::class, 'singleProject']);
 Route::get('category/{id}/projects', [ProjectController::class, 'categoryProjects']);
-Route::get('project/{slug}', [ProjectController::class, 'single']);
 Route::post('comment/{post}', [CommentController::class, 'storeComment']);
 Route::get('testimonials', [TestimonialController::class, 'index']);
 Route::get('clients', [ClientController::class, 'index']);
