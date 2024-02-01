@@ -33,52 +33,52 @@ const CaseStudy = () => {
                     </div>
 
                     <div className="row clearfix">
-                    {projects.map((project) => (
-    <div className="case-block col-md-4 col-sm-6 col-xs-12" key={project.id}>
-        <div className="inner-box">
-            <div className="image-box">
-                <div className="image">
-                    <a href="cases-single.html">
-                        <img
-                            src={
-                                project.description.find(
-                                    (desc) => desc.type === "client"
-                                )?.data.logo
-                                    ? ASSET_URL +
-                                      project.description.find(
-                                          (desc) => desc.type === "client"
-                                      ).data.logo
-                                    : "client.png"
-                            }
-                            alt={project.title}
-                        />
-                    </a>
-                    <div className="overlay-box">
-                    <Link
-                        to={`/project/${project.slug}`}
-                        className="theme-btn btn-style-one"
-                    >
-                        {" "}
-                        Read More
-                    </Link>
-                    </div>
-                </div>
-            </div>
-            <div className="content-box">
-                <div className="content-inner">
-                    <h4>{project.title}</h4>
-                    <Link
-                         to={`/project/${project.slug}`}
-                        className="read-more"
-                    >
-                        <span className="icon flaticon-right-arrow-1"></span>{" "}
-                        Read More
-                    </Link>
-                </div>
-            </div>
-        </div>
-    </div>
-))}
+                        {projects.map((project) => (
+                            <div className="case-block col-md-4 col-sm-6 col-xs-12" key={project.id}>
+                                <div className="inner-box">
+                                    <div className="image-box">
+                                        <div className="image">
+                                            <a href="cases-single.html">
+                                                <img
+                                                    src={
+                                                        project.description.find(
+                                                            (desc) => desc.type === "client"
+                                                        )?.data.logo
+                                                            ? ASSET_URL +
+                                                            project.description.find(
+                                                                (desc) => desc.type === "client"
+                                                            ).data.logo
+                                                            : "client.png"
+                                                    }
+                                                    alt={project.title}
+                                                />
+                                            </a>
+                                            <div className="overlay-box">
+                                                <Link
+                                                    to={`/project/${project.slug}`}
+                                                    className="theme-btn btn-style-one"
+                                                >
+                                                    {" "}
+                                                    Read More
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="content-box">
+                                        <div className="content-inner">
+                                            <h4>{project.title}</h4>
+                                            <Link
+                                                to={`/project/${project.slug}`}
+                                                className="read-more"
+                                            >
+                                                <span className="icon flaticon-right-arrow-1"></span>{" "}
+                                                Read More
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
 
                     </div>
 

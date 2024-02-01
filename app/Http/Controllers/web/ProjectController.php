@@ -23,7 +23,7 @@ class ProjectController extends Controller
         return response()->json(['rows'=>$projects->count(), 'projects' => $projects], 200);
     }
 
-    
+
 
     public function categoryProjects($id)
     {
@@ -37,7 +37,7 @@ class ProjectController extends Controller
         }
     }
 
-    public function single($slug)
+    public function singleProject($slug)
     {
         $project = Project::where('slug', $slug)->first();
 

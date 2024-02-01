@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <>
@@ -15,54 +17,54 @@ const Footer = () => {
                                             <div className="widget-column col-md-6 col-sm-6 col-xs-12">
                                                 <ul className="footer-list">
                                                     <li>
-                                                        <a to="/about">About Us</a>
+                                                        <Link to="/about">About Us</Link>
                                                     </li>
                                                     <li>
-                                                        <a to="#">
+                                                        <Link to="/">
                                                             Our Services
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="#">
+                                                        <Link to="/about">
                                                             Why Choose Us
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="/portfolio">
+                                                        <Link to="/portfolio">
                                                             Our Works
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="/blog">
+                                                        <Link to="/blog">
                                                             News & Updates
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="widget-column col-md-6 col-sm-6 col-xs-12">
                                                 <ul className="footer-list">
                                                     <li>
-                                                        <a to="/testimonials">
+                                                        <Link to="/testimonials">
                                                             Testimonials
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="/faqs">FAQ’s</a>
+                                                        <Link to="/faqs">FAQ’s</Link>
                                                     </li>
                                                     <li>
-                                                        <a to="/pricing">
+                                                        <Link to="/pricing">
                                                             Pricing Plans
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="/contact">
+                                                        <Link to="/contact">
                                                             Contact Us
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a to="#">
+                                                        <Link to="/privacy-policy">
                                                             Privacy Policy
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -104,34 +106,34 @@ const Footer = () => {
                                         </div>
                                         <ul className="social-icon-one">
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-facebook-f"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-twitter"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-linkedin"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-rss"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-google-plus"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a to="#">
+                                                <Link to="#">
                                                     <span className="fa fa-vimeo"></span>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -158,9 +160,9 @@ const Footer = () => {
                                                         York 10013, USA.
                                                     </li>
                                                     <li>
-                                                        <a to="#">
+                                                        <Link to="#">
                                                             Find Us On Map
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div> */}
@@ -178,9 +180,9 @@ const Footer = () => {
                                                         +256 704316255
                                                     </li>
                                                     <li>
-                                                        <a to="tel:+256 788948653">
+                                                        <Link to="tel:+256 788948653">
                                                             Call us now
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -198,9 +200,9 @@ const Footer = () => {
                                                         info@kimdigitary.com
                                                     </li>
                                                     <li>
-                                                        <a to="mailto:kimdigitary@gmail.com">
+                                                        <Link to="mailto:kimdigitary@gmail.com">
                                                             Mail to us
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -212,7 +214,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright">
-                    Copyright &copy; 2018 - 2024 <a to="#">Kim Digitary</a>{" "}
+                    Copyright &copy; 2018 - 2024 <Link to="#">Kim Digitary</Link>{" "}
                      All rights reserved.
                 </div>
             </footer>
