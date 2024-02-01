@@ -1,4 +1,24 @@
+import { useEffect, useState } from "react";
+import { ASSET_URL, axiosPrivate } from "../../config/axios";
+import { Link } from "react-router-dom";
+
 const CaseStudy = () => {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        // Fetch projects using the axios instance
+        axiosPrivate
+            .get("/projects")
+            .then((response) => {
+                // Limit projects to the 3 most recent
+                const limitedProjects = response.data.projects.slice(0, 3);
+                setProjects(limitedProjects);
+            })
+            .catch((error) =>
+                console.error("Error fetching projects:", error)
+            );
+    }, []);
+
     return (
         <>
             <section className="case-section">
@@ -13,206 +33,53 @@ const CaseStudy = () => {
                     </div>
 
                     <div className="row clearfix">
-                        <div className="case-block col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="image-box">
-                                    <div className="image">
-                                        <a href="cases-single.html">
-                                            <img
-                                                src="images/resource/case-1.jpg"
-                                                alt=""
-                                            />
-                                        </a>
-                                        <div className="overlay-box">
-                                            <a
-                                                href="cases-single.html"
-                                                className="theme-btn btn-style-one"
-                                            >
-                                                Visit Site
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="content-box">
-                                    <div className="content-inner">
-                                        <ul className="options">
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Site Traffic"
-                                            >
-                                                <img
-                                                    src="images/icons/case-1.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="User Interface"
-                                            >
-                                                <img
-                                                    src="images/icons/case-2.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Mobile Friendly"
-                                            >
-                                                <img
-                                                    src="images/icons/case-3.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                        </ul>
-                                        <div className="text">
-                                            Number one position in search engine
-                                            ads 25.54% increase...
-                                        </div>
-                                        <a
-                                            href="cases-single.html"
-                                            className="read-more"
-                                        >
-                                            <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    {projects.map((project) => (
+    <div className="case-block col-md-4 col-sm-6 col-xs-12" key={project.id}>
+        <div className="inner-box">
+            <div className="image-box">
+                <div className="image">
+                    <a href="cases-single.html">
+                        <img
+                            src={
+                                project.description.find(
+                                    (desc) => desc.type === "client"
+                                )?.data.logo
+                                    ? ASSET_URL +
+                                      project.description.find(
+                                          (desc) => desc.type === "client"
+                                      ).data.logo
+                                    : "client.png"
+                            }
+                            alt={project.title}
+                        />
+                    </a>
+                    <div className="overlay-box">
+                    <Link
+                        to={`/project/${project.slug}`}
+                        className="theme-btn btn-style-one"
+                    >
+                        {" "}
+                        Read More
+                    </Link>
+                    </div>
+                </div>
+            </div>
+            <div className="content-box">
+                <div className="content-inner">
+                    <h4>{project.title}</h4>
+                    <Link
+                         to={`/project/${project.slug}`}
+                        className="read-more"
+                    >
+                        <span className="icon flaticon-right-arrow-1"></span>{" "}
+                        Read More
+                    </Link>
+                </div>
+            </div>
+        </div>
+    </div>
+))}
 
-                        <div className="case-block alternate col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="content-inner">
-                                        <ul className="options">
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Site Traffic"
-                                            >
-                                                <img
-                                                    src="images/icons/case-1.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="User Interface"
-                                            >
-                                                <img
-                                                    src="images/icons/case-2.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Mobile Friendly"
-                                            >
-                                                <img
-                                                    src="images/icons/case-3.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                        </ul>
-                                        <div className="text">
-                                            Number one position in search engine
-                                            ads 25.54% increase...
-                                        </div>
-                                        <a
-                                            href="cases-single.html"
-                                            className="read-more"
-                                        >
-                                            <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="image-box">
-                                    <div className="image">
-                                        <a href="cases-single.html">
-                                            <img
-                                                src="images/resource/case-2.jpg"
-                                                alt=""
-                                            />
-                                        </a>
-                                        <div className="overlay-box">
-                                            <a
-                                                href="cases-single.html"
-                                                className="theme-btn btn-style-one"
-                                            >
-                                                Visit Site
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="case-block col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="image-box">
-                                    <div className="image">
-                                        <a href="cases-single.html">
-                                            <img
-                                                src="images/resource/case-3.jpg"
-                                                alt=""
-                                            />
-                                        </a>
-                                        <div className="overlay-box">
-                                            <a
-                                                href="cases-single.html"
-                                                className="theme-btn btn-style-one"
-                                            >
-                                                Visit Site
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="content-box">
-                                    <div className="content-inner">
-                                        <ul className="options">
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Site Traffic"
-                                            >
-                                                <img
-                                                    src="images/icons/case-1.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="User Interface"
-                                            >
-                                                <img
-                                                    src="images/icons/case-2.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                            <li
-                                                data-toggle="tooltip"
-                                                title="Mobile Friendly"
-                                            >
-                                                <img
-                                                    src="images/icons/case-3.png"
-                                                    alt=""
-                                                />
-                                            </li>
-                                        </ul>
-                                        <div className="text">
-                                            Number one position in search engine
-                                            ads 25.54% increase...
-                                        </div>
-                                        <a
-                                            href="cases-single.html"
-                                            className="read-more"
-                                        >
-                                            <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="btn-box text-center">

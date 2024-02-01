@@ -36,7 +36,7 @@ class ProjectResource extends Resource
     {
         $options = [];
 
-        $categories = Category::with('subcategories')->where('type', 'project')->whereNull('parent_id')->get();
+        $categories = Category::with('subcategories')->where('type', 'project')->whereNull('category_id')->get();
 
         foreach ($categories as $category) {
             $subOptions = [];

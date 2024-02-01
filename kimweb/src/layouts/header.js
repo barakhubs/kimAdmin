@@ -98,7 +98,7 @@ const Header = () => {
                             <div className="logo-box">
                                 <div className="logo">
                                     <Link to="/">
-                                        <img style={{ height: 70+'px', width: 270+'px' }} src={logo} alt="Logo" />
+                                        <img style={{ height: 70 + 'px', width: 270 + 'px' }} src={logo} alt="Logo" />
                                     </Link>
                                 </div>
                             </div>
@@ -127,34 +127,69 @@ const Header = () => {
                                                 <Link to="#">Services</Link>
                                                 <ul>
                                                     <span></span>
-                                                    <li>
-                                                        <Link to="/">
+                                                    <li className="dropdown">
+                                                        <Link to="#">
                                                             Software Development
                                                         </Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/web-design">Web Design</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Web Applications</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Mobile Applications</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                    <li>
-                                                        <Link to="/">
+                                                    <li className="dropdown">
+                                                        <Link to="#">
                                                             Graphics Design
                                                         </Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/">Logo Designing</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Social Media Posting</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Site Branding</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                    <li>
-                                                        <Link to="/">
-                                                            Digital Marketing
-                                                        </Link>
+                                                    <li className="dropdown">
+                                                        <Link to="#">Digital Marketing</Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/">Social Media Marketing</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Google Ads</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">SEO</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>
+
                                             <li className="dropdown">
                                                 <Link to="/portfolio">Our Work</Link>
                                                 <ul>
                                                     <span></span>
                                                     <li>
-                                                        <Link to="/">
+                                                        <Link to="/graphics-design">
                                                             Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">
+                                                        <Link to="/website-design">
                                                             Website Design
                                                         </Link>
                                                     </li>
@@ -197,7 +232,7 @@ const Header = () => {
                             <div className="logo-box pull-left">
                                 <div className="logo">
                                     <Link to="index.html">
-                                    <img style={{ height: 45+'px', width: 150+'px' }} src={logo} alt="Logo" />
+                                        <img style={{ height: 45 + 'px', width: 150 + 'px' }} src={logo} alt="Logo" />
                                     </Link>
                                 </div>
                             </div>
@@ -218,7 +253,7 @@ const Header = () => {
                                     </div>
 
                                     <div className="navbar-collapse collapse clearfix">
-                                    <ul className="navigation clearfix">
+                                        <ul className="navigation clearfix">
                                             <li className="current dropdown">
                                                 <Link to="/">Home</Link>
                                             </li>
@@ -226,20 +261,54 @@ const Header = () => {
                                                 <Link to="#">Services</Link>
                                                 <ul>
                                                     <span></span>
-                                                    <li>
-                                                        <Link to="/">
+                                                    <li className="dropdown">
+                                                        <Link to="#">
                                                             Software Development
                                                         </Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/web-design">Web Design</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Web Applications</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Mobile Applications</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                    <li>
-                                                        <Link to="/">
+                                                    <li className="dropdown">
+                                                        <Link to="#">
                                                             Graphics Design
                                                         </Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/">Logo Designing</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Social Media Posting</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Site Branding</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                    <li>
-                                                        <Link to="/">
-                                                            Digital Marketing
-                                                        </Link>
+                                                    <li className="dropdown">
+                                                        <Link to="#">Digital Marketing</Link>
+                                                        <ul>
+                                                            <span></span>
+                                                            <li>
+                                                                <Link to="/">Social Media Marketing</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">Google Ads</Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to="/">SEO</Link>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>

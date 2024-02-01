@@ -6,6 +6,8 @@ import BlogList from "./pages/blog/list";
 import BlogDetails from "./pages/blog/blogDetails";
 import Contact from "./pages/contact/contact";
 import GraphicsDesign from "./pages/portfolio/portfolio-graphics";
+import About from "./pages/about";
+import WebDesign from "./pages/services/web-design";
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
       <Routes>
         <Route path="" element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/*<Route path="/register" element={<Register />} />
           <Route path="/recover/email" element={<ForgotPassword />} />
@@ -24,6 +27,8 @@ function App() {
           <Route path="/works/graphics" element={<GraphicsDesign />} />
           <Route path="/works/websites" element={<BlogList />} />
           <Route path="/blog" element={<BlogList />} />
+          {/* services */}
+          <Route path="/web-design" element={<WebDesign />} />
           <Route path="*" element={<Missing />} />
         </Route>
       </Routes>

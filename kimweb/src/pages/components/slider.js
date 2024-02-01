@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
     useEffect(() => {
@@ -144,14 +145,14 @@ const Slider = () => {
                                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 >
                                     <div className="btns-box">
-                                        <a
-                                            href="#"
+                                        <Link
+                                            to="/graphics-design"
                                             className="theme-btn btn-style-one"
                                         >
                                             {" "}
                                             <span className="icon flaticon-right-arrow-1"></span>{" "}
                                             Read More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
@@ -285,14 +286,14 @@ const Slider = () => {
                                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 >
                                     <div className="btns-box">
-                                        <a
-                                            href="#"
+                                        <Link
+                                            to="/web-development"
                                             className="theme-btn btn-style-one"
                                         >
                                             {" "}
                                             <span className="icon flaticon-right-arrow-1"></span>{" "}
                                             Read More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
@@ -426,14 +427,14 @@ const Slider = () => {
                                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                                 >
                                     <div className="btns-box">
-                                        <a
-                                            href="#"
+                                        <Link
+                                            to="/web-design"
                                             className="theme-btn btn-style-one"
                                         >
                                             {" "}
                                             <span className="icon flaticon-right-arrow-1"></span>{" "}
                                             Read More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
