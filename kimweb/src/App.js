@@ -8,6 +8,7 @@ import Contact from "./pages/contact/contact";
 import GraphicsDesign from "./pages/portfolio/portfolio-graphics";
 import About from "./pages/about";
 import WebDesign from "./pages/services/web-design";
+import SingleProject from "./pages/portfolio/single-project";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/works/graphics" element={<GraphicsDesign />} />
           <Route path="/works/websites" element={<BlogList />} />
+          <Route path="/project/:slug" element={<SingleProject />} />
           <Route path="/blog" element={<BlogList />} />
           {/* services */}
           <Route path="/web-design" element={<WebDesign />} />

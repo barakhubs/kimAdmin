@@ -106,15 +106,15 @@ class ProjectResource extends Resource
                                     ->rows(4)
                                     ->columnSpanFull()
                                     ->required(),
-                                FileUpload::make('concept-once')
+                                FileUpload::make('concept_one')
                                     ->label('Concept one')
                                     ->image()
                                     ->preserveFilenames(),
-                                FileUpload::make('concept-two')
+                                FileUpload::make('concept_two')
                                     ->label('Concept two')
                                     ->image()
                                     ->preserveFilenames(),
-                                FileUpload::make('concept-three')
+                                FileUpload::make('concept_three')
                                     ->label('Concept three')
                                     ->image()
                                     ->preserveFilenames(),
@@ -152,7 +152,7 @@ class ProjectResource extends Resource
                             ])
                             ->label('Project Images'),
 
-                        Builder\Block::make('video-url')
+                        Builder\Block::make('video_url')
                             ->schema([
                                 TextInput::make('video')
                                     ->label('Add video url')
