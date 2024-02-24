@@ -1,0 +1,36 @@
+@use "../utils" as *;
+/*=============================
+    16. Team Block
+===============================*/
+.team-block {
+  $self: &;
+  &__member-name {
+    margin-bottom: 5px;
+  }
+  &__image-box {
+    border-radius: 30px;
+    overflow: hidden;
+    & > img {
+      width: 100%;
+      @include transition(0.4s);
+    }
+  }
+  &:hover {
+    #{$self}__image-box {
+      & > a {
+        & > img {
+          transform: scale(1.1) rotate(0deg);
+          @include transition(0.4s);
+        }
+      }
+    }
+    #{$self}__member-name {
+      & > a {
+        color: var(--tg-theme-primary-h2);
+        &:hover {
+          color: var(--tg-theme-primary-h2-deep);
+        }
+      }
+    }
+  }
+}

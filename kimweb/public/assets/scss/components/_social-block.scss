@@ -1,0 +1,68 @@
+@use "../utils" as *;
+
+/*=============================
+    24. Social-block
+===============================*/
+.social-block {
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media #{$md} {
+      justify-content: center;
+    }
+    li {
+      a {
+        min-width: 40px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        place-content: center;
+        border-radius: 50%;
+        &.facebook {
+          background: #e9f2ff;
+          color: #1877f2;
+          &:hover {
+            background-color: #1877f2;
+            color: #e9f2ff;
+          }
+        }
+        &.twitter {
+          background: #dbf1ff;
+          color: #1da1f2;
+          &:hover {
+            background-color: #1da1f2;
+            color: #dbf1ff;
+          }
+        }
+        &.pinterest {
+          background: #fff2f4;
+          color: #e60023;
+          &:hover {
+            background-color: #e60023;
+            color: #fff2f4;
+          }
+        }
+        &.linkedin {
+          background: #ecf5ff;
+          color: #0a66c2;
+          &:hover {
+            background-color: #0a66c2;
+            color: #ecf5ff;
+          }
+        }
+        &.instagram {
+          background: #f9efff;
+          color: #833ab4;
+          &:hover {
+            background-color: #833ab4;
+            color: #f9efff;
+          }
+        }
+      }
+    }
+  }
+}

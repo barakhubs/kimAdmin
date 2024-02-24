@@ -1,0 +1,16 @@
+@use "../utils" as *;
+/*=============================
+    46. Benefit
+===============================*/
+.benefit {
+  &__content {
+    padding-right: 88px;
+    @media #{$lg} {
+      padding-right: 0;
+    }
+  }
+  &__text {
+    font-family: var(--tg-text-font-family);
+    line-height: 1.9;
+  }
+}

@@ -1,0 +1,66 @@
+@use "../utils" as *;
+
+/*=============================
+    08. Section-title
+===============================*/
+
+.section-title {
+  $self: &;
+  &__sub {
+    font-weight: var(--tg-fw-semi-bold);
+    display: block;
+    text-transform: uppercase;
+  }
+  &--style2 {
+    #{$self}__sub {
+      display: inline-flex;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      font-size: 20px;
+      font-family: var(--tg-heading-font-family);
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        min-height: 8px;
+        bottom: 2px;
+        background: #f1ebff;
+        z-index: -1;
+      }
+    }
+  }
+  &--style3 {
+    #{$self}__sub {
+      color: var(--tg-theme-secondary-h3);
+      letter-spacing: 0.1em;
+      font-size: 18px;
+      font-family: var(--tg-body-font-family);
+      &.gray-color {
+        color: var(--tg-common-color-gray-5);
+      }
+    }
+    #{$self}__text {
+      color: #d2d2d6;
+    }
+  }
+  &--style4 {
+    #{$self}__sub {
+      background-color: #e0f8f2;
+      border-radius: 500px;
+      display: inline-flex;
+      color: #007f61;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: capitalize;
+      gap: 3px;
+      padding: 1.88px 15px;
+      font-family: var(--tg-heading-font-family);
+      &.white {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--tg-common-color-white);
+      }
+    }
+  }
+}

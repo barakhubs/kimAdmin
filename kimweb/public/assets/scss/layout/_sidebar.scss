@@ -1,0 +1,25 @@
+@use "../utils" as *;
+
+/*=============================
+    48. Sidebar
+===============================*/
+.sidebar {
+  &__block {
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    padding: 45px 38px;
+    position: relative;
+    @media #{$lg} {
+      padding: 20px;
+    }
+    &--style2 {
+      padding: 35px 29px;
+      @media #{$lg} {
+        padding: 20px;
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+  }
+}

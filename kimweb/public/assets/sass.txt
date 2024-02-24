@@ -1,0 +1,1 @@
+sass --watch F:\Eagle\HTML\html-package\html-preview\assets\scss\main.scss:F:\Eagle\HTML\html-package\html-preview\assets\css\main.css

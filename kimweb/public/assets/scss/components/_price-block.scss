@@ -1,0 +1,93 @@
+@use "../utils" as *;
+/*=============================
+    14. Price Block
+===============================*/
+.price-block {
+  $self: &;
+  &__inner {
+    background: var(--tg-common-color-white);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  &__icon {
+    min-width: 77px;
+    min-height: 77px;
+    display: inline-block;
+  }
+  &__header {
+    padding: 30px 0px 15px 0px;
+    margin: 0 35px;
+    border-bottom: 2px solid var(--tg-common-color-ashes-1);
+  }
+  &__highlight {
+    color: var(--tg-theme-primary);
+    font-size: 15px;
+    padding-top: 10px;
+    display: block;
+  }
+  &__title {
+    padding-top: 4px;
+    text-transform: uppercase;
+  }
+  &__price {
+    color: var(--tg-theme-primary);
+    display: inline-block;
+    padding: 27px 0 23px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--tg-heading-font-family);
+    line-height: 1.1;
+  }
+  &__features {
+    padding: 0 40px 65px;
+    @media #{$xs} {
+      padding: 0 20px 65px;
+    }
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 5px;
+      padding-left: 0;
+      margin-bottom: 0;
+      li {
+        display: flex;
+        font-size: 15px;
+        font-weight: var(--tg-fw-regular);
+        padding-left: 25px;
+        position: relative;
+        text-align: left;
+        &::before {
+          position: absolute;
+          content: "\f00c";
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          display: inline-block;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__footer {
+    margin-top: -26px;
+  }
+  &--recommend {
+    #{$self}__inner {
+      background-color: var(--tg-theme-secondary);
+      box-shadow: none;
+    }
+    #{$self}__title {
+      color: var(--tg-common-color-white);
+    }
+    #{$self}__features {
+      ul {
+        li {
+          color: var(--tg-common-color-gray-3);
+        }
+      }
+    }
+    #{$self}__header {
+      margin: 0 0;
+      border-color: var(--tg-theme-primary);
+    }
+  }
+}

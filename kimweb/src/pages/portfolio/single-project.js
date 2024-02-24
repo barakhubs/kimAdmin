@@ -36,18 +36,18 @@ const SingleProject = () => {
     return (
         <>
             <section
-                class="page-title"
+                className="page-title"
                 style={{
                     backgroundImage: 'url("images/background/pattern-4.png")',
                 }}
             >
-                <div class="auto-container">
+                <div className="auto-container">
                     <h1>Our Work: {project.title}</h1>
                 </div>
-                <div class="page-info">
-                    <div class="auto-container">
-                        <div class="inner-container">
-                            <ul class="bread-crumb">
+                <div className="page-info">
+                    <div className="auto-container">
+                        <div className="inner-container">
+                            <ul className="bread-crumb">
                                 <li>
                                     <Link to="/">Home</Link>
                                 </li>
@@ -58,31 +58,31 @@ const SingleProject = () => {
                 </div>
             </section>
 
-            <section class="case-single-section">
-                <div class="container">
+            <section className="case-single-section">
+                <div className="container">
 
-                    <div class="case-info-section">
-                        <div class="row clearfix">
+                    <div className="case-info-section">
+                        <div className="row clearfix">
 
-                            <div class="title-column col-md-3 col-sm-12 col-xs-12">
-                                <div class="inner-column">
+                            <div className="title-column col-md-3 col-sm-12 col-xs-12">
+                                <div className="inner-column">
                                     <h2>Case Info</h2>
                                 </div>
                             </div>
-                            <div class="content-column col-md-9 col-sm-12 col-xs-12">
-                                <div class="inner-column">
-                                    <div class="row clearfix">
+                            <div className="content-column col-md-9 col-sm-12 col-xs-12">
+                                <div className="inner-column">
+                                    <div className="row clearfix">
 
-                                        <div class="column col-md-8 col-sm-8 col-xs-12">
-                                            <div class="text">
+                                        <div className="column col-md-8 col-sm-8 col-xs-12">
+                                            <div className="text">
                                                 <p>{project.description?.find((desc) => desc.type === "client")?.data.overview}</p>
                                             </div>
                                         </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12">
-                                            <ul class="info-category">
-                                                <li><span class="title">Category :</span>Email Marketing</li>
-                                                <li><span class="title">Client :</span>{project.description?.find((desc) => desc.type === "client")?.data.name}</li>
-                                                {/* <li><span class="title">Link :</span>www.Domainname.com</li> */}
+                                        <div className="column col-md-4 col-sm-4 col-xs-12">
+                                            <ul className="info-category">
+                                                <li><span className="title">Category :</span>Email Marketing</li>
+                                                <li><span className="title">Client :</span>{project.description?.find((desc) => desc.type === "client")?.data.name}</li>
+                                                {/* <li><span className="title">Link :</span>www.Domainname.com</li> */}
                                             </ul>
                                         </div>
 
@@ -93,28 +93,28 @@ const SingleProject = () => {
                         </div>
                     </div>
                     {/*
-                    <div class="case-goal-section">
-                        <div class="row clearfix">
+                    <div className="case-goal-section">
+                        <div className="row clearfix">
 
-                            <div class="title-column col-md-3 col-sm-12 col-xs-12">
-                                <div class="inner-column">
+                            <div className="title-column col-md-3 col-sm-12 col-xs-12">
+                                <div className="inner-column">
                                     <h2>Case Info</h2>
                                 </div>
                             </div>
 
-                            <div class="content-column col-md-9 col-sm-12 col-xs-12">
-                                <div class="inner-column">
-                                    <div class="row clearfix">
+                            <div className="content-column col-md-9 col-sm-12 col-xs-12">
+                                <div className="inner-column">
+                                    <div className="row clearfix">
 
-                                        <div class="image-column col-md-5 col-sm-5 col-xs-12">
-                                            <div class="image">
+                                        <div className="image-column col-md-5 col-sm-5 col-xs-12">
+                                            <div className="image">
                                                 <img src="images/resource/goal.jpg" alt="" />
                                             </div>
                                         </div>
 
-                                        <div class="column col-md-7 col-sm-7 col-xs-12">
+                                        <div className="column col-md-7 col-sm-7 col-xs-12">
                                             <h3>The CEO of Gosearch, William Rogerson, made it clear to SEO Inc. that his goals were to:</h3>
-                                            <ul class="list-style-one">
+                                            <ul className="list-style-one">
                                                 <li>Increase organic traffic 5% per month</li>
                                                 <li>Increase the number of keywords on the first two pages of Google results.</li>
                                                 <li>Increase appointments in both the US and UK</li>
@@ -130,60 +130,60 @@ const SingleProject = () => {
                         </div>
                     </div> */}
 
-                    <section class="case-challenge-section">
-                        <div class="row clearfix">
+                    <section className="case-challenge-section">
+                        <div className="row clearfix">
 
-                            <div class="title-column col-md-3 col-sm-12 col-xs-12">
-                                <div class="inner-column">
+                            <div className="title-column col-md-3 col-sm-12 col-xs-12">
+                                <div className="inner-column">
                                     <h2>Challenges</h2>
                                 </div>
                             </div>
 
-                            <div class="content-column col-md-9 col-sm-12 col-xs-12">
-                                <div class="inner-column">
-                                    <div class="text">{project.description?.find((desc) => desc.type === "challenges")?.data.challenge}</div>
+                            <div className="content-column col-md-9 col-sm-12 col-xs-12">
+                                <div className="inner-column">
+                                    <div className="text">{project.description?.find((desc) => desc.type === "challenges")?.data.challenge}</div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section class="case-solutions-section">
-                        <div class="row clearfix">
+                    <section className="case-solutions-section">
+                        <div className="row clearfix">
 
-                            <div class="title-column col-md-3 col-sm-12 col-xs-12">
-                                <div class="inner-column">
+                            <div className="title-column col-md-3 col-sm-12 col-xs-12">
+                                <div className="inner-column">
                                     <h2>Approaches</h2>
                                 </div>
                             </div>
 
-                            <div class="content-column col-md-9 col-sm-12 col-xs-12">
-                                <div class="inner-column">
-                                    <div class="text">{project.description?.find((desc) => desc.type === "approaches")?.data.approach}</div>
-                                    <div class="row clearfix">
+                            <div className="content-column col-md-9 col-sm-12 col-xs-12">
+                                <div className="inner-column">
+                                    <div className="text">{project.description?.find((desc) => desc.type === "approaches")?.data.approach}</div>
+                                    <div className="row clearfix">
 
-                                        <div class="content-column col-md-6 col-sm-6 col-xs-12">
-                                            <div class="row clearfix">
+                                        <div className="content-column col-md-6 col-sm-6 col-xs-12">
+                                            <div className="row clearfix">
 
-                                                <div class="solution-icon-block col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="solution-inner">
-                                                        <div class="icon-box">
-                                                            <span class="icon"><img src="images/icons/time-icon.png" alt="" /></span>
+                                                <div className="solution-icon-block col-md-6 col-sm-6 col-xs-12">
+                                                    <div className="solution-inner">
+                                                        <div className="icon-box">
+                                                            <span className="icon"><img src="images/icons/time-icon.png" alt="" /></span>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="solution-icon-block col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="solution-inner">
-                                                        <div class="icon-box">
-                                                            <span class="icon"><img src="images/icons/rocket.png" alt="" /></span>
+                                                <div className="solution-icon-block col-md-6 col-sm-6 col-xs-12">
+                                                    <div className="solution-inner">
+                                                        <div className="icon-box">
+                                                            <span className="icon"><img src="images/icons/rocket.png" alt="" /></span>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="solution-icon-block col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="solution-inner">
-                                                        <div class="icon-box">
-                                                            <span class="icon"><img src="images/icons/cart.png" alt="" /></span>
+                                                <div className="solution-icon-block col-md-6 col-sm-6 col-xs-12">
+                                                    <div className="solution-inner">
+                                                        <div className="icon-box">
+                                                            <span className="icon"><img src="images/icons/cart.png" alt="" /></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -196,21 +196,21 @@ const SingleProject = () => {
                         </div>
                     </section>
 
-                    <section class="case-result-section">
-                        <div class="row clearfix">
+                    <section className="case-result-section">
+                        <div className="row clearfix">
 
-                            <div class="title-column col-md-3 col-sm-12 col-xs-12">
-                                <div class="inner-column">
+                            <div className="title-column col-md-3 col-sm-12 col-xs-12">
+                                <div className="inner-column">
                                     <h2>Results</h2>
                                 </div>
                             </div>
 
-                            <div class="content-column col-md-9 col-sm-12 col-xs-12">
-                                <div class="inner-column">
-                                    <div class="row clearfix">
+                            <div className="content-column col-md-9 col-sm-12 col-xs-12">
+                                <div className="inner-column">
+                                    <div className="row clearfix">
 
-                                        <div class="column col-md-12 col-sm-12 col-xs-12">
-                                            <div class="text">{project.description?.find((desc) => desc.type === "results")?.data.description}</div>
+                                        <div className="column col-md-12 col-sm-12 col-xs-12">
+                                            <div className="text">{project.description?.find((desc) => desc.type === "results")?.data.description}</div>
                                             <div className="row clearfix">
                                                 {project.description?.find((desc) => desc.type === "results")?.data.images && (
                                                     <>

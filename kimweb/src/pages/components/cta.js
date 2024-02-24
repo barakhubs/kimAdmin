@@ -3,79 +3,38 @@ import Slider from "react-slick";
 import axios, { ASSET_URL } from "../../config/axios";
 
 const Cta = () => {
-    const [partnersData, setPartnersData] = useState([]);
-
-    useEffect(() => {
-        // Fetch data from the API endpoint /clients
-        axios.get("/clients")
-            .then(response => {
-                // Update the state with the fetched data
-                setPartnersData(response.data.clients);
-            })
-            .catch(error => {
-                console.error("Error fetching data from API:", error);
-            });
-    }, []); // Empty dependency array ensures the effect runs once on mount
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        prevArrow: false,
-        nextArrow: false,
-        responsive: [
-            {
-                breakpoint: 768, // Breakpoint for mobile devices
-                settings: {
-                    slidesToShow: 1.2,
-                    slidesToScroll: 1.2,
-                },
-            },
-        ],
-    };
-
 
     return (
-        <section className="partners-section">
-            <div className="auto-container">
-                <div className="row clearfix">
-                    <div className="title-column col-md-4 col-sm-12 col-xs-12">
-                        <div className="inner-column">
-                            <h2>Our Clients</h2>
-                            <div className="text">
-                                We value the trust and partnership of our clients. Join our growing community of satisfied clients who have experienced success with our services and solutions.
+        <div class="estimate estimate--bg">
+            <div class="estimate__elements">
+                <img class="estimate__element estimate__element--one" src="assets/img/elements/element1.svg" alt="element" />
+                <img class="estimate__element estimate__element--two" src="assets/img/elements/element2.svg" alt="element" />
+            </div>
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-lg-6 mb-30">
+                        <div class="estimate__content">
+                            <div class="section-title animation-style2">
+                                <span class="section-title__sub text-white mb-10">
+                                    Let's Work Together
+                                </span>
+                                <h2 class="section-title__main text-white">
+                                    Need a Successful Your Project?
+                                </h2>
                             </div>
-                            <a href="#" className="theme-btn btn-style-one">
-                                Join us now
-                            </a>
+                            <div class="estimate-button pt-30">
+                                <a href="price.html" class="btn btn--white">Estimate Project</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div className="partners-column col-md-8 col-sm-12 col-xs-12">
-                        <Slider {...settings}>
-                            {partnersData.map(partner => (
-                                <div key={partner.id} className="partner-block">
-                                    <div className="inner-box">
-                                        <div className="client-img">
-                                            <img src={ASSET_URL + partner.logo} alt={partner.name} style={{ width: "180px", height: "120px" }} />
-                                        </div>
-                                        <div className="text">{partner.name}</div>
-                                        <a className="read-more" href={'https://' + partner.url} target="_blank" rel="noopener noreferrer">
-                                            <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                            Visit Website
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>
+                    <div class="col-lg-6">
+                        <div class="estimate__right wow fadeInUp animated" data-wow-duration="800ms" data-wow-delay="200ms">
+                            <img src="assets/img/others/estimate-right.png" alt="Estimate" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

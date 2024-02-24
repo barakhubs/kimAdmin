@@ -5,344 +5,190 @@ import logo from '../images/kimdigitary.png';
 const Header = () => {
     return (
         <>
-            <header className="main-header header-style-one">
-                <div className="header-top">
-                    <div className="auto-container">
-                        <div className="top-outer clearfix">
-                            <div className="top-left">
-                                <ul className="links clearfix">
-                                    <li>
-                                        <Link to="tel:+256 704 316255">
-                                            <span className="icon fa fa-phone"></span>
-                                            Talk to us now:{" "}
-                                            <strong>+256 704 316255</strong>{" "}
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/contact">
-                                            <span className="icon"></span>Contact Us
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="top-right clearfix">
-                                <ul className="clearfix">
-                                    <li>
-                                        <Link to="/free-web-analysis">
-                                            <span className="icon flaticon-planet-earth"></span>
-                                            Free Website Analysis
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#">
-                                            <span className="icon flaticon-user"></span>
-                                            Login
-                                        </Link> {" "}
-                                        <span>or</span>{" "}
-                                        <Link to="#">
-                                            <span className="icon flaticon-upload"></span>
-                                            Register
-                                        </Link>
-                                    </li>
-                                    {/* <li className="search-box-outer">
-                                        <div className="dropdown">
-                                            <button
-                                                className="search-box-btn dropdown-toggle"
-                                                type="button"
-                                                id="dropdownMenu3"
-                                                data-toggle="dropdown"
-                                                aria-haspopup="true"
-                                                aria-expanded="false"
-                                            >
-                                                <span className="fa fa-search"></span>
-                                            </button>
-                                            <ul
-                                                className="dropdown-menu pull-right search-panel"
-                                                aria-labelledby="dropdownMenu3"
-                                            >
-                                                <li className="panel-outer">
-                                                    <div className="form-container">
-                                                        <form
-                                                            method="post"
-                                                            action="blog.html"
-                                                        >
-                                                            <div className="form-group">
-                                                                <input
-                                                                    type="search"
-                                                                    name="field-name"
-                                                                    placeholder="Search Here"
-                                                                    required
-                                                                />
-                                                                <button
-                                                                    type="submit"
-                                                                    className="search-btn"
-                                                                >
-                                                                    <span className="fa fa-search"></span>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+            <div id="header-fixed-height"></div>
+            <header>
+                <div id="sticky-header" class="tg-header__area">
+                    <div class="container custom-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-nav-toggler">
+                                    <i class="flaticon-menu-1"></i>
+                                </div>
+                                <div class="tgmenu__wrap">
+                                    <nav class="tgmenu__nav">
+                                        <div class="logo">
+                                            <Link to="index.html"><img src="assets/img/logo/logo.png" alt="Logo" /></Link >
+                                        </div>
+                                        <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
+                                            <ul class="navigation">
+                                                <li class="menu-item-has-children">
+                                                    <Link to="/" class="active-menu">
+                                                        Home
+                                                    </Link >
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <Link to="#">
+                                                        Services
+                                                    </Link >
+                                                    <ul class="sub-menu">
+                                                        <li>
+                                                            <Link to="#">
+                                                                Web Design
+                                                            </Link >
+                                                            <ul class="sub-menu">
+                                                                <li>
+                                                                    <Link to="/web-design">
+                                                                        Web Development
+                                                                    </Link >
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/mobile-apps">
+                                                                        Mobile Applications
+                                                                    </Link >
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <Link to="#">
+                                                                Graphics Design
+                                                            </Link >
+                                                            <ul class="sub-menu">
+                                                                <li>
+                                                                    <Link to="/logo-design">
+                                                                        Logo Design
+                                                                    </Link >
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/social-media-posting">
+                                                                        Social Media Posting
+                                                                    </Link >
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/site-branding">
+                                                                        Site Branding
+                                                                    </Link >
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <Link to="#">
+                                                                Digital Marketing
+                                                            </Link >
+                                                            <ul class="sub-menu">
+                                                                <li>
+                                                                    <Link to="/social-media-marketing">
+                                                                        Social Media Marketing
+                                                                    </Link >
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/google-ads">
+                                                                        Google Ads
+                                                                    </Link >
+                                                                </li>
+                                                                <li>
+                                                                    <Link to="/seo">
+                                                                        SEO
+                                                                    </Link >
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <Link to="#">Our Work </Link >
+                                                    <ul class="sub-menu">
+                                                        <li>
+                                                            <Link to="/works/web-design">
+                                                                Web Design
+                                                            </Link >
+                                                        </li>
+                                                        <li>
+                                                            <Link to="/works/graphics-design">
+                                                                Graphics Design
+                                                            </Link >
+                                                        </li>
+                                                        <li>
+                                                            <Link to="/works/web-apps">
+                                                                Web Apps
+                                                            </Link >
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <Link to="about">About </Link >
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <Link to="pricing"> Pricing </Link >
+                                                </li>
+                                                <li>
+                                                    <Link to="blog">
+                                                        Blog
+                                                    </Link >
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li> */}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="main-box">
-                    <div className="auto-container">
-                        <div className="outer-container clearfix">
-                            <div className="logo-box">
-                                <div className="logo">
-                                    <Link to="/">
-                                        <img style={{ height: 70 + 'px', width: 270 + 'px' }} src={logo} alt="Logo" />
-                                    </Link>
+                                        <div class="tgmenu__action d-none d-md-block">
+                                            <ul class="list-wrap">
+                                                <li class="header-search">
+                                                    <Link to="#" class="search search--button">
+                                                        <img src="assets/img/icons/search-icon.svg" alt="Search" />
+                                                    </Link >
+                                                </li>
+                                                <li class="header-btn">
+                                                    <Link to="/contact" class="btn">Let's Talk</Link >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
                                 </div>
-                            </div>
-
-                            <div className="nav-outer clearfix">
-                                <nav className="main-menu">
-                                    <div className="navbar-header">
-                                        <button
-                                            type="button"
-                                            className="navbar-toggle"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse"
-                                        >
-                                            <span className="icon-bar"></span>
-                                            <span className="icon-bar"></span>
-                                            <span className="icon-bar"></span>
-                                        </button>
+                                <form action="#" class="search-block">
+                                    <div class="search-block__container">
+                                        <span id="close-search" class="search-block__close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                        <div class="search-block__input">
+                                            <input class="search-block__field-input" type="text" placeholder="Enter Your Keywords..." />
+                                        </div>
                                     </div>
-
-                                    <div className="navbar-collapse collapse clearfix">
-                                        <ul className="navigation clearfix">
-                                            <li className="current dropdown">
-                                                <Link to="/">Home</Link>
-                                            </li>
-                                            <li className="dropdown">
-                                                <Link to="#">Services</Link>
-                                                <ul>
-                                                    <span></span>
-                                                    <li className="dropdown">
-                                                        <Link to="#">
-                                                            Software Development
-                                                        </Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/web-design">Web Design</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Web Applications</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Mobile Applications</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown">
-                                                        <Link to="#">
-                                                            Graphics Design
-                                                        </Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/">Logo Designing</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Social Media Posting</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Site Branding</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown">
-                                                        <Link to="#">Digital Marketing</Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/">Social Media Marketing</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Google Ads</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">SEO</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li className="dropdown">
-                                                <Link to="/portfolio">Our Work</Link>
-                                                <ul>
-                                                    <span></span>
-                                                    <li>
-                                                        <Link to="/graphics-design">
-                                                            Graphics Design
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/website-design">
-                                                            Website Design
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <Link to="/pricing">Pricing</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/about">About</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/contact">Contact</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/blog">Blog</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-
-                                <div className="outer-box">
-                                    <Link
-                                        to="contact.html"
-                                        className="theme-btn btn-style-one"
-                                    >
-                                        {" "}
-                                        <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                        Get a Quote
-                                    </Link>
+                                </form>
+                                <div class="tgmobile__menu">
+                                    <nav class="tgmobile__menu-box">
+                                        <div class="close-btn"><i class="flaticon-close-1"></i></div>
+                                        <div class="nav-logo">
+                                            <Link to="index.html"><img src="assets/img/logo/logo.png" alt="Logo" /></Link >
+                                        </div>
+                                        <div class="tgmobile__search">
+                                            <form action="#">
+                                                <input type="text" placeholder="Search here..." />
+                                                <button type="submit">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="tgmobile__menu-outer">
+                                        </div>
+                                        <div class="social-links">
+                                            <ul class="list-wrap">
+                                                <li>
+                                                    <Link to="project-details.html"><i class="fab fa-facebook-f"></i></Link >
+                                                </li>
+                                                <li>
+                                                    <Link to="project-details.html"><i class="fab fa-twitter"></i></Link >
+                                                </li>
+                                                <li>
+                                                    <Link to="project-details.html"><i class="fab fa-instagram"></i></Link >
+                                                </li>
+                                                <li>
+                                                    <Link to="project-details.html"><i class="fab fa-linkedin-in"></i></Link >
+                                                </li>
+                                                <li>
+                                                    <Link to="project-details.html"><i class="fab fa-youtube"></i></Link >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="sticky-header">
-                    <div className="auto-container">
-                        <div className="outer-container clearfix">
-                            <div className="logo-box pull-left">
-                                <div className="logo">
-                                    <Link to="index.html">
-                                        <img style={{ height: 45 + 'px', width: 150 + 'px' }} src={logo} alt="Logo" />
-                                    </Link>
-                                </div>
-                            </div>
-
-                            <div className="nav-outer clearfix">
-                                <nav className="main-menu">
-                                    <div className="navbar-header">
-                                        <button
-                                            type="button"
-                                            className="navbar-toggle"
-                                            data-toggle="collapse"
-                                            data-target=".navbar-collapse"
-                                        >
-                                            <span className="icon-bar"></span>
-                                            <span className="icon-bar"></span>
-                                            <span className="icon-bar"></span>
-                                        </button>
-                                    </div>
-
-                                    <div className="navbar-collapse collapse clearfix">
-                                        <ul className="navigation clearfix">
-                                            <li className="current dropdown">
-                                                <Link to="/">Home</Link>
-                                            </li>
-                                            <li className="dropdown">
-                                                <Link to="#">Services</Link>
-                                                <ul>
-                                                    <span></span>
-                                                    <li className="dropdown">
-                                                        <Link to="#">
-                                                            Software Development
-                                                        </Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/web-design">Web Design</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Web Applications</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Mobile Applications</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown">
-                                                        <Link to="#">
-                                                            Graphics Design
-                                                        </Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/">Logo Designing</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Social Media Posting</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Site Branding</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown">
-                                                        <Link to="#">Digital Marketing</Link>
-                                                        <ul>
-                                                            <span></span>
-                                                            <li>
-                                                                <Link to="/">Social Media Marketing</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">Google Ads</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/">SEO</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="dropdown">
-                                                <Link to="/portfolio">Our Work</Link>
-                                                <ul>
-                                                    <span></span>
-                                                    <li>
-                                                        <Link to="/works/graphics">
-                                                            Graphics Design
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/works/websites">
-                                                            Website Design
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <Link to="/pricing">Pricing</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/about">About</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/contact">Contact</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/blog">Blog</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
+                                <div class="tgmobile__menu-backdrop"></div>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,56 @@
+@use "../utils" as *;
+/*=============================
+    36. Estimate
+===============================*/
+.estimate {
+  &--bg {
+    background-color: var(--tg-theme-primary);
+    padding-top: 245px;
+    padding-bottom: 200px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @media #{$lg} {
+      padding-top: 145px;
+      padding-bottom: 100px;
+    }
+    @media #{$md} {
+      padding-top: 145px;
+      padding-bottom: 100px;
+    }
+    @media #{$xs} {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  &__content {
+    padding-top: 60px;
+  }
+  &__right {
+    margin-left: -180px;
+    margin-bottom: -140px;
+    @media #{$lg} {
+      margin-left: 0;
+      margin-bottom: 0;
+      text-align: right;
+    }
+    @media #{$md} {
+      margin-left: 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  &__element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    &--one {
+      top: -1px;
+    }
+    &--two {
+      bottom: -1px;
+    }
+  }
+}

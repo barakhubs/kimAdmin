@@ -1,0 +1,60 @@
+@use "../utils" as *;
+
+/*=============================
+    25. Skill-block
+===============================*/
+.skills-block {
+  padding-right: 200px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  @media #{$lg} {
+    padding-right: 15px;
+  }
+  @media #{$md} {
+    padding-right: 0px;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  &__item {
+    margin-bottom: 40px;
+    text-align: left;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    margin-bottom: 16px;
+  }
+  &__number {
+    line-height: 1;
+    font-size: 16px;
+    transition: width 1s ease-in-out;
+  }
+  &__progress {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      min-width: 100%;
+      min-height: 5px;
+      background: #ffdbe3;
+      border-radius: 0px 5px 5px 3px;
+      bottom: -5px;
+      z-index: 2;
+    }
+  }
+  &__progress-bar {
+    min-height: 4px;
+    background: #ff2759;
+    border-radius: 3px 3px 0px 0px;
+    z-index: 1;
+    transition: width 1s ease-in-out;
+  }
+}

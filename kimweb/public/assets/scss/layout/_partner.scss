@@ -1,0 +1,14 @@
+@use "../utils" as *;
+/*=============================
+    35. Partner
+===============================*/
+.partner {
+  &--bg {
+    background-color: var(--tg-theme-secondary-deep);
+  }
+}
+.sponsors {
+  &--h3 {
+    border-bottom: 1px solid #d9d9d9;
+  }
+}

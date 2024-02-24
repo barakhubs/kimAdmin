@@ -1,113 +1,61 @@
 const FeaturedSection = () => {
     return (
-        <section className="featured-section">
-                <div className="auto-container">
-                    <div className="inner-container clearfix">
-                        <div className="featured-block col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="upper-box">
-                                    <div className="text">
-                                    Welcome to Kim Digitary, your premier partner in 360-degree digital marketing services. Committed to building unshakable brand presences and delivering measurable ROI.
-                                    </div>
-                                    <a className="read-more" href="services.html">
-                                        <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                        Read More
-                                    </a>
-                                </div>
-                                <div className="lower-box">
-                                    <div className="lower-inner">
-                                        <div className="icon-box">
-                                            <span className="icon">
-                                                <img
-                                                    src="images/icons/featured-icon-1.png"
-                                                    alt=""
-                                                />
-                                            </span>
-                                        </div>
-                                        <h3>
-                                            <a href="services.html">
-                                                Who We Are
-                                            </a>
-                                        </h3>
-                                        <div className="title">
-                                            Bulding Brands, Building Brands
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="about about--area pt-50 pb-85">
+            <div class="container custom-container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-30">
+                        <div class="about__image wow fadeInLeft animated" data-wow-duration="700ms" data-wow-delay="500ms">
+                            <img src="assets/img/others/about_img01.png" alt="img" />
                         </div>
-
-                        <div className="featured-block col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="upper-box">
-                                    <div className="text">
-                                    Comprehensive 360-degree digital marketing solutions tailored to your business needs. Services include SEO, Social Media Management, Content Marketing, and more.
-                                    </div>
-                                    <a className="read-more" href="services.html">
-                                        <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                        Read More
-                                    </a>
-                                </div>
-                                <div className="lower-box">
-                                    <div className="lower-inner">
-                                        <div className="icon-box">
-                                            <span className="icon">
-                                                <img
-                                                    src="images/icons/featured-icon-2.png"
-                                                    alt=""
-                                                />
-                                            </span>
-                                        </div>
-                                        <h3>
-                                            <a href="services.html">
-                                                What We Do
-                                            </a>
-                                        </h3>
-                                        <div className="title">
-                                            Services we Offer
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-lg-6 mb-30">
+                        <div class="about__content">
+                            <div class="section-title animation-style2">
+                                <span class="section-title__sub primary-color mb-10">ABOUT US</span>
+                                <h2 class="section-title__main">Creative Agency that Help you go Ahead.</h2>
                             </div>
-                        </div>
-
-                        <div className="featured-block col-md-4 col-sm-6 col-xs-12">
-                            <div className="inner-box">
-                                <div className="upper-box">
-                                    <div className="text">
-                                    Partnering with businesses of all sizes – from startups to national brands. Our mission is to empower every business with effective digital marketing strategies. 
-                                    </div>
-                                    <a className="read-more" href="services.html">
-                                        <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                        Read More
-                                    </a>
-                                </div>
-                                <div className="lower-box">
-                                    <div className="lower-inner">
-                                        <div className="icon-box">
-                                            <span className="icon">
-                                                <img
-                                                    src="images/icons/featured-icon-3.png"
-                                                    alt=""
-                                                />
+                            <div>
+                                <p class="about__text pt-15">
+                                    We’re an imaginative group given to making your brand flourish in computerized media through compelling technique and plan. We make imaginative, eye-catching logos, blurbs, flyers, and websites that are competitive and moderate whereas keeping your campaign’s objective in intellect.
+                                </p>
+                                <div class="about__features pt-15">
+                                    <ul>
+                                        <li>
+                                            <span>
+                                                <img src="assets/img/icons/check-icon.svg" alt="icon" />
                                             </span>
-                                        </div>
-                                        <h3>
-                                            <a href="services.html">
-                                                Who We Help
-                                            </a>
-                                        </h3>
-                                        <div className="title">
-                                            Client Focus
-                                        </div>
-                                    </div>
+                                            We are accountable and work together as a team and communicate clearly.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <img src="assets/img/icons/check-icon.svg" alt="icon" />
+                                            </span>
+                                            We think outside the box, challenge constructively and act faster before others do.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <img src="assets/img/icons/check-icon.svg" alt="icon" />
+                                            </span>
+                                            We aim to Create a positive place to work and support ethical initiatives.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                <img src="assets/img/icons/check-icon.svg" alt="icon" />
+                                            </span>
+                                            We Always deliver extraordinary quality results, accomplish and improve them.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="about__button pt-20">
+                                    <a href="about.html" class="btn">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-    );
+            </div>
+        </section>
+    )
 };
 
 export default FeaturedSection;

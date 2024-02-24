@@ -31,18 +31,18 @@ const GraphicsDesign = () => {
     return (
         <>
             <section
-                class="page-title"
+                className="page-title"
                 style={{
                     backgroundImage: 'url("images/background/pattern-4.png")',
                 }}
             >
-                <div class="auto-container">
+                <div className="auto-container">
                     <h1>Our Work: Graphics Design</h1>
                 </div>
-                <div class="page-info">
-                    <div class="auto-container">
-                        <div class="inner-container">
-                            <ul class="bread-crumb">
+                <div className="page-info">
+                    <div className="auto-container">
+                        <div className="inner-container">
+                            <ul className="bread-crumb">
                                 <li>
                                     <Link to="/">Home</Link>
                                 </li>
@@ -56,8 +56,8 @@ const GraphicsDesign = () => {
                 </div>
             </section>
 
-            <section class="case-page-section">
-                <div class="auto-container">
+            <section className="case-page-section">
+                <div className="auto-container">
                 <div className="row clearfix">
                         {currentProjects.map((project) => (
                             <div className="case-block col-md-4 col-sm-6 col-xs-12" key={project.id}>

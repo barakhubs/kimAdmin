@@ -1,0 +1,49 @@
+@use "../utils" as *;
+/*=============================
+    10. Featured Block
+===============================*/
+.featured-block {
+  display: flex;
+  gap: 19px;
+  max-width: 431px;
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    min-width: 60px;
+    min-height: 60px;
+    justify-content: center;
+    border: 1px solid #ffe07e;
+    background: #fff7de;
+    border-radius: 50%;
+    &.icon2 {
+      border-color: #5f70fe;
+      background-color: #f1f3ff;
+    }
+    &.icon3 {
+      border-color: #f64833;
+      background-color: #fff4f2;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    text-transform: capitalize;
+  }
+}
+.features-list {
+  ul {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 8px;
+    li {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      span {
+        min-width: 23px;
+      }
+    }
+  }
+}

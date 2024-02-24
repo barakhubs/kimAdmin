@@ -1,0 +1,63 @@
+@use "../utils" as *;
+
+/*=============================
+    38. Team
+===============================*/
+.team {
+  &__detail-wrapper {
+    z-index: 1;
+    @media #{$md} {
+      text-align: center;
+      padding: 50px 15px 80px 15px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 83%;
+      right: 0;
+      height: 100%;
+      background-color: #f3fcff;
+      top: 0;
+      z-index: -1;
+      @media #{$lg} {
+        width: 100%;
+      }
+    }
+  }
+  &__profile-picture {
+    & > img {
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+  &__member-details {
+    &__designation {
+      font-size: 24px;
+      color: #7e7e7e;
+    }
+    &__address {
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: grid;
+        gap: 3px;
+        li {
+          font-size: 15px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          @media #{$md} {
+            justify-content: center;
+          }
+          span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--tg-theme-secondary);
+          }
+        }
+      }
+    }
+  }
+}

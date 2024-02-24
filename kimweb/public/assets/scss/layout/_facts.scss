@@ -1,0 +1,29 @@
+@use "../utils" as *;
+/*=============================
+	33. Facts
+===============================*/
+.facts {
+  &--bg {
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(31, 36, 87, 0.8);
+      z-index: -1;
+    }
+  }
+}
+.map-bg {
+  margin-top: -250px;
+  height: 600px;
+  & iframe {
+    height: 100%;
+    width: 100%;
+  }
+}

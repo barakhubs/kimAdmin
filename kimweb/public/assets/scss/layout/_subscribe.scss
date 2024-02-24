@@ -1,0 +1,10 @@
+@use "../utils" as *;
+
+/*=============================
+    43. Subscribe
+===============================*/
+.subscribe {
+  &--bg {
+    background-color: var(--tg-theme-primary-h2);
+  }
+}

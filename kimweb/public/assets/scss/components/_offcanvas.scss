@@ -1,0 +1,94 @@
+@use "../utils" as *;
+
+/*=============================
+	04. OffCanvas
+===============================*/
+.extra-info {
+  background: var(--tg-common-color-white) none repeat scroll 0 0;
+  height: 100%;
+  padding: 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.7s ease 0s;
+  width: 340px;
+  z-index: 999;
+  overflow-y: scroll;
+  transform: translateX(100%);
+}
+.extra-info.active {
+  transform: translateX(0);
+}
+.close-icon {
+  margin-top: -16px;
+  text-align: right;
+}
+.close-icon > button {
+  background: transparent;
+  border: 0 none;
+  color: var(--tg-theme-primary);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+}
+.extra-info .logo-side img {
+  max-width: 151px;
+}
+.side-info {
+  border-top: 1px solid var(--tg-theme-primary);
+  padding-top: 25px;
+}
+.contact-list h4 {
+  color: var(--tg-heading-font-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+.contact-list p {
+  color: var(--tg-theme-secondary);
+  margin: 0;
+  margin-bottom: 2px;
+  line-height: 26px;
+}
+.side-instagram {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+.side-instagram li {
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+  padding: 5px;
+}
+.side-instagram li > a {
+  display: block;
+}
+.side-instagram img {
+  width: 100%;
+  border-radius: 5px;
+}
+.social-icon-right > a {
+  color: var(--tg-theme-primary);
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+}
+.social-icon-right > a:hover {
+  color: var(--tg-secondary-color);
+}
+.offcanvas-overly {
+  position: fixed;
+  background: var(--tg-common-color-black);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.offcanvas-overly.active {
+  opacity: 0.5;
+  visibility: visible;
+}

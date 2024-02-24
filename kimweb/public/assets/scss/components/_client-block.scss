@@ -1,0 +1,83 @@
+@use "../utils" as *;
+/*=============================
+    12. Client Block
+===============================*/
+.client-block {
+  $self: &;
+  background-color: var(--tg-common-color-ashes);
+  border-radius: 20px;
+  padding: 65px 30px 65px 49px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+  @include transition(0.4s);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: var(--tg-theme-primary);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(0.4s);
+  }
+  &:hover {
+    background-color: var(--tg-common-color-white);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    @include transition(0.4s);
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      height: 10px;
+      @include transition(0.4s);
+    }
+  }
+  @media #{$xs} {
+    padding: 20px;
+  }
+  &__author {
+    gap: 15px;
+  }
+  &__author-img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__author-name {
+    font-size: 22px;
+    font-weight: var(--tg-fw-bold);
+    margin-bottom: 3px;
+    line-height: 1;
+  }
+  &__author-designation {
+    font-size: 14px;
+  }
+  &--style2 {
+    text-align: center;
+    padding: 40px 26px;
+    margin-bottom: 0;
+    #{$self}__avatar {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    #{$self}__quote {
+      display: inline-block;
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.15);
+      line-height: 1.1;
+    }
+    #{$self}__name {
+      font-size: 22px;
+      margin-bottom: 0px;
+    }
+    #{$self}__designation {
+      font-size: 14px;
+    }
+  }
+  &--h3 {
+    background: #fffaef;
+    border: 1px solid #d7d7d7;
+    border-radius: 30px;
+  }
+}

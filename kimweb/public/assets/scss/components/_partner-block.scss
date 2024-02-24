@@ -1,0 +1,53 @@
+@use "../utils" as *;
+/*=============================
+    15. Partner Block
+===============================*/
+.partner-block {
+  background-color: var(--tg-common-color-dark-3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 170px;
+  border-radius: 20px;
+}
+.sponsors-content {
+  &__title {
+    font-weight: 400;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__list {
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media #{$md} {
+        text-align: center;
+      }
+      @media #{$xs} {
+        text-align: center;
+      }
+      li {
+        a {
+          img {
+            opacity: 0.5;
+            filter: grayscale(1);
+            @include transition(0.4s);
+          }
+          &:hover {
+            img {
+              opacity: 1;
+              filter: grayscale(0);
+              @include transition(0.4s);
+            }
+          }
+        }
+      }
+    }
+  }
+}

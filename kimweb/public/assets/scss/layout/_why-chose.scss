@@ -1,0 +1,47 @@
+@use "../utils" as *;
+/*=============================
+    45. Why Choose
+===============================*/
+.whychose {
+  $self: &;
+  &--h4 {
+    background: linear-gradient(
+      180deg,
+      #f9fbff 0%,
+      rgba(237, 237, 237, 0.4) 100%
+    );
+    #{$self}__element {
+      position: absolute;
+      min-width: 466px;
+      min-height: 248px;
+      top: 0;
+      left: auto;
+      right: 370px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__content {
+    margin-bottom: 110px;
+    @media #{$lg} {
+      margin-bottom: 50px;
+    }
+    h3 {
+      max-width: 423px;
+    }
+  }
+  &__image-graph2 {
+    position: absolute;
+    right: -51px;
+    bottom: 133px;
+    border-radius: 6px;
+    background-color: var(--tg-common-color-white);
+    box-shadow: 0px 8px 40px -2px rgba(6, 12, 59, 0.08);
+    animation: jump 15s infinite;
+    @media #{$lg} {
+      right: 0;
+    }
+    @media #{$xs} {
+      bottom: 0;
+    }
+  }
+}

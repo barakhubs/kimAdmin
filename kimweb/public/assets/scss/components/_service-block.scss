@@ -1,0 +1,498 @@
+@use "../utils" as *;
+/*=============================
+    09. Service Block
+===============================*/
+.service-block {
+  $self: &;
+  background-color: var(--tg-common-color-dark-2);
+  border-radius: 20px;
+  padding: 40px 33px 40px 40px;
+  @include transition(0.3s);
+  &__icon {
+    display: inline-block;
+    height: 53px;
+    object-fit: cover;
+  }
+  &__link {
+    font-size: 15px;
+    font-weight: var(--tg-fw-medium);
+    color: var(--tg-common-color-white);
+  }
+  &__text {
+    @include transition(0.3s);
+  }
+  &:hover {
+    background-color: var(--tg-common-color-white);
+    @include transition(0.3s);
+    #{$self}__text {
+      color: var(--tg-body-color);
+    }
+    #{$self}__title {
+      a {
+        color: var(--tg-theme-secondary);
+        &:hover {
+          color: var(--tg-theme-primary);
+        }
+      }
+    }
+    #{$self}__link {
+      color: var(--tg-theme-secondary);
+      &:hover {
+        color: var(--tg-theme-primary);
+      }
+    }
+  }
+  &--style2 {
+    background-color: var(--tg-common-color-white);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    padding: 48px 20px;
+    margin-bottom: 55px;
+    #{$self}__title {
+      font-size: 22px;
+      line-height: 1.4;
+      @media #{$lg} {
+        font-size: 18px;
+      }
+    }
+    #{$self}__link {
+      color: var(--tg-theme-primary-h2);
+    }
+    #{$self}__icon {
+      svg > path {
+        @include transition(0.3s);
+      }
+      min-width: 96px;
+      min-height: 80px;
+    }
+    &:hover {
+      background-color: var(--tg-theme-secondary-h2);
+      box-shadow: none;
+      #{$self}__title {
+        & a {
+          color: var(--tg-common-color-white);
+          &:hover {
+            color: var(--tg-common-color-white);
+            @include transition(0.3s);
+          }
+        }
+      }
+      #{$self}__icon {
+        svg > path {
+          stroke: var(--tg-common-color-white);
+          fill: var(--tg-common-color-white);
+          @include transition(0.3s);
+        }
+        &.icon1 {
+          svg > path {
+            fill: transparent;
+          }
+        }
+      }
+      #{$self}__link {
+        color: var(--tg-common-color-white);
+        &:hover {
+          color: var(--tg-theme-primary-h2);
+        }
+      }
+    }
+  }
+  &--style3 {
+    background-color: var(--tg-common-color-white);
+    border-radius: 10px;
+    padding: 42px 22px 38px 23px;
+    display: flex;
+    gap: 20px;
+    #{$self}__left {
+      z-index: 1;
+      padding: 25px 0;
+      max-height: 100px;
+    }
+    #{$self}__title {
+      font-size: 22px;
+      display: block;
+      a {
+        color: var(--tg-theme-secondary);
+      }
+    }
+    #{$self}__icon-line {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      min-height: 100px;
+      width: 2px;
+      background-color: rgb(114, 114, 114);
+      margin: 0 auto;
+      z-index: -1;
+      @include transition(0.3s);
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: rgb(114, 114, 114);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        @include transition(1s);
+        z-index: 2;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      i {
+        position: absolute;
+        height: 0%;
+        width: 2px;
+        background: var(--tg-common-color-black);
+        top: 50%;
+        transform: translateY(-50%);
+        @include transition(0.6s);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+      }
+    }
+    #{$self}__icon {
+      width: 50px;
+      height: 50px;
+      background-color: var(--tg-common-color-black);
+      border-radius: 50%;
+      color: var(--tg-common-color-white);
+      display: inline-flex;
+      place-content: center;
+      place-items: center;
+      padding: 10px;
+    }
+    .icon1 {
+      #{$self}__icon-line {
+        background-color: #e0e9ff;
+        & > i {
+          background-color: #e0e9ff;
+        }
+        &::before,
+        &::after {
+          background-color: #e0e9ff;
+        }
+      }
+      #{$self}__icon {
+        background-color: #4b7eff;
+      }
+    }
+    .icon2 {
+      #{$self}__icon-line {
+        background-color: #ffe4ec;
+        & > i {
+          background-color: #ffe4ec;
+        }
+        &::before,
+        &::after {
+          background-color: #ffe4ec;
+        }
+      }
+      #{$self}__icon {
+        background-color: #fd346e;
+      }
+    }
+    .icon3 {
+      #{$self}__icon-line {
+        background-color: #e5faff;
+        & > i {
+          background-color: #e5faff;
+        }
+        &::before,
+        &::after {
+          background-color: #e5faff;
+        }
+      }
+      #{$self}__icon {
+        background-color: #25d3fa;
+      }
+    }
+    .icon4 {
+      #{$self}__icon-line {
+        background-color: #f8edff;
+        & > i {
+          background-color: #f8edff;
+        }
+        &::before,
+        &::after {
+          background-color: #f8edff;
+        }
+      }
+      #{$self}__icon {
+        background-color: #bb4bff;
+      }
+    }
+    .icon5 {
+      #{$self}__icon-line {
+        background-color: #fff1e4;
+        & > i {
+          background-color: #fff1e4;
+        }
+        &::before,
+        &::after {
+          background-color: #fff1e4;
+        }
+      }
+      #{$self}__icon {
+        background-color: #ffa24b;
+      }
+    }
+    .icon6 {
+      #{$self}__icon-line {
+        background-color: #d0ffe3;
+        & > i {
+          background-color: #d0ffe3;
+        }
+        &::before,
+        &::after {
+          background-color: #d0ffe3;
+        }
+      }
+      #{$self}__icon {
+        background-color: #36e27b;
+      }
+    }
+    &:hover {
+      background-color: var(--tg-common-color-white);
+      box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
+      #{$self}__title {
+        a {
+          color: var(--tg-theme-primary-h3);
+          &:hover {
+            color: var(--tg-theme-secondary);
+          }
+        }
+      }
+      &.service1 {
+        #{$self}__title {
+          a {
+            color: #4b7eff;
+            &:hover {
+              color: var(--tg-theme-primary-h3);
+            }
+          }
+        }
+      }
+      &.service2 {
+        #{$self}__title {
+          a {
+            color: #fd346e;
+            &:hover {
+              color: var(--tg-theme-primary-h3);
+            }
+          }
+        }
+      }
+      &.service3 {
+        #{$self}__title {
+          a {
+            color: #25d3fa;
+          }
+        }
+      }
+      &.service4 {
+        #{$self}__title {
+          a {
+            color: #bb4bff;
+          }
+        }
+      }
+      &.service5 {
+        #{$self}__title {
+          a {
+            color: #ffa24b;
+          }
+        }
+      }
+      &.service6 {
+        #{$self}__title {
+          a {
+            color: #36e27b;
+          }
+        }
+      }
+      #{$self}__title {
+        a {
+          &:hover {
+            color: var(--tg-theme-primary-h3);
+          }
+        }
+      }
+      #{$self}__icon-line {
+        i {
+          opacity: 1;
+          visibility: visible;
+          height: 100%;
+          @include transition(0.6s);
+        }
+        &::before,
+        &::after {
+          @include transition(1s);
+        }
+      }
+      .icon1 {
+        #{$self}__icon-line {
+          i {
+            background-color: #4b7eff;
+          }
+          &::before,
+          &::after {
+            background-color: #4b7eff;
+          }
+        }
+      }
+      .icon2 {
+        #{$self}__icon-line {
+          i {
+            background-color: #fd346e;
+          }
+          &::before,
+          &::after {
+            background-color: #fd346e;
+          }
+        }
+      }
+      .icon3 {
+        #{$self}__icon-line {
+          i {
+            background-color: #25d3fa;
+          }
+          &::before,
+          &::after {
+            background-color: #25d3fa;
+          }
+        }
+      }
+      .icon4 {
+        #{$self}__icon-line {
+          i {
+            background-color: #bb4bff;
+          }
+          &::before,
+          &::after {
+            background-color: #bb4bff;
+          }
+        }
+      }
+      .icon5 {
+        #{$self}__icon-line {
+          i {
+            background-color: #ffa24b;
+          }
+          &::before,
+          &::after {
+            background-color: #ffa24b;
+          }
+        }
+      }
+      .icon6 {
+        #{$self}__icon-line {
+          i {
+            background-color: #36e27b;
+          }
+          &::before,
+          &::after {
+            background-color: #36e27b;
+          }
+        }
+      }
+    }
+  }
+  &--style4 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 16px 40px;
+    text-align: center;
+    #{$self}__number {
+      font-size: 30px;
+      color: var(--tg-theme-secondary-h4);
+      font-family: var(--tg-heading-font-family);
+      display: block;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+    #{$self}__title {
+      font-size: 24px;
+      @media #{$lg} {
+        font-size: 20px;
+      }
+    }
+    #{$self}__icon {
+      min-width: 80px;
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1a9678;
+      border-radius: 50%;
+      @include transition(0.3s);
+      svg {
+        path {
+          @include transition(0.3s);
+        }
+      }
+    }
+    #{$self}__text {
+      color: var(--tg-common-color-white);
+    }
+    &:hover {
+      #{$self}__title {
+        a {
+          color: var(--tg-common-color-black);
+          &:hover {
+            color: var(--tg-theme-primary-h4);
+          }
+        }
+      }
+      #{$self}__text {
+        color: var(--tg-body-color);
+        @include transition(0.3s);
+      }
+      #{$self}__number {
+        color: #fe5802;
+        @include transition(0.3s);
+      }
+      #{$self}__icon {
+        background-color: #fff4f4;
+        @include transition(0.3s);
+        svg {
+          path {
+            stroke: #fe5802;
+          }
+        }
+      }
+    }
+  }
+  &--style5 {
+    border: 1px solid #d8d8d8;
+    background-color: var(--tg-common-color-white);
+    border-radius: 20px;
+    padding: 50px 29px 40px;
+    #{$self}__icon {
+      svg {
+        path {
+          @include transition(0.3s);
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid transparent;
+      #{$self}__icon {
+        svg {
+          path {
+            stroke: var(--tg-theme-primary);
+            @include transition(0.3s);
+          }
+        }
+      }
+    }
+  }
+}

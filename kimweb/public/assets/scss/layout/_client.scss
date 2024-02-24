@@ -1,0 +1,25 @@
+@use "../utils" as *;
+/*=============================
+    34. Client Layout
+===============================*/
+.client {
+  $self: &;
+  &--h2 {
+    background-color: var(--tg-bg-FFF8E8);
+    #{$self}__wrapper {
+      padding-left: 60px;
+      @media #{$md} {
+        padding: 0 30px;
+      }
+    }
+  }
+  &--h4 {
+    background-color: #dff1ee;
+    #{$self}__wrapper {
+      padding-left: 60px;
+      @media #{$md} {
+        padding: 0 30px;
+      }
+    }
+  }
+}

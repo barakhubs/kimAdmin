@@ -1,9 +1,11 @@
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
+import BlogHome from "./components/blog";
 import CaseStudy from "./components/case-studies";
 import Cta from "./components/cta";
 import FeaturedSection from "./components/featured";
 import Features from "./components/features";
+import Partners from "./components/partners";
 import Pricing from "./components/pricing";
 import Score from "./components/score";
 import Services from "./components/services";
@@ -18,11 +20,13 @@ const Home = () => {
             <FeaturedSection />
             <Services />
             {/* <Score /> */}
-            <Features />
-            <WorkFlow />
+             {/* <Features /> */}
+            {/* <WorkFlow /> */}
             <CaseStudy />
-            <Testimonials />
+             <Testimonials />
             <Pricing />
+            <Partners />
+            <BlogHome />
             <Cta />
         </>
     );

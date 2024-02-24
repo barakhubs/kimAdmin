@@ -1,0 +1,18 @@
+@use "../utils" as *;
+/*=============================
+    20. Counter Block
+===============================*/
+.counter-block {
+  &__number {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--tg-theme-primary-h4);
+    line-height: 1.1;
+    font-family: var(--tg-heading-font-family);
+    margin-bottom: 0;
+  }
+  &__name {
+    font-size: 18px;
+    color: var(--tg-theme-secondary);
+  }
+}

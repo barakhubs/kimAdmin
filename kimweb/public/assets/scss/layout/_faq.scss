@@ -1,0 +1,18 @@
+@use "../utils" as *;
+/*=============================
+    41. Faq
+===============================*/
+.faq {
+  &--style {
+    background-color: #1a1a1f;
+  }
+  &__image {
+    margin-right: -110px;
+    @media #{$xl} {
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

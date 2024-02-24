@@ -1,0 +1,25 @@
+@use "../utils" as *;
+/*=============================
+    49. Error
+===============================*/
+.error-content {
+  text-align: center;
+  &__title {
+    font-size: 80px;
+    @media #{$lg} {
+      font-size: 40px;
+    }
+    @media #{$md} {
+      font-size: 30px;
+    }
+    @media #{$xs} {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    font-size: 30px;
+    @media #{$xs} {
+      font-size: 18px;
+    }
+  }
+}

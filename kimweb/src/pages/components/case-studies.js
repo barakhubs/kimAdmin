@@ -1,46 +1,51 @@
-import { useEffect, useState } from "react";
-import { ASSET_URL, axiosPrivate } from "../../config/axios";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ASSET_URL, axiosPrivate } from '../../config/axios';
+import { Link } from 'react-router-dom';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 const CaseStudy = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        // Fetch projects using the axios instance
-        axiosPrivate
-            .get("/projects")
-            .then((response) => {
-                // Limit projects to the 3 most recent
-                const limitedProjects = response.data.projects.slice(0, 3);
-                setProjects(limitedProjects);
+        axiosPrivate.get('/projects')
+            .then(response => {
+                // Assuming your API returns an array of projects
+                setProjects(response.data.projects.slice(0, 6));
             })
-            .catch((error) =>
-                console.error("Error fetching projects:", error)
-            );
+            .catch(error => console.error('Error fetching projects:', error));
     }, []);
 
     return (
-        <>
-            <section className="case-section">
-                <div className="auto-container">
-                    <div className="sec-title centered">
-                        <h2>Case Studies</h2>
-                        <div className="text">
-                            We help you generate high-quality online sales leads
-                            by implementing highly structured, <br /> persuasive
-                            Internet marketing campaigns.
+        <section className="project project--area tg-slide-wrap2 pb-65 pt-65">
+            <div className="container">
+                <div class="row">
+                    <div class="col-xxl-5 col-xl-6 col-lg-7 mx-auto">
+                        <div class="section-title text-center mb-45 animation-style2">
+                            <span class="section-title__sub primary-color mb-10">Our Project</span>
+                            <h2 class="section-title__main">
+                                We Create last Years for our Client
+                            </h2>
                         </div>
                     </div>
-
-                    <div className="row clearfix">
-                        {projects.map((project) => (
-                            <div className="case-block col-md-4 col-sm-6 col-xs-12" key={project.id}>
-                                <div className="inner-box">
-                                    <div className="image-box">
-                                        <div className="image">
-                                            <a href="cases-single.html">
-                                                <img
-                                                    src={
+                </div>
+            </div>
+            <div class="project__wrapper">
+                    <div class="tg-sliderStyle2 swiper"></div>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3.5}
+                pagination={true} modules={[Pagination]} // Enable pagination dots and make them clickable
+            >
+                {projects.map((project, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="project-block">
+                        <div class="project-block">
+                                    <div class="project-block__image">
+                                        <a class="d-inline-block w-100" href="project-details.html">
+                                            <img class="img w-100" src={
                                                         project.description.find(
                                                             (desc) => desc.type === "client"
                                                         )?.data.logo
@@ -50,46 +55,22 @@ const CaseStudy = () => {
                                                             ).data.logo
                                                             : "client.png"
                                                     }
-                                                    alt={project.title}
-                                                />
-                                            </a>
-                                            <div className="overlay-box">
-                                                <Link
-                                                    to={`/project/${project.slug}`}
-                                                    className="theme-btn btn-style-one"
-                                                >
-                                                    {" "}
-                                                    Read More
-                                                </Link>
-                                            </div>
-                                        </div>
+                                                    alt={project.title} />
+                                        </a>
                                     </div>
-                                    <div className="content-box">
-                                        <div className="content-inner">
-                                            <h4>{project.title}</h4>
-                                            <Link
-                                                to={`/project/${project.slug}`}
-                                                className="read-more"
-                                            >
-                                                <span className="icon flaticon-right-arrow-1"></span>{" "}
-                                                Read More
-                                            </Link>
-                                        </div>
-                                    </div>
+                                    <h3 class="project-block__name pt-20 under-line-1">
+                                    <Link
+                                                    to={`/project/${project.slug}`}>{project.title}</Link>
+                                    </h3>
+                                    {/* <span class="project-block__category">{project.category_id}</span> */}
                                 </div>
-                            </div>
-                        ))}
-
-                    </div>
-
-                    <div className="btn-box text-center">
-                        <a href="case.html" className="theme-btn btn-style-one">
-                            View All
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            <div class="tg-pagination1 tg-pagination1--project"></div>
+            </Swiper>
+            </div>
+        </section>
     );
 };
 

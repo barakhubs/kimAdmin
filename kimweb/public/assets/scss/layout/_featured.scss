@@ -1,0 +1,21 @@
+@use "../utils" as *;
+/*=============================
+	32. Featured
+===============================*/
+.featured {
+  $self: &;
+  &__img {
+    &--right {
+      padding-left: 48px;
+      @media #{$md} {
+        text-align: center;
+      }
+      @media #{$xs} {
+        padding-left: 0;
+      }
+    }
+  }
+  &--h2 {
+    background-color: var(--tg-bg-F9FCFF);
+  }
+}

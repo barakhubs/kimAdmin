@@ -1,0 +1,83 @@
+@use "../utils" as *;
+/*=============================
+    17. Faq Block
+===============================*/
+.faq-block {
+  .accordion {
+    display: grid;
+    gap: 9px;
+  }
+  .accordion-item {
+    background-color: transparent;
+    border: 1px solid #424244;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .accordion-button {
+    font-family: var(--tg-heading-font-family);
+    font-size: 18px;
+    font-weight: var(--tg-fw-medium);
+    background-color: transparent;
+    color: var(--tg-common-color-white);
+    box-shadow: none;
+    padding: 18.21px 30px;
+    color: var(--tg-theme-primary-h3);
+    @include transition(0.4s);
+    &.collapsed {
+      color: var(--tg-common-color-white);
+      @include transition(0.4s);
+    }
+    &::after {
+      background-image: none;
+      content: "\f063";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 600;
+      @include transition(0.4s);
+      color: var(--tg-common-color-white);
+    }
+    &:not(.collapsed)::after {
+      transform: rotate(0);
+      content: "\f062";
+      @include transition(0.4s);
+      color: var(--tg-theme-primary-h3);
+    }
+  }
+  .accordion-body {
+    color: #d2d2d6;
+    padding: 0 30px 25px;
+  }
+  &--style2 {
+    .accordion {
+      gap: 15px;
+    }
+    .accordion-item {
+      border: 1px solid transparent;
+    }
+    .accordion-button {
+      background-color: var(--tg-theme-primary);
+      font-family: var(--tg-heading-font-family);
+      font-weight: 700;
+      color: var(--tg-common-color-white);
+      border-radius: 5px;
+      &.collapsed {
+        color: var(--tg-theme-secondary);
+        background-color: #f9faff;
+      }
+      &::after {
+        content: "\f107";
+        color: var(--tg-theme-secondary);
+      }
+      &:not(.collapsed) {
+        &::after {
+          content: "\f106";
+          color: var(--tg-common-color-white);
+        }
+      }
+    }
+    .accordion-body {
+      color: #757589;
+      padding: 20px 27px 12px 30px;
+      line-height: 1.8;
+    }
+  }
+}

@@ -1,141 +1,97 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-    useEffect(() => {
-        if (window.jQuery) {
-            const jQuery = window.jQuery;
-            jQuery('.three-item-carousel').owlCarousel({
-                items: 3,
-                loop: true,
-                autoplay: true,
-                nav: true, // Add this for navigation arrows
-                navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Optional: customize the navigation text/icons
-                // ...other options
-            });
-        }
-
-        return () => {
-            if (window.jQuery) {
-                const jQuery = window.jQuery;
-                jQuery('.three-item-carousel').owlCarousel('destroy');
-            }
-        }
-    }, []);
-
     return (
         <>
-        <section className="services-section">
-    	<div className="auto-container">
-            <div className="sec-title centered">
-            	<h2>Our Services: Driving Digital Success</h2>
-                <div className="text">Discover a suite of services designed to elevate your brand, engage your audience, and drive measurable success in the digital realm.</div>
-            </div>
-
-            <div className="three-item-carousel owl-carousel owl-theme">
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-1.png" alt="" /></span>
+            <section class="service service--bg position-relative fix pt-120 pb-96">
+                <div class="container custom-container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-10 mb-24">
+                            <div class="section-title animation-style2">
+                                <span class="section-title__sub primary-color mb-10">We Can Do For You</span>
+                                <h2 class="section-title__main text-white">Services We can Help You.</h2>
+                            </div>
+                            <div class="service__content">
+                                <p class="service__text pt-15 text-color-gray">Lorem ipsum dolor sit amet consectetur. Ut a tellus
+                                    suspendisse nulla aliquam. Risu dumm amet facilisis the egestas.
+                                </p>
+                                {/* <div class="service__button pt-15">
+                                    <Link  to="services.html" class="btn">See All Services</Link >
+                                </div> */}
+                            </div>
                         </div>
-                        <h3><a href="services.html">Custom Software Development</a></h3>
-                        <div className="text">We specialize in developing custom software solutions designed to meet your specific business needs.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-md-6 mb-24 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="200ms">
+                                    <div class="service-block">
+                                        <img src="assets/img/icons/service_icon_1.svg" alt="Service" class="service-block__icon" />
+                                        <h3 class="service-block__title text-white mb-0 pt-20">
+                                            <Link  to="/graphics-design">Graphic Design</Link >
+                                        </h3>
+                                        <p class="service-block__text text-color-gray mb-0 pt-10">
+                                            Make a lasting impression with captivating visuals and compelling branding.
+                                        </p>
+                                        <div class="service-block__footer pt-20">
+                                            <Link  to="/graphics-design" class="service-block__link">Learn More</Link >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-24 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="400ms">
+                                    <div class="service-block">
+                                        <img src="assets/img/icons/service_icon_2.svg" alt="Service" class="service-block__icon" />
+                                        <h3 class="service-block__title text-white mb-0 pt-20">
+                                            <Link  to="/web-design">Web Design</Link >
+                                        </h3>
+                                        <p class="service-block__text text-color-gray mb-0 pt-10">Craft visually stunning and highly functional websites that engage your audience and drive
+                                            results. </p>
+                                        <div class="service-block__footer pt-20">
+                                            <Link  to="/web-design" class="service-block__link">
+                                                Learn More
+                                            </Link >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-24 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                                    <div class="service-block">
+                                        <img src="assets/img/icons/service_icon_3.png" alt="Service" class="service-block__icon" />
+                                        <h3 class="service-block__title text-white mb-0 pt-20">
+                                            <Link  to="/software-development">Software Development</Link >
+                                        </h3>
+                                        <p class="service-block__text text-color-gray mb-0 pt-10">
+                                            Empower your business with custom software solutions tailored to your unique needs.
+                                        </p>
+                                        <div class="service-block__footer pt-20">
+                                            <Link  to="/software-development" class="service-block__link">
+                                                Learn More
+                                            </Link >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-24 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="800ms">
+                                    <div class="service-block">
+                                        <img src="assets/img/icons/service_icon_4.png" alt="Service" class="service-block__icon" />
+                                        <h3 class="service-block__title text-white mb-0 pt-20">
+                                            <Link  to="/digital-marketing">Digital Marketing</Link >
+                                        </h3>
+                                        <p class="service-block__text text-color-gray mb-0 pt-10">
+                                            Boost your online presence and drive growth with our digital marketing expertise.
+                                        </p>
+                                        <div class="service-block__footer pt-20">
+                                            <Link  to="/digital-marketing" class="service-block__link">
+                                                Learn More
+                                            </Link >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-2.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Website Design</a></h3>
-                        <div className="text">Craft visually appealing websites that seamlessly adapt to different devices and screen sizes.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-3.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Web & Mobile Applications</a></h3>
-                        <div className="text">Develop web and mobile applications that streamline business processes and enhance functionality.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-1.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Graphics & Logo Designing</a></h3>
-                        <div className="text">Design eye-catching graphics and logos that leave a lasting impression.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-2.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Social Media Flyers/Posters</a></h3>
-                        <div className="text">Craft attention-grabbing flyers and posters optimized for social media platforms.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-3.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Site Branding</a></h3>
-                        <div className="text">Develop a cohesive brand strategy for your online presence.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-3.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Social Media Marketing</a></h3>
-                        <div className="text">Foster meaningful connections with your audience through social media platforms</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-3.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Digital Marketing</a></h3>
-                        <div className="text">Design and execute digital marketing campaigns tailored to your audience.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-                <div className="services-block">
-                	<div className="inner-box">
-                    	<div className="icon-box">
-                        	<span className="icon"><img src="images/icons/services-3.png" alt="" /></span>
-                        </div>
-                        <h3><a href="services.html">Google Ads & Search Engine Optimization</a></h3>
-                        <div className="text">Create targeted Google Ads to increase visibility and drive traffic.</div>
-                        <a href="services.html" className="read-more"><span className="icon flaticon-right-arrow-1"></span> Read More</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
+                <div class="element element--service" data-parallax='{"y" : 50 }'></div>
+                <div class="element element--service element--service2" data-parallax='{"y" : 100 }'></div>
+                <div class="element element--service element--service3" data-parallax='{"y" : 200 }'></div>
+            </section>
         </>
     )
 }

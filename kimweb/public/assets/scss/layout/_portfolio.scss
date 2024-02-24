@@ -1,0 +1,53 @@
+@use "../utils" as *;
+
+/*=============================
+    40. Portfolio
+===============================*/
+.project {
+  &__wrapper {
+    padding-left: 98px;
+    @media #{$xs} {
+      padding-left: 0;
+      padding: 0 15px;
+    }
+  }
+}
+
+.project-details {
+  &__images {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.case-infos {
+  display: grid;
+  gap: 40px;
+  @media #{$md} {
+    gap: 0;
+  }
+  &__row {
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      @media #{$md} {
+        flex-wrap: wrap;
+      }
+      li {
+        min-width: 161px;
+      }
+    }
+  }
+  &__title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  &__name {
+    font-size: 15px;
+  }
+}

@@ -29,295 +29,171 @@ const BlogDetails = () => {
 
     return (
         <>
-            <section
-                className="page-title"
-                style={{
-                    backgroundImage: 'url("images/background/pattern-4.png")',
-                }}
-            >
-                <div className="auto-container">
-                    <h1>{post.title}</h1>
-                </div>
-                <div className="page-info">
-                    <div className="auto-container">
-                        <div className="inner-container">
-                            <ul className="bread-crumb">
-                                <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/blog">Blog</Link>
-                                </li>
-                                <li>{post.title}</li>
-                            </ul>
+            <section class="breadcrumb-area">
+                <div class="tg-breadcrumb-bg" data-bg-image="assets/img/others/inner-page-breadcumb.jpg">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="tg-breadcrumb">
+                                    <h2 class="tg-breadcrumb-title">{post.title}</h2>
+                                    <div class="tg-breadcrumb-link">
+                                        <span class="tg-breadcrumb-active"><Link to="/">Home</Link></span>
+                                        <span>{post.title}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div className="sidebar-page-container">
-                <div className="auto-container">
-                    <div className="row clearfix">
-                        <div className="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                            <div className="blog-single">
-                                <div className="inner-box">
-                                    <div className="image">
-                                        {post.image && (
-                                            <img
-                                                src={`${ASSET_URL}${post.image}`}
-                                                alt={post.title}
-                                                style={{
-                                                    width: "7700px",
-                                                    height: "400px",
-                                                    objectFit: "cover",
-                                                }}
-                                            />
-                                        )}
-                                    </div>
-                                    <div className="lower-content">
-                                        <ul className="post-meta">
-                                            <li>
-                                                <span className="icon fa fa-calendar"></span>
-                                                {post.created_at}
-                                            </li>
-                                            <li>
-                                                <span className="icon fa fa-user"></span>
-                                                {post.name}
-                                            </li>
-                                            <li>
-                                                <span className="icon fa fa-folder"></span>
-                                                {post.category_name}
-                                            </li>
-                                        </ul>
-                                        <h3>{post.title}</h3>
-                                        <div className="text">
-                                            <div
-                                                dangerouslySetInnerHTML={{
-                                                    __html: post.content,
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
+            <section class="blog-list pt-120 pb-110">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-lg-8 mb-30">
+                            <div class="blog-block blog-block--details">
+                                <div class="blog-block__content">
+                                    {post.image && (
+                                        <img
+                                            src={`${ASSET_URL}${post.image}`}
+                                            alt={post.title}
+                                            style={{
+                                                width: "690px",
+                                                height: "580px",
+                                            }}
+                                            class="rounded-4 mb-35"
+                                        />
+                                    )}
+                                    <span class="blog-block__meta">
+                                        {post.created_at} _ <span>{post.category_name}</span>
+                                    </span>
+                                    <h2 class="blog-block__heading h2-40 pt-10 mb-0">
+                                        {post.title}
+                                    </h2>
+                                    <p class="blog-block__text pt-10 mb-35"
+                                        dangerouslySetInnerHTML={{
+                                            __html: post.content,
+                                        }}>
+                                    </p>
                                 </div>
-
-                                {/* <div className="group-title">
-                        	<h2>About Author</h2>
+                            </div>
+                            {/* <div class="row pt-60">
+                                <div class="col-md-6 mb-30">
+                                    <a href="project-details.html">
+                                        <div class="np-block justify-content-start">
+                                            <div class="np-block__left">
+                                                <div class="np-block__icon">
+                                                    <i class="fa-solid fa-chevron-left"></i>
+                                                </div>
+                                            </div>
+                                            <div class="np-block__right">
+                                                <span class="np-block__name">Previous Work</span>
+                                                <h3 class="np-block__title">Creative agency</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <a href="project-details.html">
+                                        <div class="np-block flex-row-reverse">
+                                            <div class="np-block__left">
+                                                <div class="np-block__icon">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </div>
+                                            </div>
+                                            <div class="np-block__right text-end">
+                                                <span class="np-block__name">Next Work</span>
+                                                <h3 class="np-block__title">Digital Marketing</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div> */}
                         </div>
-
-                        <div className="author-box">
-                            <div className="author-comment">
-                                <div className="inner">
-                                    <div className="image"><img src="images/resource/author-6.jpg" alt="" /></div>
-                                    <h3>Lilly Anderson</h3>
-                                    <div className="text">We will give you a complete account of the system, and expound actual teachings of explorer of the truth, the master-builder of human happiness.</div>
-                                    <ul className="social-icon-two">
-                                        <li><a href="#"><span className="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span className="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span className="fa fa-google-plus"></span></a></li>
-                                        <li><a href="#"><span className="fa fa-youtube"></span></a></li>
+                        <div class="col-lg-4 mb-30">
+                            <div class="sidebar">
+                                {/* <div class="sidebar-blog sidebar__block sidebar__block--style2 mb-40">
+                <h3 class="sidebar__title mb-15">Recent post</h3>
+                <div class="blog-block blog-block--style6 mb-25">
+                  <div class="blog-block__img">
+                    <a class="blog-block__img__link" href="blog-details.html">
+                      <img class="rounded-2" src="assets/img/blog/sidebar-blog1.jpg" alt="Blog">
+                    </a>
+                  </div>
+                  <div class="blog-block__content">
+                    <span class="blog-block__meta">
+                      <i class="fa-regular fa-calendar-days"></i> August 17,
+                      2023
+                    </span>
+                    <h4 class="blog-block__heading mb-0">
+                      <a href="blog-details.html">
+                        A quick solutions for daily problem
+                      </a>
+                    </h4>
+                  </div>
+                </div>
+                <div class="blog-block blog-block--style6 mb-25">
+                  <div class="blog-block__img">
+                    <a class="blog-block__img__link" href="blog-details.html">
+                      <img class="rounded-2" src="assets/img/blog/sidebar-blog2.jpg" alt="Blog">
+                    </a>
+                  </div>
+                  <div class="blog-block__content">
+                    <span class="blog-block__meta">
+                      <i class="fa-regular fa-calendar-days"></i> August 17,
+                      2023
+                    </span>
+                    <h4 class="blog-block__heading mb-0">
+                      <a href="blog-details.html">
+                        Podcasting operational change any...
+                      </a>
+                    </h4>
+                  </div>
+                </div>
+                <div class="blog-block blog-block--style6">
+                  <div class="blog-block__img">
+                    <a class="blog-block__img__link" href="blog-details.html">
+                      <img class="rounded-2" src="assets/img/blog/sidebar-blog3.jpg" alt="Blog">
+                    </a>
+                  </div>
+                  <div class="blog-block__content">
+                    <span class="blog-block__meta">
+                      <i class="fa-regular fa-calendar-days"></i> August 17,
+                      2023
+                    </span>
+                    <h4 class="blog-block__heading mb-0">
+                      <a href="blog-details.html">
+                        Capitalize on low Idea hanging fruit
+                      </a>
+                    </h4>
+                  </div>
+                </div>
+              </div> */}
+                                <div class="sidebar-category sidebar-category--style2 sidebar__block sidebar__block--style2 mb-40">
+                                    <h3 class="sidebar__title mb-10">Categories</h3>
+                                    <ul>
+                                        <li>
+                                            <a href="project-details.html">Agency News <span>(10)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="project-details.html">Digital Marketing <span>(10)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="project-details.html">Information Technology <span>(10)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="project-details.html">New Ideas <span>(10)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="project-details.html">Marketing & Branding <span>(10)</span></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="comments-area">
-                            <div className="group-title">
-                            	<h2>Read Comments</h2>
-                                <div className="separator"></div>
-                            </div>
-                            <div className="comment-box">
-                                <div className="comment">
-                                    <div className="author-thumb"><img src="images/resource/author-7.jpg" alt=""/></div>
-                                    <div className="comment-inner">
-                                        <div className="comment-info clearfix">Steven Rich – Sep 17, 2016:</div>
-                                        <div className="rating">
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star light"></span>
-                                        </div>
-                                        <div className="text">How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="comment-box reply-comment">
-                                <div className="comment">
-                                    <div className="author-thumb"><img src="images/resource/author-8.jpg" alt=""/></div>
-                                    <div className="comment-inner">
-                                        <div className="comment-info clearfix">William Cobus – Aug 21, 2016:</div>
-                                        <div className="rating">
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star"></span>
-                                            <span className="fa fa-star-half-empty"></span>
-                                        </div>
-                                        <div className="text">There anyone who loves or pursues or desires to obtain pain itself, because it is pain sed, because occasionally circumstances occur some great pleasure.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className="comment-form">
-                            <div className="group-title">
-                            	<h2>Add Your Comments</h2>
-                                <div className="separator"></div>
-                            </div>
-                            <div className="rating-box">
-                                <div className="text"> Your Rating:</div>
-                                <div className="rating">
-                                    <a href="#"><span className="fa fa-star"></span></a>
-                                </div>
-                                <div className="rating">
-                                    <a href="#">
-                                    	<span className="fa fa-star"></span>
-                                    	<span className="fa fa-star"></span>
-                                    </a>
-                                </div>
-                                <div className="rating">
-                                    <a href="#">
-                                    	<span className="fa fa-star"></span>
-                                    	<span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                    </a>
-                                </div>
-                                <div className="rating">
-                                    <a href="#">
-                                    	<span className="fa fa-star"></span>
-                                    	<span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                    </a>
-                                </div>
-                                <div className="rating">
-                                    <a href="#">
-                                    	<span className="fa fa-star"></span>
-                                    	<span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <form method="post" action="contact.html">
-                                <div className="row clearfix">
-                                    <div className="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label>First Name*</label>
-                                        <input type="text" name="username" placeholder="" required/>
-                                    </div>
-                                    <div className="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <label>Last Name*</label>
-                                        <input type="text" name="username" placeholder="" required/>
-                                    </div>
-                                    <div className="col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <label>Email*</label>
-                                        <input type="email" name="email" placeholder="" required/>
-                                    </div>
-
-                                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <label>Your Comments*</label>
-                                        <textarea name="message" placeholder=""></textarea>
-                                    </div>
-
-                                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                        <button className="theme-btn btn-style-one" type="submit" name="submit-form">Post Comment</button>
-                                    </div>
-
-                                </div>
-                            </form>
-
-                        </div> */}
-                            </div>
-                        </div>
-
-                        <div className="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <aside className="sidebar default-sidebar with-border">
-                                <div className="sidebar-widget search-box">
-                                    <form method="post" action="contact.html">
-                                        <div className="form-group">
-                                            <input
-                                                type="search"
-                                                name="search-field"
-                                                value=""
-                                                placeholder="Enter Your Keyword..."
-                                                required
-                                            />
-                                            <button type="submit">
-                                                <span className="icon fa fa-search"></span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div className="sidebar-widget sidebar-blog-category">
-                                    <div className="sidebar-title">
-                                        <h2>Categories</h2>
-                                    </div>
-                                    <ul className="blog-cat">
-                                        <li>
-                                            <a href="#">
-                                                Business <span>(6)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Email Marketing <span>(2)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                PPC Management <span>(8)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Social Marketing{" "}
-                                                <span>(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Uncategorized <span>(3)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="sidebar-widget popular-posts">
-                                    <div className="sidebar-title">
-                                        <h2>Popular Posts</h2>
-                                    </div>
-                                    {/* {latestPosts.map((post) => (
-                                    <article className="post">
-                                        <figure className="post-thumb">
-                                            <img
-                                                src="images/resource/post-thumb-1.jpg"
-                                                alt=""
-                                            />
-                                            <a
-                                                className="overlay"
-                                                href="blog-single.html"
-                                            ></a>
-                                        </figure>
-                                        <div className="text">
-                                            <a href="blog-single.html">
-                                                6 ways to keep in control your
-                                                debtors
-                                            </a>
-                                        </div>
-                                        <div className="post-info">
-                                            April 18, 2017
-                                        </div>
-                                    </article>
-                                    ))} */}
-                                </div>
-                            </aside>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };

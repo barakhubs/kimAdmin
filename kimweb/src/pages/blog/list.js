@@ -13,70 +13,59 @@ const BlogList = () => {
             .catch((error) => console.error("Error fetching posts:", error));
     }, []);
 
+    const limitTitle = (title, limit = 50) => {
+        if (title.length > limit) {
+            return title.substring(0, limit) + '...';
+        }
+        return title;
+    };
+
+    // Function to format the date
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Intl.DateTimeFormat('en-US', options).format(new Date(dateString));
+    };
+    
     return (
         <>
-            <section
-                class="page-title"
-                style={{
-                    backgroundImage: 'url("images/background/pattern-4.png")',
-                }}
-            >
-                <div class="auto-container">
-                    <h1>Recent Blog Articles</h1>
-                </div>
-                <div class="page-info">
-                    <div class="auto-container">
-                        <div class="inner-container">
-                            <ul class="bread-crumb">
-                                <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>Recent Posts</li>
-                            </ul>
+            <section class="breadcrumb-area">
+                <div class="tg-breadcrumb-bg" data-bg-image="assets/img/others/inner-page-breadcumb.jpg">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="tg-breadcrumb">
+                                    <h2 class="tg-breadcrumb-title">Latest News</h2>
+                                    <div class="tg-breadcrumb-link">
+                                        <span class="tg-breadcrumb-active"><Link to="/">Home</Link></span>
+                                        <span>Latest News</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="blog-page-section">
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        {/* Mapping over the posts and generating JSX for each post */}
+            <section class="blog pt-120 pb-110">
+                <div class="container custom-container">
+                    <div class="row">
                         {posts.map((post) => (
-                            <div
-                                key={post.id}
-                                class="news-block col-md-4 col-sm-6 col-xs-12"
-                            >
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <Link to={`/blog/${post.slug}`}>
-                                            <img
-                                                src={`${ASSET_URL}${post.image}`}
-                                                alt={post.title}
-                                                style={{ width: "370px", height: "200px", objectFit: "cover" }}
-                                            />
+                            <div class="col-lg-4 col-md-6 mb-25">
+                                <div class="blog-block blog-block--style4">
+                                    <div class="blog-block__img">
+                                        <Link to={`/blog/${post.slug}`} className="blog-block__img__link">
+                                            <img src={`${ASSET_URL}${post.image}`} alt={post.title} />
                                         </Link>
                                     </div>
-                                    <div class="lower-content">
-                                        <div class="upper">
-                                            <div class="post-date">
-                                                {post.created_at}
-                                            </div>
-                                            <h3>
-                                                <Link to={`/blog/${post.slug}`}>
-                                                    {post.title}
-                                                </Link>
-                                            </h3>
-                                        </div>
-                                        <div class="more">
-                                            <Link
-                                                to={`/blog/${post.slug}`}
-                                                class="read-more"
-                                            >
-                                                <span class="fa fa-chevron-circle-right"></span>{" "}
-                                                Read More
+                                    <div class="blog-block__content pt-20">
+                                        <span class="blog-block__meta">
+                                            {formatDate(post.created_at)} _ <span>{post.category}</span>
+                                        </span>
+                                        <h3 class="blog-block__heading pt-10 mb-0">
+                                            <Link to={`/blog/${post.slug}`}>
+                                                {limitTitle(post.title)}
                                             </Link>
-                                        </div>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
@@ -84,6 +73,7 @@ const BlogList = () => {
                     </div>
                 </div>
             </section>
+
         </>
     );
 };

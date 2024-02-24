@@ -4,40 +4,28 @@ import Header from "./header";
 import { useEffect } from "react";
 
 const Layout = () => {
-    useEffect(() => {
-        const scrollToTopElement = document.querySelector(".scroll-to-top");
-
-        if (scrollToTopElement) {
-            scrollToTopElement.addEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                });
-            });
-        }
-
-        return () => {
-            if (scrollToTopElement) {
-                scrollToTopElement.removeEventListener("click");
-            }
-        };
-    }, []);
-
     return (
-        <div className="page-wrapper">
-            {/* <!-- Preloader --> */}
-            <div className="preloader"></div>
-            {/* Outlet will render nested routes */}
-
-            <Header />
-            <Outlet />
-            <Footer />
-
-            {/* <!--Scroll to top--> */}
-            <div className="scroll-to-top scroll-to-target" data-target="html">
-                <span className="icon fa fa-angle-double-up"></span>
+        <>
+        <div id="preloader">
+            <div id="loading-center">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+            </div>
             </div>
         </div>
+        <div class="element element--1"></div>
+        <div class="element element--2"></div>
+
+        <button type="submit" class="scroll__top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <Header />
+        <main class="main position-relative">
+            <Outlet />
+        </main>
+        <Footer />
+        </>
     );
 };
 

@@ -1,0 +1,47 @@
+@use "../utils" as *;
+
+/*=============================
+    39. Services
+===============================*/
+.service {
+  $self: &;
+  position: relative;
+  &--bg {
+    background-color: var(--tg-common-color-dark);
+    z-index: 1;
+  }
+  &--h2 {
+    #{$self}__text {
+      font-size: 18px;
+      font-weight: var(--tg-fw-regular);
+      a {
+        font-weight: var(--tg-fw-medium);
+        color: var(--tg-theme-primary-h2);
+        text-decoration: underline;
+        &:hover {
+          color: var(--tg-theme-secondary-h2);
+        }
+      }
+    }
+  }
+  &--h3 {
+    background-color: var(--tg-bg-F9FBFF);
+  }
+  &--h4 {
+    background-color: var(--tg-theme-primary-h4);
+    #{$self}__element {
+      position: absolute;
+      min-width: 466px;
+      min-height: 248px;
+      top: 0;
+      left: 249px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.service-details {
+  &__text-main {
+    color: var(--tg-theme-secondary);
+  }
+}

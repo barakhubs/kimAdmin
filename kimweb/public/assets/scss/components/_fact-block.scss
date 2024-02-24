@@ -1,0 +1,100 @@
+@use "../utils" as *;
+/*=============================
+    13. Fact Block
+===============================*/
+.facts-block {
+  $self: &;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 50px;
+  border-radius: 20px;
+  border: 1px solid var(--tg-common-color-white);
+  @include transition(0.4s);
+  @media #{$lg} {
+    padding: 15px;
+    gap: 15px;
+  }
+  @media #{$xs} {
+    padding: 20px;
+    gap: 10px;
+  }
+  &__number {
+    font-size: 36px;
+    font-weight: var(--tg-fw-bold);
+    line-height: 1.2;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    @include transition(0.4s);
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: var(--tg-fw-bold);
+    margin-bottom: 0;
+    line-height: 1;
+    text-transform: capitalize;
+    @include transition(0.4s);
+    @media #{$xs} {
+      font-size: 18px;
+    }
+  }
+  #{$self}__icon {
+    svg {
+      path {
+        @include transition(0.4s);
+      }
+    }
+  }
+  &--yellow {
+    border-color: var(--tg-common-color-yellow);
+    #{$self}__number,
+    #{$self}__title {
+      color: var(--tg-common-color-yellow);
+    }
+    &:hover {
+      background-color: var(--tg-common-color-yellow);
+    }
+  }
+  &--green {
+    border-color: var(--tg-common-color-green);
+    #{$self}__number,
+    #{$self}__title {
+      color: var(--tg-common-color-green);
+    }
+    &:hover {
+      background-color: var(--tg-common-color-green);
+    }
+  }
+  &--green {
+    &.active {
+      background-color: var(--tg-common-color-green);
+    }
+  }
+  &--cyan {
+    border-color: var(--tg-common-color-cyan);
+    #{$self}__number,
+    #{$self}__title {
+      color: var(--tg-common-color-cyan);
+    }
+    &:hover {
+      background-color: var(--tg-common-color-cyan);
+    }
+  }
+  &:hover,
+  &.active {
+    #{$self}__number,
+    #{$self}__title {
+      color: var(--tg-common-color-white);
+      @include transition(0.4s);
+    }
+    #{$self}__icon {
+      svg {
+        path {
+          stroke: var(--tg-common-color-white);
+          @include transition(0.4s);
+        }
+      }
+    }
+  }
+}

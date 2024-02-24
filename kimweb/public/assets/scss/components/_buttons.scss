@@ -1,0 +1,150 @@
+@use "../utils" as *;
+
+/*=============================
+	02. Button style
+===============================*/
+.btn {
+  $self: &;
+  user-select: none;
+  -moz-user-select: none;
+  background: var(--tg-theme-primary) none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 10px;
+  color: var(--tg-common-color-white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 17px 29px;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  @include transition(0.4s);
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 19px;
+    background-color: var(--tg-theme-primary-deep);
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    @include transition(0.4s);
+    z-index: -1;
+    transform: scale(1) rotate(0);
+  }
+  &:hover {
+    color: var(--tg-common-color-white);
+    background-color: var(--tg-theme-primary-deep);
+    border-color: transparent;
+    @include transition(0.4s);
+    &::before {
+      @include transition(0.6s);
+      transform: scale(25) rotate(180deg);
+    }
+  }
+  &--price {
+    font-size: 18px;
+    font-weight: var(--tg-fw-semi-bold);
+  }
+  &--white {
+    background-color: var(--tg-common-color-white);
+    color: var(--tg-theme-secondary);
+    &::before {
+      display: none;
+    }
+    &:hover {
+      background-color: var(--tg-theme-secondary);
+      color: var(--tg-common-color-white);
+    }
+  }
+  &--style2 {
+    background-color: var(--tg-theme-primary-h2);
+    &:hover {
+      background-color: var(--tg-theme-primary-h2);
+    }
+    &::before {
+      background-color: var(--tg-theme-primary-h2-deep);
+    }
+  }
+  &--style4 {
+    background-color: var(--tg-theme-primary-h4);
+    padding: 22px 33px;
+    font-size: 18px;
+    &:hover {
+      background-color: var(--tg-theme-primary-h4);
+    }
+    &::before {
+      background-color: #1a9678;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &--style4dot {
+    &:hover {
+      background-color: #12725b;
+    }
+    &::before {
+      background-color: #12725b;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &--price-active {
+    background-color: var(--tg-theme-primary-deep);
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &--secondary {
+    background-color: var(--tg-theme-secondary);
+    &:hover {
+      background-color: var(--tg-theme-secondary);
+    }
+    &::before {
+      background-color: #272976;
+    }
+  }
+  &--outline {
+    background-color: transparent;
+    color: var(--tg-theme-secondary);
+    border: 1px solid var(--tg-theme-secondary);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+    i {
+      font-size: 12px;
+      @include transition(0.4s);
+      display: inline-block;
+    }
+    &:hover {
+      border: 1px solid var(--tg-theme-primary);
+      color: var(--tg-theme-primary);
+      background-color: transparent;
+      i {
+        transform: rotate(180deg);
+        @include transition(0.4s);
+      }
+    }
+  }
+}

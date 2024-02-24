@@ -1,0 +1,24 @@
+@use "../utils" as *;
+
+/*=============================
+    50. Section form
+===============================*/
+.contact-right {
+  padding-top: 265px;
+  margin-left: -87px;
+  @media #{$lg} {
+    margin-left: 0;
+    padding-top: 30px;
+  }
+}
+section.map {
+  margin-top: -277px;
+  min-height: 660px;
+  @media #{$lg} {
+    margin-top: -15px;
+  }
+  & > img {
+    min-height: 660px;
+    object-fit: cover;
+  }
+}

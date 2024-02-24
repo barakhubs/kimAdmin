@@ -1,0 +1,209 @@
+@use "../utils" as *;
+/*=============================
+	30. About
+===============================*/
+.about {
+  $self: &;
+
+  &__content {
+    padding-left: 45px;
+    @media #{$lg} {
+      padding-left: 0;
+    }
+    &--h3 {
+      padding-top: 65px;
+    }
+  }
+  &__image {
+    margin-left: -70px;
+    @media #{$lg} {
+      margin-left: 0;
+    }
+    @media #{$md} {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  &__features {
+    ul {
+      display: inline-block;
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 6px;
+      li {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        span {
+          min-width: 23px;
+        }
+      }
+    }
+  }
+  &--h3 {
+    padding-top: 110px;
+    #{$self}__right {
+      position: absolute;
+      right: 151px;
+      bottom: 0;
+      @media #{$xl} {
+        right: 0;
+        max-width: 680px;
+      }
+      @media #{$lg} {
+        right: 0;
+        max-width: 375px;
+      }
+      @media #{$md} {
+        position: relative;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: -125px;
+      }
+    }
+  }
+  &--h4 {
+    #{$self}__text {
+      font-family: var(--tg-text-font-family);
+      margin-bottom: 40px;
+      &:first-child {
+        color: var(--tg-theme-secondary);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__inner-content {
+    padding-right: 55px;
+    @media #{$md} {
+      padding-right: 0;
+    }
+    .for-mobile {
+      @media #{$md} {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      a {
+        @media #{$md} {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+  &__inner-images {
+    border-radius: 20px;
+    overflow: hidden;
+    ul {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      gap: 15px;
+      @media #{$xs} {
+        flex-wrap: wrap;
+      }
+      li {
+        flex-grow: 1;
+        transition: all 300ms ease-in-out 0s;
+        max-height: 460px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          object-fit: cover;
+          transition: all 300ms ease-in-out 0s;
+          height: 100%;
+        }
+        &:hover {
+          flex-grow: 2;
+        }
+      }
+    }
+  }
+  &--video {
+    padding: 190px 0;
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @media #{$md} {
+      padding: 80px 0;
+    }
+    &::before {
+      background: rgba(26, 26, 31, 0.1);
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  &--case {
+    padding: 300px 0;
+    &::before {
+      background: rgba(0, 33, 151, 0.5);
+    }
+  }
+}
+
+.inner-image {
+  min-height: 526px;
+  position: relative;
+  z-index: 1;
+  @media #{$xs} {
+    display: grid;
+    gap: 20px;
+  }
+  img {
+    border-radius: 20px;
+    background: #d9d9d9;
+  }
+  &__img1 {
+    box-shadow: 20px -20px 20px rgba(0, 0, 0, 0.1);
+  }
+  &__img2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.05);
+    @media #{$xs} {
+      position: relative;
+    }
+  }
+  &__circle {
+    position: absolute;
+    width: 455px;
+    height: 455px;
+    background-color: var(--tg-theme-primary);
+    border-radius: 50%;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media #{$xs} {
+      display: none;
+    }
+  }
+}
+
+.tg-line {
+  & a {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    display: inline;
+    background-size: 0% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s linear;
+    &:hover {
+      background-size: 0% 1px, 100% 1px;
+    }
+  }
+}

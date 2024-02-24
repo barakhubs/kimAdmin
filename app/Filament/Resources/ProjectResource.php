@@ -72,6 +72,11 @@ class ProjectResource extends Resource
                     ->label('Select project category')
                     ->options($options)
                     ->preload(),
+                FileUpload::make('featured_image')
+                    ->label('Featured Image')
+                    ->image()
+                    ->required()
+                    ->preserveFilenames(),
 
                 Builder::make('description')
                     ->blocks([
@@ -175,7 +180,7 @@ class ProjectResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('business')->label('Business/Client')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('featured_image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

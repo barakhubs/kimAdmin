@@ -1,0 +1,114 @@
+@use "../utils" as *;
+
+/*=============================
+    element circle
+===============================*/
+.element {
+  position: absolute;
+  width: 557px;
+  height: 557px;
+  right: 0;
+  top: -57px;
+  filter: blur(150px);
+  z-index: -1;
+  border-radius: 50%;
+  @media #{$xs} {
+    width: 100%;
+  }
+  &--1 {
+    background: linear-gradient(
+      209.85deg,
+      rgba(128, 0, 255, 0.3) 18.23%,
+      rgba(143, 0, 255, 0) 96.18%
+    );
+  }
+  &--2 {
+    left: 0;
+    background: linear-gradient(
+      209.85deg,
+      rgba(0, 255, 25, 0.3) 18.23%,
+      rgba(143, 0, 255, 0) 96.18%
+    );
+    filter: blur(150px);
+    top: 336px;
+    left: -36px;
+  }
+  &--3 {
+    background: linear-gradient(
+      209.85deg,
+      rgba(0, 240, 255, 0.3) 18.23%,
+      rgba(0, 255, 117, 0) 96.18%
+    );
+  }
+  &--4 {
+    background: linear-gradient(
+      209.85deg,
+      rgba(0, 56, 255, 0.3) 18.23%,
+      rgba(66, 255, 0, 0) 96.18%
+    );
+    top: 336px;
+    left: -36px;
+  }
+  &--service {
+    z-index: -3;
+    top: auto;
+    bottom: -628px;
+    filter: blur(0);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(60, 60, 60, 0.1);
+    opacity: 0.75;
+    width: 1236px;
+    height: 1236px;
+  }
+  &--service2 {
+    bottom: -470px;
+    width: 900px;
+    height: 900px;
+    z-index: -2;
+    background: rgba(42, 44, 43, 0.3);
+    opacity: 0.75;
+  }
+  &--service3 {
+    bottom: -290px;
+    width: 540px;
+    height: 540px;
+    z-index: -1;
+    background: rgba(34, 38, 35, 0.5);
+    opacity: 0.75;
+  }
+}
+
+.video-icon {
+  min-width: 160px;
+  min-height: 160px;
+  display: inline-flex;
+  align-items: center;
+  place-content: center;
+  color: var(--tg-common-color-white);
+  background-color: var(--tg-theme-primary);
+  border-radius: 50%;
+  font-size: 40px;
+  @media #{$md} {
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 25px;
+  }
+  &:hover {
+    background-color: var(--tg-common-color-white);
+    color: var(--tg-theme-primary);
+  }
+  &--style2 {
+    min-width: 120px;
+    min-height: 120px;
+    font-size: 36px;
+    background-color: var(--tg-common-color-white);
+    color: var(--tg-theme-primary);
+    &:hover {
+      background-color: var(--tg-theme-primary);
+      color: var(--tg-common-color-white);
+    }
+  }
+}
