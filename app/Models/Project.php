@@ -10,9 +10,20 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected $casts = [
         'description' => 'array',
     ];
+
+    protected $appends = [
+        'category_title',
+    ];
+
+    protected $hidden = [
+        'Category'
+    ];
+
     protected $fillable = [
         'category_id',
         'title',
@@ -31,5 +42,10 @@ class Project extends Model
     public function Category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function getCategoryTitleAttribute(): string
+    {
+        return $this->Category->title;
     }
 }

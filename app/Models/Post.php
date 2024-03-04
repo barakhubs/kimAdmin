@@ -11,6 +11,16 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
+    protected $appends = [
+        'category_title',
+    ];
+
+    protected $hidden = [
+        'category',
+    ];
+
     protected $fillable = [
         'title',
         'slug',
@@ -49,5 +59,9 @@ class Post extends Model
     public function comments(): HasMany
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function getCategoryTitleAttribute(): string {
+        return $this->category->title;
     }
 }
