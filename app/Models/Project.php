@@ -18,6 +18,7 @@ class Project extends Model
 
     protected $appends = [
         'category_title',
+        'parent_category'
     ];
 
     protected $hidden = [
@@ -47,5 +48,10 @@ class Project extends Model
     public function getCategoryTitleAttribute(): string
     {
         return $this->Category->title;
+    }
+
+    public function getParentCategoryTitleAttribute(): string
+    {
+        return $this->Category->parent->title;
     }
 }
