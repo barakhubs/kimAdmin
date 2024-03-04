@@ -18,7 +18,7 @@ class Project extends Model
 
     protected $appends = [
         'category_title',
-        'parent_category'
+        'parent_category_title'
     ];
 
     protected $hidden = [
